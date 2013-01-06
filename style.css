@@ -1,0 +1,129 @@
+@font-face {
+    font-family: rezland;
+    src: url(rez.ttf);
+}
+
+@font-face {
+    font-family: vegurl;
+    src: url(vegurl.otf);
+}
+
+@font-face {
+    font-family: vegur;
+    src: url(vegur.otf);
+}
+
+#logo {
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: vegurl;
+	font-size: 54px;
+	vertical-align: text-center;
+}
+
+#logo img {
+	vertical-align: text-bottom;
+}
+
+#topmenu {
+	text-align: right;
+	margin-top: 10px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+	font-family: vegurl;
+	font-size: 30px;
+	word-spacing: 15px;
+}
+
+#topmenu a {
+	text-decoration: none;
+	color: #000;
+}
+
+#topmenu a.selected {
+	text-decoration: underline;
+}
+
+#leftmenu {
+	float: left;
+	width: 220px;
+	font-family: vegurl;
+	font-size: 16px;
+	margin-top: 0px;
+	margin-left: 5px;
+	margin-bottom: 15px;
+	border: 1px solid gray;
+}
+
+#leftmenutitle {
+	font-family: vegur;
+	font-size: 20px;
+}
+
+#leftmenu ul {
+	list-style: none;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+
+#leftmenu li a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	margin-bottom: 2px;
+}
+
+#leftmenu a:hover {
+	background: #eee;
+}
+
+#main {
+	position: absolute;
+	left: 230px;
+	font-size: 14px;
+	font-family: vegur;
+	background: #fff;
+	color: #000;
+}
+
+#main a {
+	text-decoration: underline;
+	color: #88b;
+}
+
+#main a:hover {
+	text-decoration: none;
+	color: #b88;
+}
+
+#main ul {
+	list-style: square;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#main p {
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+
+#title {
+	font-family: vegur;
+	font-size: 20px;
+}
+
+#illus {
+	float: right;
+	margin: 5px;
+	clear: right;
+}
+
+#illus img {
+	border: 1px solid gray;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
