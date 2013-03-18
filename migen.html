@@ -32,18 +32,13 @@
 <div id="title">Migen</div>
 <p>Started late 2011 and still experimental, Migen (<b>Mi</b>lkymist <b>gen</b>erator) is a Python-based tool that aims at automating further the VLSI design process.</p>
 
-<p>Migen makes it possible to apply modern software concepts such as object-oriented programming and metaprogramming to design hardware. This results in more elegant and easily maintained designs and reduces the incidence of human errors.</p>
+<p>Despite being faster than schematics entry, hardware design with Verilog and VHDL remains tedious and inefficient for several reasons. The event-driven model introduces issues and manual coding that are unnecessary for synchronous circuits, which represent the lion's share of today's logic designs. Counter- intuitive arithmetic rules result in steeper learning curves and provide a fertile ground for subtle bugs in designs. Finally, support for procedural generation of logic (metaprogramming) through "generate" statements is very limited and restricts the ways code can be made generic, reused and organized.</p>
 
-<p>Built on these principles, it provides or will provide tools to:
-<ul>
-<li>build synchronous designs more productively by automating tasks like resetting registers and abstracting away the event-driven paradigm of HDLs.</li>
-<li>integrate system-on-chips, for example by automatically interconnecting on-chip buses such as Wishbone.</li>
-<li>design hardware accelerators in the dataflow paradigm, with semi-automatic integration in a SoC.</li>
-<li>and more...</li>
-</ul>
-</p>
- 
-<p>Migen will become the foundation for the <a href="mng.html">next-generation Milkymist SoC</a>, and is also used in the <a href="http://www.rhinoplatform.org">Rhino</a> software-defined radio platform.</p>
+<p>To address those issues, we have developed the Migen FHDL library that replaces the event-driven paradigm with the notions of combinatorial and synchronous statements, has arithmetic rules that make integers always behave like mathematical integers, and most importantly allows the design's logic to be constructed by a Python program. This last point enables hardware designers to take advantage of the richness of the Python language - object oriented programming, function parameters, generators, operator overloading, libraries, etc. - to build well organized, reusable and elegant designs.</p>
+
+<p>Other Migen libraries are built on FHDL and provide various tools such as a system-on-chip interconnect infrastructure, a dataflow programming system, a more traditional high-level synthesizer that compiles Python routines into state machines with datapaths, and a simulator that allows test benches to be written in Python.</p>
+
+<p>Migen is the foundation for the <a href="mng.html">next-generation Milkymist SoC</a>, and is also used in the <a href="http://www.rhinoplatform.org">Rhino</a> software-defined radio platform.</p>
 
 <p>You can find the Migen source <a href="http://github.com/milkymist/migen">here</a>, released under a <a href="https://github.com/milkymist/migen/blob/master/LICENSE">permissive license</a>.</p>
 
