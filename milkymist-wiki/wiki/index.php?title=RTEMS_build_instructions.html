@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="RTEMS build instructions" />
+		<link rel="alternate" type="application/x-wiki" title="Edit" href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;action=edit" />
+		<link rel="edit" title="Edit" href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;action=edit" />
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="Milkymist Wiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;action=creativecommons" rel="meta" />
+		<link rel="copyright" href="http://www.milkymist.org/wiki/index.php?title=Copyright" />
+		<link rel="alternate" type="application/rss+xml" title="Milkymist Wiki RSS Feed" href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges&amp;feed=rss" />
+		<link rel="alternate" type="application/atom+xml" title="Milkymist Wiki Atom Feed" href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+		<title>RTEMS build instructions - Milkymist Wiki</title>
+		<link rel="stylesheet" href="skins/common/shared.css%3F195.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="skins/common/commonPrint.css%3F195.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="skins/monobook/main.css%3F195.css" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" media="print" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/wiki/skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/wiki/skins";
+		var wgArticlePath = "/wiki/index.php?title=$1";
+		var wgScriptPath = "/wiki";
+		var wgScript = "/wiki/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://milkymist.org";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "RTEMS_build_instructions";
+		var wgTitle = "RTEMS build instructions";
+		var wgAction = "view";
+		var wgArticleId = "86";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "1527";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="skins/common/wikibits.js%3F195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="skins/common/ajax.js%3F195"></script>
+		<script type="text/javascript" src="http://milkymist.org/wiki/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-RTEMS_build_instructions skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">RTEMS build instructions</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Milkymist Wiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="index.php%3Ftitle=RTEMS_build_instructions.html#column-one">navigation</a>, <a href="index.php%3Ftitle=RTEMS_build_instructions.html#searchInput">search</a></div>			<!-- start content -->
+			<p>This is a tutorial on how to build RTEMS on the Milkymist One board.
+</p><p>Questions about the Milkymist BSP for RTEMS&nbsp;?
+</p><p>GO ask them on irc.freenode.net on #milkymist
+</p><p>I (Yann Sionneau aka Fallenou on IRC) or lekernel or mwalle will try to answer&nbsp;:)
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="index.php%3Ftitle=RTEMS_build_instructions.html#Build_an_RTEMS_toolchain"><span class="tocnumber">1</span> <span class="toctext">Build an RTEMS toolchain</span></a></li>
+<li class="toclevel-1"><a href="index.php%3Ftitle=RTEMS_build_instructions.html#Historical_Information"><span class="tocnumber">2</span> <span class="toctext">Historical Information</span></a>
+<ul>
+<li class="toclevel-2"><a href="index.php%3Ftitle=RTEMS_build_instructions.html#Other_Build_Scripts"><span class="tocnumber">2.1</span> <span class="toctext">Other Build Scripts</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=RTEMS_build_instructions.html#Checkout_the_RTEMS_port_to_Milkymist"><span class="tocnumber">2.2</span> <span class="toctext">Checkout the RTEMS port to Milkymist</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=RTEMS_build_instructions.html#Building_RTEMS_port_to_Milkymist"><span class="tocnumber">2.3</span> <span class="toctext">Building RTEMS port to Milkymist</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Build_an_RTEMS_toolchain" id="Build_an_RTEMS_toolchain"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;action=edit&amp;section=1" title="Edit section: Build an RTEMS toolchain">edit</a>]</span> <span class="mw-headline"> Build an RTEMS toolchain </span></h2>
+<p><a href="http://en.qi-hardware.com/wiki/User:Xiangfu" class="external text" title="http://en.qi-hardware.com/wiki/User:Xiangfu" rel="nofollow">xiangfu</a> wrote some <a href="https://github.com/milkymist/scripts" class="external text" title="https://github.com/milkymist/scripts" rel="nofollow">Makefiles</a> to compile the lm32 toolchain and flickernoise. Please read the <a href="https://github.com/milkymist/scripts/blob/master/README.html" class="external text" title="https://github.com/milkymist/scripts/blob/master/README.html" rel="nofollow">README.html</a> for detailed directions and host specific requirements. Build steps are below:
+</p>
+<ul><li> Download the script files:
+</li></ul>
+<pre>   $ git clone git://github.com/milkymist/scripts.git
+</pre>
+<ul><li> Read and follow the directions in the <a href="https://github.com/milkymist/scripts/blob/master/README.html" class="external text" title="https://github.com/milkymist/scripts/blob/master/README.html" rel="nofollow">README.html</a> file:
+</li></ul>
+<pre>   $ cd scripts  
+   $ vi README
+</pre>
+<a name="Historical_Information" id="Historical_Information"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;action=edit&amp;section=2" title="Edit section: Historical Information">edit</a>]</span> <span class="mw-headline"> Historical Information </span></h2>
+<p><i>The following information is out of date but may be useful if you run into problems.</i>
+
+</p>
+<ul><li> Alternatively, you can follow the following tutorial on RTEMS's wiki&nbsp;:
+</li></ul>
+<pre> <a href="http://www.rtems.org/wiki/index.php/Building_the_RTEMS_toolset_on_Ubuntu" class="external free" title="http://www.rtems.org/wiki/index.php/Building_the_RTEMS_toolset_on_Ubuntu" rel="nofollow">http://www.rtems.org/wiki/index.php/Building_the_RTEMS_toolset_on_Ubuntu</a>
+</pre>
+<pre>or this local tutorial for Debian
+</pre>
+<pre><a href="index.php%3Ftitle=Building_the_RTEMS_toolset_on_Debian.html" class="external text" title="http://milkymist.org/wiki/index.php?title=Building_the_RTEMS_toolset_on_Debian" rel="nofollow">Building the RTEMS toolset on Debian</a>
+</pre>
+<ul><li> If you are under ubuntu 10.04 i guess you do not need to compile autoconf and automake from sources, the version provided by ubuntu is recent enough.
+</li><li> So basically doing the following should be ok&nbsp;: 
+</li></ul>
+<pre> # aptitude install m4 patch  build-essential texinfo cvs libncurses5-dev libgmp3-dev libmpfr-dev libmpc-dev autoconf autotools-dev
+</pre>
+<ul><li> Then download the sources of gcc-core, newlib, gdb, g++ and binutils and the corresponding patches (.diff files) on this page&nbsp;: <a href="http://ftp.rtems.org/ftp/pub/rtems/SOURCES/4.11/" class="external free" title="http://ftp.rtems.org/ftp/pub/rtems/SOURCES/4.11/" rel="nofollow">http://ftp.rtems.org/ftp/pub/rtems/SOURCES/4.11/</a>
+</li></ul>
+<ul><li> Follow the steps of the "Phase 2." of RTEMS' wiki page to configure and build the toolchain.
+<ul><li> Do not forget that you are building the toolchain for RTEMS 4.11 and not 4.9
+</li><li> Your target is not powerpc-rtems4.9 but lm32-rtems4.11
+</li><li> Do not forget to apply the patches, and follow the build order indicated in the RTEMS wiki, you must build gcc against newlib.
+</li></ul>
+</li></ul>
+<a name="Other_Build_Scripts" id="Other_Build_Scripts"></a><h3><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;action=edit&amp;section=3" title="Edit section: Other Build Scripts">edit</a>]</span> <span class="mw-headline">Other Build Scripts</span></h3>
+<ol><li> one <a href="http://home.gwu.edu/~cssmith/LuaRtems/RTEMS_Tools.html" class="external text" title="http://home.gwu.edu/~cssmith/LuaRtems/RTEMS_Tools.html" rel="nofollow">script_file</a> for auto download and build
+</li><li> another one <a href="http://www.rtems.org/viewvc/rtems-testing/simple-build-script/" class="external text" title="http://www.rtems.org/viewvc/rtems-testing/simple-build-script/" rel="nofollow">script_file</a> from rtems.org cvs
+</li><li> yet another one <a href="http://projects.qi-hardware.com/index.php/p/m1s/source/tree/master/" class="external text" title="http://projects.qi-hardware.com/index.php/p/m1s/source/tree/master/" rel="nofollow">Makefile</a> for auto download and build
+</li></ol>
+<a name="Checkout_the_RTEMS_port_to_Milkymist" id="Checkout_the_RTEMS_port_to_Milkymist"></a><h3><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;action=edit&amp;section=4" title="Edit section: Checkout the RTEMS port to Milkymist">edit</a>]</span> <span class="mw-headline"> Checkout the RTEMS port to Milkymist </span></h3>
+<p>Yann Sionneau developped as part of a Google Summer of Code (2010) a Board Support Package (BSP) for the Milkymist One board which makes it possible to run RTEMS on Milkymist One board using Milkymist SoC&nbsp;!
+</p><p>The BSP is available on his git repository hosted on github&nbsp;: <a href="http://github.com/fallen/rtems-milkymist" class="external free" title="http://github.com/fallen/rtems-milkymist" rel="nofollow">http://github.com/fallen/rtems-milkymist</a>
+</p><p><br />
+</p>
+<ul><li> Be sure to have the git tool installed in your computer
+</li></ul>
+<ul><li> Git can be installed this way under debian (and ubuntu)&nbsp;: 
+</li></ul>
+<pre> # aptitude update &amp;&amp; aptitude install git-core
+</pre>
+<ul><li> Clone the git repository of the RTEMS port to Milkymist&nbsp;:
+</li></ul>
+<pre> ~$ git clone git://github.com/fallen/rtems-milkymist.git
+</pre>
+<a name="Building_RTEMS_port_to_Milkymist" id="Building_RTEMS_port_to_Milkymist"></a><h3><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;action=edit&amp;section=5" title="Edit section: Building RTEMS port to Milkymist">edit</a>]</span> <span class="mw-headline"> Building RTEMS port to Milkymist </span></h3>
+<ul><li> Go to the root of the source tree&nbsp;: 
+</li></ul>
+<pre> ~$ cd rtems-milkymist
+</pre>
+<ul><li> Put your lm32-rtems4.11 toolchain in your PATH environment variable&nbsp;: 
+</li></ul>
+<pre> ~$ export PATH=/opt/rtems-4.11/bin:$PATH
+</pre>
+<ul><li> Run bootstrap (to generate the Makefile.in and other autotools related files)&nbsp;: 
+</li></ul>
+<pre> ~/rtems-milkymist$  ./bootstrap -c &amp;&amp; ./bootstrap -p &amp;&amp; ./bootstrap
+</pre>
+<ul><li> Go make some coffee, drink the coffee, refill your mug and drink again ... ok you're done&nbsp;!
+</li></ul>
+<ul><li> Create a directory to host the binaries you're going to create&nbsp;: 
+</li></ul>
+<pre> $ cd ~/
+ ~$ mkdir bsp-milkymist
+</pre>
+<ul><li> Do configure and make&nbsp;!
+</li></ul>
+<pre> ~$ cd bsp-milkymist
+ ~/bsp-milkymist$ ../rtems-milkymist/configure --target=lm32-rtems4.11 --enable-rtemsbsp=milkymist \ 
+                  --enable-testsuites=samples --enable-posix --disable-itron --enable-networking --disable-multiprocessing
+ ~/bsp-milkymist$ make all
+ ~/bsp-milkymist$ sudo -s (or simply su in debian)
+ ~/bsp-milkymist# export PATH=$PATH:/opt/rtems-4.11/bin
+ ~/bsp-milkymist# make install
+</pre>
+<ul><li> You can go drink some more coffee&nbsp;!
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 6/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sbsql1-mw_:pcache:idhash:86-0!1!0!!en!2 and timestamp 20140823124219 -->
+<div class="printfooter">
+Retrieved from "<a href="index.php%3Ftitle=RTEMS_build_instructions.html">http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="index.php%3Ftitle=RTEMS_build_instructions.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="http://milkymist.org/wiki/index.php?title=Talk:RTEMS_build_instructions&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;action=edit" title="You can edit this page.&#10;Please use the preview button before saving [e]" accesskey="e">Edit</a></li>
+				 <li id="ca-history"><a href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;action=history" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://milkymist.org/wiki/index.php?title=Special:UserLogin&amp;returnto=RTEMS_build_instructions" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://www.milkymist.org/wikilogo.png);" href="../wiki.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="../wiki.html">Main Page</a></li>
+				<li id="n-portal"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="http://milkymist.org/wiki/index.php?title=Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="http://milkymist.org/wiki/index.php?title=Help:Contents" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://milkymist.org/wiki/index.php?title=Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search Milkymist Wiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://milkymist.org/wiki/index.php?title=Special:WhatLinksHere/RTEMS_build_instructions" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://milkymist.org/wiki/index.php?title=Special:RecentChangesLinked/RTEMS_build_instructions" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="http://milkymist.org/wiki/index.php?title=Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://milkymist.org/wiki/index.php?title=RTEMS_build_instructions&amp;oldid=1527" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="http://www.milkymist.org/wiki/index.php?title=Copyright"><img src="skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.3 and CC-BY-SA 3.0 Unported' /></a></div>
+			<ul id="f-list">
+					<li id="lastmod"> This page was last modified on 15 July 2011, at 21:19.</li>
+					<li id="viewcount">This page has been accessed 15,668 times.</li>
+					<li id="copyright">Content is available under <a href="http://www.milkymist.org/wiki/index.php?title=Copyright" class="external " title="http://www.milkymist.org/wiki/index.php?title=Copyright">GNU Free Documentation License 1.3 and CC-BY-SA 3.0 Unported</a>.</li>
+					<li id="privacy"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Privacy_policy" title="Milkymist Wiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:About" title="Milkymist Wiki:About">About Milkymist Wiki</a></li>
+					<li id="disclaimer"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:General_disclaimer" title="Milkymist Wiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.189 secs. --></body></html>

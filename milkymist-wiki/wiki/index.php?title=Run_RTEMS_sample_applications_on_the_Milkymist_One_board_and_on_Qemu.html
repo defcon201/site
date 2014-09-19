@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Run RTEMS sample applications on the Milkymist One board and on Qemu,RTEMS build instructions,Using QEMU" />
+		<link rel="alternate" type="application/x-wiki" title="Edit" href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit" />
+		<link rel="edit" title="Edit" href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit" />
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="Milkymist Wiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=creativecommons" rel="meta" />
+		<link rel="copyright" href="http://www.milkymist.org/wiki/index.php?title=Copyright" />
+		<link rel="alternate" type="application/rss+xml" title="Milkymist Wiki RSS Feed" href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges&amp;feed=rss" />
+		<link rel="alternate" type="application/atom+xml" title="Milkymist Wiki Atom Feed" href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+		<title>Run RTEMS sample applications on the Milkymist One board and on Qemu - Milkymist Wiki</title>
+		<link rel="stylesheet" href="skins/common/shared.css%3F195.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="skins/common/commonPrint.css%3F195.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="skins/monobook/main.css%3F195.css" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" media="print" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/wiki/skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/wiki/skins";
+		var wgArticlePath = "/wiki/index.php?title=$1";
+		var wgScriptPath = "/wiki";
+		var wgScript = "/wiki/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://milkymist.org";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu";
+		var wgTitle = "Run RTEMS sample applications on the Milkymist One board and on Qemu";
+		var wgAction = "view";
+		var wgArticleId = "112";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "1056";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="skins/common/wikibits.js%3F195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="skins/common/ajax.js%3F195"></script>
+		<script type="text/javascript" src="http://milkymist.org/wiki/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Run RTEMS sample applications on the Milkymist One board and on Qemu</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Milkymist Wiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html#column-one">navigation</a>, <a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html#searchInput">search</a></div>			<!-- start content -->
+			<p>This is a tutorial on how to run RTEMS sample applications on the Milkymist One board and on Qemu.
+</p><p>Questions about the Milkymist BSP for RTEMS&nbsp;?
+</p><p>GO ask them on irc.freenode.net on #milkymist
+</p><p>I (Yann Sionneau aka Fallenou on IRC) or lekernel or mwalle will try to answer&nbsp;:)
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html#First_you_must_build_the_RTEMS_port_to_Milkymist"><span class="tocnumber">1</span> <span class="toctext">First you must build the RTEMS port to Milkymist</span></a></li>
+<li class="toclevel-1"><a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html#Run_the_sample_applications"><span class="tocnumber">2</span> <span class="toctext">Run the sample applications</span></a>
+<ul>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html#Run_the_sample_applications_on_the_Milkymist_One_board"><span class="tocnumber">2.1</span> <span class="toctext">Run the sample applications on the Milkymist One board</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html#Run_the_sample_applications_on_Qemu"><span class="tocnumber">2.2</span> <span class="toctext">Run the sample applications on Qemu</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html#Another_example_of_application_built_against_RTEMS_:_tftpclient"><span class="tocnumber">3</span> <span class="toctext">Another example of application built against RTEMS&nbsp;: tftpclient</span></a>
+<ul>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html#Run_the_tftpclient_on_the_Milkymist_One_board"><span class="tocnumber">3.1</span> <span class="toctext">Run the tftpclient on the Milkymist One board</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html#Run_the_tftpclient_on_Qemu"><span class="tocnumber">3.2</span> <span class="toctext">Run the tftpclient on Qemu</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="First_you_must_build_the_RTEMS_port_to_Milkymist" id="First_you_must_build_the_RTEMS_port_to_Milkymist"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit&amp;section=1" title="Edit section: First you must build the RTEMS port to Milkymist">edit</a>]</span> <span class="mw-headline"> First you must build the RTEMS port to Milkymist </span></h2>
+<ul><li> Check this page of the wiki&nbsp;: <a href="index.php%3Ftitle=RTEMS_build_instructions.html" title="RTEMS build instructions">RTEMS build instructions</a>
+</li><li> Make sure you have compiled Qemu with LM32 support&nbsp;: <a href="index.php%3Ftitle=Using_QEMU.html" title="Using QEMU">Using QEMU</a>
+</li></ul>
+<a name="Run_the_sample_applications" id="Run_the_sample_applications"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit&amp;section=2" title="Edit section: Run the sample applications">edit</a>]</span> <span class="mw-headline"> Run the sample applications </span></h2>
+<a name="Run_the_sample_applications_on_the_Milkymist_One_board" id="Run_the_sample_applications_on_the_Milkymist_One_board"></a><h3><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit&amp;section=3" title="Edit section: Run the sample applications on the Milkymist One board">edit</a>]</span> <span class="mw-headline"> Run the sample applications on the Milkymist One board </span></h3>
+<p>Go to the bsp-milkymist directory, say we wanna test the "hello world" sample&nbsp;: 
+</p>
+<pre> ~$ cd bsp-milkymist/
+ ~/bsp-milkymist$ cd lm32-rtems4.11/c/milkymist/testsuites/samples/hello
+</pre>
+<ul><li> Plug your RS-232 serial usb wire to your computer and to the Serial port of the board
+</li></ul>
+<ul><li> Install flterm (the software for uploading the application into on-board Flash through RS-232 line)&nbsp;: 
+<ul><li> This software is available in milkymist's debian repository (works for ubuntu too), just do&nbsp;: 
+</li></ul>
+</li></ul>
+<pre> # echo "deb <a href="http://www.milkymist.org/debian" class="external free" title="http://www.milkymist.org/debian" rel="nofollow">http://www.milkymist.org/debian</a> ./" &gt;&gt; /etc/apt/sources.list
+ # aptitude update &amp;&amp; aptitude install flterm
+</pre>
+<ul><li> Power-on the board
+</li></ul>
+<ul><li> Then upload the sample application hello.exe to the board&nbsp;: 
+</li></ul>
+<pre> ~/bsp-milkymist/lm32-rtems4.11/c/milkymist/testsuites/samples/hello$ flterm --kernel hello.ralf --port /dev/ttyUSB0
+</pre>
+<ul><li> If nothing is uploading then push two push-buttons, then push the third and release it, then release the two others. (in this order)
+</li></ul>
+<a name="Run_the_sample_applications_on_Qemu" id="Run_the_sample_applications_on_Qemu"></a><h3><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit&amp;section=4" title="Edit section: Run the sample applications on Qemu">edit</a>]</span> <span class="mw-headline"> Run the sample applications on Qemu </span></h3>
+<ul><li> You must compile Qemu with Milkymist support, Check this wiki page <a href="index.php%3Ftitle=Using_QEMU.html" title="Using QEMU">Using QEMU</a>
+</li></ul>
+<ul><li> Go to the binary directory
+</li></ul>
+<pre> ~$ cd bsp-milkymist/lm32-rtems4.11/c/milkymist/testsuites/samples/hello
+</pre>
+<ul><li> Run the .exe binary file with Qemu 
+</li></ul>
+<pre> ~/bsp-milkymist/lm32-rtems4.11/c/milkymist/testsuites/samples/hello$ ~/path/to/qemu-lm32/lm32-softmmu/qemu-system-lm32 -M milkymist -kernel hello.exe -nographic
+</pre>
+<ul><li> How to run the others samples&nbsp;: 
+</li></ul>
+<ul><li><ul><li> milkymist_networking - starts a shell that you can reach through a telnetd daemon over the network
+</li></ul>
+</li></ul>
+<pre> ~$ cd ~/bsp-milkymist/lm32-rtems4.11/c/milkymist/testsuites/samples/milkymist_networking
+ milkymist_networking$ ~/path/to/qemu-lm32/lm32-softmmu/qemu-system-lm32 -M milkymist -kernel milkymist_networking.exe \
+ -nographic -net nic -net user,net=192.168.101.0/24,restrict=n,host=192.168.101.254,hostfwd=::5555-192.168.101.100:23 \
+ -net dump
+ milkymist_networking$ telnet 127.0.0.1 5555
+ Trying&nbsp;::1...
+ Trying 127.0.0.1...
+ Connected to localhost.
+ Escape character is '^]'.
+ == Starting shell inside telnetd ==
+ 
+ Welcome to rtems-4.10.99.0(LM32/lm32/milkymist)
+ COPYRIGHT (c) 1989-2008.
+ On-Line Applications Research Corporation (OAR).
+ 
+ running on (LM32/lm32)
+ /dev/pty0 login: root
+ root
+ Password: 
+ 
+ RTEMS SHELL (Ver.1.0-FRC):/dev/pty0. Oct 27 2010. 'help' to list commands.
+ [/] # 
+</pre>
+<ul><li><ul><li><ul><li> a .pcap file will be generated with a dump of the network packets involved in the sample run, so that you can monitor the network activity of the sample, you can open this file with wireshark.
+</li></ul>
+</li></ul>
+</li></ul>
+<ul><li><ul><li> milkymist-networking2 - sends a UDP packet to 4.2.2.1:1234 with "toto" as payload
+</li></ul>
+</li></ul>
+<pre> ~$ cd ~/bsp-milkymist/lm32-rtems4.11/c/milkymist/testsuites/samples/milkymist_networking2
+ milkymist_networking2$ ~/path/to/qemu-lm32/lm32-softmmu/qemu-system-lm32 -M milkymist -kernel milkymist_networking2.exe \
+ -nographic -net nic -net user,net=192.168.101.0/24,restrict=n,host=192.168.101.254 -net dump
+</pre>
+<ul><li><ul><li><ul><li> a .pcap file will be generated with a dump of the network packets involved in the sample run, so that you can monitor the network activity of the sample, you can open this file with wireshark.
+</li></ul>
+</li></ul>
+</li></ul>
+<ul><li><ul><li> milkymist-networking3 - listens on the TCP port 23 for connections, and echoes what you type (no more than 4 bytes/line), ends with "quit"
+</li></ul>
+</li></ul>
+<pre> ~$ cd ~/bsp-milkymist/lm32-rtems4.11/c/milkymist/testsuites/samples/milkymist_networking3
+ milkymist_networking3$ ~/path/to/qemu-lm32/lm32-softmmu/qemu-system-lm32 -M milkymist -kernel milkymist_networking3.exe \
+ -nographic -net nic -net user,net=192.168.101.0/24,restrict=n,host=192.168.101.254,hostfwd=::5555-192.168.101.100:23 \
+ -net dump
+ milkymist_networking3$ telnet 127.0.0.1 23
+ toto
+ tata
+ quit
+</pre>
+<ul><li><ul><li><ul><li> a .pcap file will be generated with a dump of the network packets involved in the sample run, so that you can monitor the network activity of the sample, you can open this file with wireshark.
+</li></ul>
+</li></ul>
+</li></ul>
+<a name="Another_example_of_application_built_against_RTEMS_:_tftpclient" id="Another_example_of_application_built_against_RTEMS_:_tftpclient"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit&amp;section=5" title="Edit section: Another example of application built against RTEMS&nbsp;: tftpclient">edit</a>]</span> <span class="mw-headline"> Another example of application built against RTEMS&nbsp;: tftpclient </span></h2>
+<a name="Run_the_tftpclient_on_the_Milkymist_One_board" id="Run_the_tftpclient_on_the_Milkymist_One_board"></a><h3><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit&amp;section=6" title="Edit section: Run the tftpclient on the Milkymist One board">edit</a>]</span> <span class="mw-headline"> Run the tftpclient on the Milkymist One board </span></h3>
+<p>tftpclient is an example application that you can build against RTEMS kernel.
+</p><p>This application downloads a file from a tftp server and prints it's content to the serial console.
+</p><p>This application has been added to the network-demos provided by RTEMS as a CVS module, it is available on Yann's github
+</p>
+<ul><li> Checkout the github repo of network-demos&nbsp;: 
+</li></ul>
+<pre> ~$ git clone git://github.com/fallen/network-demos.git
+</pre>
+<ul><li> Compile the applications against RTEMS kernel&nbsp;: 
+</li></ul>
+<pre> ~$ cd network-demos
+ ~$ export PATH=$PATH:/opt/rtems-4.11/bin
+ ~/network-demos$ RTEMS_MAKEFILE_PATH=/opt/rtems-4.11/lm32-rtems4.11/milkymist make all
+</pre>
+<ul><li> Install a tftpd server on your computer&nbsp;: 
+</li></ul>
+<pre> ~# aptitude install tftpd
+</pre>
+<ul><li> Configure it&nbsp;: 
+</li></ul>
+<pre> ~# touch /etc/xinetd.d/tftp
+ ~# vim /etc/xinetd.d/tftp
+</pre>
+<ul><li> Put this in the file&nbsp;: 
+</li></ul>
+<pre> service tftp
+ {
+   protocol    = udp 
+   port        = 69
+   socket_type = dgram
+   wait        = yes 
+   user        = nobody
+   server      = /usr/sbin/in.tftpd
+   server_args = /tftpboot
+   disable     = no
+ }
+</pre>
+<ul><li> Create the tftp root directory and put your file in it
+</li></ul>
+<pre> ~# mkdir /tftpboot
+ ~# cp yourfile /tftpboot/sample.data
+ ~# chown -R nobody /tftpboot
+ ~# chmod -R 777 /tftpboot
+</pre>
+<ul><li> Restart xinetd&nbsp;: 
+</li></ul>
+<pre> ~# /etc/init.d/xinetd restart
+</pre>
+<ul><li> Upload the file to the board using the procedure described previously&nbsp;: 
+</li></ul>
+<pre> ~/network-demos$ cd tftpclient/o-optimize
+ ~/network-demos/tftpclient/o-optimize$ lm32-rtems4.11-objcopy -Obinary tftpclient.exe
+ ~/network-demos/tftpclient/o-optimize$ flterm --kernel tftpclient.exe --port /dev/ttyUSB0
+</pre>
+<ul><li> While uploading the binary into the board, set-up your network configuration&nbsp;: 
+</li></ul>
+<pre> ~# ifconfig eth0 192.168.101.254 netmask 255.255.255.0
+</pre>
+<p>You can change the ip address taken by the board, the ip address of the gateway it's supposed to use, the ip address of the tftp server, the port of the tftp server and the name of the file tftpclient is supposed to download and print in the network-demos/networkconfig.h and directly into network-demos/tftpclient/init.c
+</p>
+<a name="Run_the_tftpclient_on_Qemu" id="Run_the_tftpclient_on_Qemu"></a><h3><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit&amp;section=7" title="Edit section: Run the tftpclient on Qemu">edit</a>]</span> <span class="mw-headline"> Run the tftpclient on Qemu </span></h3>
+<ul><li> Go through all the previous sections untill you reach the "Restart xinetd" point.
+</li></ul>
+<ul><li> Go to the tftpclient binary directory
+</li></ul>
+<pre> ~$ cd ~/dev/network-demos/tftpclient/o-optimize
+</pre>
+<ul><li> Create a TAP device interface (do this as root)&nbsp;: 
+</li></ul>
+<pre> ~# aptitude install uml-utilities
+ ~# tunctl -u YOUR_USER -g YOUR_GROUP -t tap0
+</pre>
+<ul><li> Start the tftpclient with Qemu (in user)&nbsp;: 
+</li></ul>
+<pre> o-optimize$ ~/path/to/lm32-qemu/lm32-softmmu/qemu-system-lm32 -kernel tftpclient.exe -nographic -net nic -net tap,iface=tap0,script=no,downscript=no -net dump
+</pre>
+<ul><li> It will show you the content of the /tftpboot/sample.data file
+</li></ul>
+<ul><li> It will produce a .pcap file with all the network activity involved in this tftp transaction. You can open this file with wireshark.
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 8/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sbsql1-mw_:pcache:idhash:112-0!1!0!!en!2 and timestamp 20140823124220 -->
+<div class="printfooter">
+Retrieved from "<a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html">http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="index.php%3Ftitle=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="http://milkymist.org/wiki/index.php?title=Talk:Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=edit" title="You can edit this page.&#10;Please use the preview button before saving [e]" accesskey="e">Edit</a></li>
+				 <li id="ca-history"><a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;action=history" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://milkymist.org/wiki/index.php?title=Special:UserLogin&amp;returnto=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://www.milkymist.org/wikilogo.png);" href="../wiki.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="../wiki.html">Main Page</a></li>
+				<li id="n-portal"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="http://milkymist.org/wiki/index.php?title=Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="http://milkymist.org/wiki/index.php?title=Help:Contents" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://milkymist.org/wiki/index.php?title=Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search Milkymist Wiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://milkymist.org/wiki/index.php?title=Special:WhatLinksHere/Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://milkymist.org/wiki/index.php?title=Special:RecentChangesLinked/Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="http://milkymist.org/wiki/index.php?title=Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://milkymist.org/wiki/index.php?title=Run_RTEMS_sample_applications_on_the_Milkymist_One_board_and_on_Qemu&amp;oldid=1056" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="http://www.milkymist.org/wiki/index.php?title=Copyright"><img src="skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.3 and CC-BY-SA 3.0 Unported' /></a></div>
+			<ul id="f-list">
+					<li id="lastmod"> This page was last modified on 16 February 2011, at 21:07.</li>
+					<li id="viewcount">This page has been accessed 20,042 times.</li>
+					<li id="copyright">Content is available under <a href="http://www.milkymist.org/wiki/index.php?title=Copyright" class="external " title="http://www.milkymist.org/wiki/index.php?title=Copyright">GNU Free Documentation License 1.3 and CC-BY-SA 3.0 Unported</a>.</li>
+					<li id="privacy"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Privacy_policy" title="Milkymist Wiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:About" title="Milkymist Wiki:About">About Milkymist Wiki</a></li>
+					<li id="disclaimer"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:General_disclaimer" title="Milkymist Wiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.192 secs. --></body></html>

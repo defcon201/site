@@ -1,0 +1,283 @@
+diff --git a/boards/avnet-sp3aevl/rtl/system.v b/boards/avnet-sp3aevl/rtl/system.v
+index 33e7b26..178cfb1 100644
+--- a/boards/avnet-sp3aevl/rtl/system.v
++++ b/boards/avnet-sp3aevl/rtl/system.v
+@@ -36,8 +36,7 @@ module system(
+ 
+ 	// GPIO
+ 	input [2:0] btn,    // 3
+-	output [3:0] led,    //        2 (2 LEDs for UART activity)
+-	input count
++	output [3:0] led    //        2 (2 LEDs for UART activity)
+ );
+ 
+ //------------------------------------------------------------------
+@@ -309,8 +308,7 @@ wire [13:0]	csr_a;
+ wire		csr_we;
+ wire [31:0]	csr_dw;
+ wire [31:0]	csr_dr_uart,
+-		csr_dr_sysctl,
+-		csr_dr_counter;
++		csr_dr_sysctl;
+ 
+ //---------------------------------------------------------------------------
+ // WISHBONE to CSR bridge
+@@ -334,7 +332,6 @@ csrbrg csrbrg(
+ 	.csr_di(
+ 		 csr_dr_uart
+ 		|csr_dr_sysctl
+-		|csr_dr_counter
+ 	)
+ );
+ 
+@@ -519,30 +516,4 @@ sysctl #(
+ 	.hard_reset(hard_reset)
+ );
+ 
+-
+-//---------------------------------------------------------------------------
+-// Counter
+-//---------------------------------------------------------------------------
+-//wire [13:0] gpio_output
+-
+-counter #(
+-	.csr_addr(4'h2)
+-) counter (
+-	.sys_clk(sys_clk),
+-	.sys_rst(sys_rst),
+-
+-	//.gpio_irq(gpio_irq),
+-	//.timer0_irq(timer0_irq),
+-	//.timer1_irq(timer1_irq),
+-
+-	.csr_a(csr_a),
+-	.csr_we(csr_we),
+-	.csr_di(csr_dw),
+-	.csr_do(csr_dr_counter), //with CSR remenber add it there too 
+-
+-	.count_input(count) //count is fot the pin
+-
+-//	.hard_reset(hard_reset)
+-);
+-
+ endmodule
+diff --git a/boards/avnet-sp3aevl/sources.mak b/boards/avnet-sp3aevl/sources.mak
+index 47ea9e8..797628a 100644
+--- a/boards/avnet-sp3aevl/sources.mak
++++ b/boards/avnet-sp3aevl/sources.mak
+@@ -22,6 +22,5 @@ NORFLASH_SRC=$(wildcard $(CORES_DIR)/norflash8/rtl/*.v)
+ BRAM_SRC=$(wildcard $(CORES_DIR)/bram/rtl/*.v)
+ UART_SRC=$(wildcard $(CORES_DIR)/uart/rtl/*.v)
+ SYSCTL_SRC=$(wildcard $(CORES_DIR)/sysctl/rtl/*.v)
+-COUNTER_SRC=$(wildcard $(CORES_DIR)/counter/rtl/*.v)
+ 
+-CORES_SRC=$(CONBUS_SRC) $(LM32_SRC) $(CSRBRG_SRC) $(NORFLASH_SRC) $(BRAM_SRC) $(UART_SRC) $(SYSCTL_SRC) $(COUNTER_SRC)
++CORES_SRC=$(CONBUS_SRC) $(LM32_SRC) $(CSRBRG_SRC) $(NORFLASH_SRC) $(BRAM_SRC) $(UART_SRC) $(SYSCTL_SRC)
+diff --git a/boards/avnet-sp3aevl/synthesis/common.ucf b/boards/avnet-sp3aevl/synthesis/common.ucf
+index 97fe532..60f9568 100644
+--- a/boards/avnet-sp3aevl/synthesis/common.ucf
++++ b/boards/avnet-sp3aevl/synthesis/common.ucf
+@@ -61,9 +61,6 @@ NET "led(1)" LOC = C16 | IOSTANDARD = LVCMOS33;
+ NET "led(2)" LOC = C15 | IOSTANDARD = LVCMOS33;
+ NET "led(3)" LOC = B15 | IOSTANDARD = LVCMOS33;
+ 
+-# ==== Counter ====
+-NET "count" LOC = E13 | IOSTANDARD = LVCMOS33;
+-
+ # ==== Prohibit Special Pins ====
+ CONFIG PROHIBIT = T12;  # FPGA_INIT_B
+ CONFIG PROHIBIT = D5;   # FPGA_PUDC
+diff --git a/cores/counter/doc/Makefile b/cores/counter/doc/Makefile
+deleted file mode 100644
+index 884d3c0..0000000
+--- a/cores/counter/doc/Makefile
++++ /dev/null
+@@ -1,23 +0,0 @@
+-TEX=counter.tex
+-
+-DVI=$(TEX:.tex=.dvi)
+-PS=$(TEX:.tex=.ps)
+-PDF=$(TEX:.tex=.pdf)
+-AUX=$(TEX:.tex=.aux)
+-LOG=$(TEX:.tex=.log)
+-
+-all: $(PDF)
+-
+-%.dvi: %.tex
+-	latex $<
+-
+-%.ps: %.dvi
+-	dvips $<
+-
+-%.pdf: %.ps
+-	ps2pdf $<
+-
+-clean:
+-	rm -f $(DVI) $(PS) $(PDF) $(AUX) $(LOG)
+-
+-.PHONY: clean
+diff --git a/cores/counter/doc/counter.tex b/cores/counter/doc/counter.tex
+deleted file mode 100644
+index 3b8a917..0000000
+--- a/cores/counter/doc/counter.tex
++++ /dev/null
+@@ -1,46 +0,0 @@
+-\documentclass[a4paper,11pt]{article}
+-\usepackage{fullpage}
+-\usepackage[latin1]{inputenc}
+-\usepackage[T1]{fontenc}
+-\usepackage[normalem]{ulem}
+-\usepackage[english]{babel}
+-\usepackage{listings,babel}
+-\lstset{breaklines=true,basicstyle=\ttfamily}
+-\usepackage{graphicx}
+-\usepackage{moreverb}
+-\usepackage{url}
+-\usepackage{tabularx}
+-
+-\title{Simple Counter}
+-\author{Cristian Paul Penaranda Rojas}
+-\date{September 2010}
+-\begin{document}
+-\setlength{\parindent}{0pt}
+-\setlength{\parskip}{5pt}
+-\maketitle{}
+-\section{Overview}
+-
+-The counter have  basic functionallity, is not intended for real applications yet, just educational porpuses:
+-
+-\section{Control}
+-
+-The counter can support maximum count of 32 bits also enable/disable by control registers.
+-
+-It is possible to generate an interrupt when the counter overflow.
+-
+-\begin{tabularx}{\textwidth}{|l|l|l|X|}
+-\hline
+-\bf{Offset} & \bf{Read/Write} & \bf{Default} & \bf{Description} \\
+-\hline
+-0x00 & W & 0 & Enable. \\
+-\hline
+-0x04 & R & N/A & Count. \\
+-\hline
+-\end{tabularx}\\
+-
+-
+-\section*{Copyright notice}
+-Copyright \copyright 2010 Cristian Paul Penaranda Rojas. \\
+-Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the LICENSE.FDL file at the root of the Milkymist source distribution.
+-
+-\end{document}
+diff --git a/cores/counter/rtl/count.v b/cores/counter/rtl/count.v
+deleted file mode 100644
+index ae3e43a..0000000
+--- a/cores/counter/rtl/count.v
++++ /dev/null
+@@ -1,107 +0,0 @@
+-/*
+- * Milkymist VJ SoC
+- *
+- * Copyright (C) 2010 Cristian Paul Peñaranda Rojas
+- * Copyright (C) 2007, 2008, 2009, 2010 Sebastien Bourdeauducq
+- *
+- * This program is free software: you can redistribute it and/or modify
+- * it under the terms of the GNU General Public License as published by
+- * the Free Software Foundation, version 3 of the License.
+- *
+- * This program is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- * GNU General Public License for more details.
+- *
+- * You should have received a copy of the GNU General Public License
+- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+- */
+-
+-module counter #(
+-        parameter csr_addr = 4'h0
+-) (
+-	input sys_clk,
+-	input sys_rst,
+-	
+-        /* Interrupts & count */
+-        //output reg count_irq,
+-        output reg [31:0] counter0,
+-        output reg [31:0] counter_c0,
+-        output reg [31:0] counter_in0,
+-
+-	/* CSR bus interface */
+-	input [13:0] csr_a,
+-	input csr_we,
+-	input [31:0] csr_di,
+-	output reg [31:0] csr_do,
+-
+-        /* count clk input*/
+-        input  count_input
+-	
+-);
+-
+-
+-
+-/* Synchronize the input */
+-reg  count_in0;
+-reg  count_in;
+-always @(posedge sys_clk) begin
+-	count_in0 <= count_input;
+-	count_in <= count_in0;
+-end
+-
+-/* Detect level changes and generate count */
+-reg  count_inbefore;
+-always @(posedge sys_clk) count_inbefore <= count_in;
+-wire  count_diff = count_inbefore ^ count_in;
+-reg  count_irqen;
+-always @(posedge sys_clk) begin
+-	if(sys_rst)
+-		counter0 <= 32'd0;
+-	else
+-                counter0 <= counter0 + 1;  //count
+-end
+-
+-/*
+- * Logic and CSR interface
+- */
+-
+-wire csr_selected = csr_a[13:10] == csr_addr;
+-//counter_0 = counter0;
+-//wire [31:0] counter_0 = {counter0};
+-wire [31:0] counter_0 = counter0;
+-//:counter0 = counter_c0;
+-
+-always @(posedge sys_clk) begin
+-	if(sys_rst) begin
+-		csr_do <= 32'd0;
+-		
+-//		counter_irq <= 1'b0;		
+-
+-		counter_c0 <= 32'd0;
+-	
+-		if(csr_selected) begin
+-			/* CSR Writes */
+-			if(csr_we) begin
+-				case(csr_a[3:0])
+-					/* control registers */
+-					// 0000 enable
+-					// 0001 counter soft reset 
+-					//4'b0000: en1 <= csr_di[0];
+-					//4'b0001: counter_irqen <= csr_di[ninputs-1:0];
+-					4'b0000: counter_in0 <= csr_di[31:0]; //not used yet
+-				endcase
+-			end
+-		
+-			/* CSR Reads */
+-			case(csr_a[3:0])
+-				/*  status registers */
+-				/* 0100 count*/
+-				4'b0100: csr_do <= counter_0;
+-				//pending irq when counter overflow
+-			endcase
+-		end
+-	end
+-end
+-
+-endmodule

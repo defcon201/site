@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="How to make a simple core for CSR bus" />
+		<link rel="alternate" type="application/x-wiki" title="Edit" href="http://milkymist.org/wiki/index.php?title=How_to_make_a_simple_core_for_CSR_bus&amp;action=edit" />
+		<link rel="edit" title="Edit" href="http://milkymist.org/wiki/index.php?title=How_to_make_a_simple_core_for_CSR_bus&amp;action=edit" />
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="Milkymist Wiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="http://milkymist.org/wiki/index.php?title=How_to_make_a_simple_core_for_CSR_bus&amp;action=creativecommons" rel="meta" />
+		<link rel="copyright" href="http://www.milkymist.org/wiki/index.php?title=Copyright" />
+		<link rel="alternate" type="application/rss+xml" title="Milkymist Wiki RSS Feed" href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges&amp;feed=rss" />
+		<link rel="alternate" type="application/atom+xml" title="Milkymist Wiki Atom Feed" href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+		<title>How to make a simple core for CSR bus - Milkymist Wiki</title>
+		<link rel="stylesheet" href="skins/common/shared.css%3F195.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="skins/common/commonPrint.css%3F195.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="skins/monobook/main.css%3F195.css" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" media="print" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/wiki/skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/wiki/skins";
+		var wgArticlePath = "/wiki/index.php?title=$1";
+		var wgScriptPath = "/wiki";
+		var wgScript = "/wiki/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://milkymist.org";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "How_to_make_a_simple_core_for_CSR_bus";
+		var wgTitle = "How to make a simple core for CSR bus";
+		var wgAction = "view";
+		var wgArticleId = "93";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "1730";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="skins/common/wikibits.js%3F195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="skins/common/ajax.js%3F195"></script>
+		<script type="text/javascript" src="http://milkymist.org/wiki/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-How_to_make_a_simple_core_for_CSR_bus skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">How to make a simple core for CSR bus</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Milkymist Wiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="index.php%3Ftitle=How_to_make_a_simple_core_for_CSR_bus.html#column-one">navigation</a>, <a href="index.php%3Ftitle=How_to_make_a_simple_core_for_CSR_bus.html#searchInput">search</a></div>			<!-- start content -->
+			<p>There is AVNET Spartan 3 Evaluation board that will be used for learning purposes, for this board there is fork of the Milkymist SoC with basic core functionality:
+(This example need to be ported to the Milkymist One Board)
+</p><p><b>Bus data is fixed at 32bits, remenber that&nbsp;!</b>
+</p>
+<pre>* LM32 Processor
+* CRS Bus
+* GPIO
+* UART
+* 16kbits On Chip Ram (2 KBytes)
+</pre>
+<p>In the milkymist-avnet directory you'll find two interesting folders:
+</p>
+<pre>   cores  &lt;- source code of the system modules, you can find both rtl and doc folder for each one
+   boards/avnet-sp3aevl &lt;- related to the synthesis and core setup for specific board
+</pre>
+<p>Especially the file:
+</p>
+<pre> boards/avnet-sp3aevl/sources.mak
+</pre>
+<p>Points the included sources for the system, so you should consider add the new folders here, appending this:
+</p>
+<pre> COUNTER_SRC=$(wildcard $(CORES_DIR)/counter/rtl/*.v)
+</pre>
+<p>And fix last line as follow (note new directory is included):
+</p>
+<pre> CORES_SRC=$(CONBUS_SRC) $(LM32_SRC) $(CSRBRG_SRC) $(NORFLASH_SRC) $(BRAM_SRC) $(UART_SRC) $(SYSCTL_SRC) $(COUNTER)
+</pre>
+<p>Before continue is good idea create a git branch so you can make sure what you change later using commits or even merging code with master branch, run thisy:
+</p>
+<pre> git checkout -b counter
+</pre>
+<p>Try make sure git know what changed and or new files added using:
+</p>
+<pre>git add &lt;filename&gt;
+</pre>
+<p>and when you selected all the files that would be part of the commit, that’s for the end all the tutorial when we got the new feature working&nbsp;:)
+</p><p>For the first edited file:
+</p>
+<pre>git add  boards/avnet-sp3aevl/sources.mak
+</pre>
+<p>Remember do same for others.
+</p><p>This assume also you created the new directory.
+</p><p>Now create new folders:
+</p>
+<pre>mkdir cores/counter
+mkdir cores/counter/rtl
+mkdir cores/counter/doc
+</pre>
+<p>Then simply do:
+</p>
+<pre>git commit -m "commit message"
+</pre>
+<p>Now is time to start coding new core template, before i suggest keep in mind file:
+</p>
+<pre>boards/avnet-sp3aevl/rtl/system.v
+</pre>
+<p>Later we will need to add some lines there according to the core features.
+</p><p>New core file:
+</p>
+<pre> cores/customcore/rtl/counter.v
+</pre>
+<p>This core is intended to be simple as possible, mainly it is re-used code from the sysctl core for the GPIO input and CSR bus.
+</p><p>The counter have a single external clock input which is need to be synced with then Milkymist clock, to avoid  <a href="http://www.eetimes.com/design/automotive-design/4018520/Understanding-Clock-Domain-Crossing-Issues" class="external text" title="http://www.eetimes.com/design/automotive-design/4018520/Understanding-Clock-Domain-Crossing-Issues" rel="nofollow">Clock Domain Crossing Issues</a>.
+</p><p>You can read more information in <a href="http://www.fpga4fun.com/CrossClockDomain.html" class="external text" title="http://www.fpga4fun.com/CrossClockDomain.html" rel="nofollow">fpg4fun</a> about how to implement a solution in verilog.
+</p><p><br />
+The counter code diff is here:
+</p>
+<pre><a href="images/2/23/Counter.diff" class="external free" title="http://milkymist.org/wiki/images/2/23/Counter.diff" rel="nofollow">http://milkymist.org/wiki/images/2/23/Counter.diff</a>
+</pre>
+<p><br />
+Check module in/out defintion
+</p><p>Input is defined:
+</p>
+<pre>     input  count_input
+</pre>
+<p>Now adding the counter core to the system editing:
+</p>
+<pre>boards/avnet-sp3aevl/rtl/system.v
+</pre>
+<p>This requires a bit more of editing, check code here:
+</p>
+<pre><a href="images/2/23/Counter.diff" class="external free" title="http://milkymist.org/wiki/images/2/23/Counter.diff" rel="nofollow">http://milkymist.org/wiki/images/2/23/Counter.diff</a>
+</pre>
+<p><br />
+Take look close to:
+</p>
+<pre>* GPIO 
+* CSR Bus
+* WISHBONE to CSR bridge (For OR part check CSR bus topology)
+</pre>
+<p>The big part is from line 522, in wich:
+</p>
+<pre>* some parameters are filled with real values
+* core is linked to CSR
+* core input pin is linked to physical pin defined in the UCF file
+</pre>
+<p><br />
+Assign FPGA pins for external input editing file:
+</p>
+<pre> boards/avnet-sp3aevl/synthesis/common.ucf
+</pre>
+<p>With the new  content:
+</p>
+<pre>NET "count(0)" LOC = E13 | IOSTANDARD = LVCMOS33;
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor node count: 1/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sbsql1-mw_:pcache:idhash:93-0!1!0!!en!2 and timestamp 20140823124212 -->
+<div class="printfooter">
+Retrieved from "<a href="index.php%3Ftitle=How_to_make_a_simple_core_for_CSR_bus.html">http://milkymist.org/wiki/index.php?title=How_to_make_a_simple_core_for_CSR_bus</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="index.php%3Ftitle=How_to_make_a_simple_core_for_CSR_bus.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk"><a href="index.php%3Ftitle=Talk:How_to_make_a_simple_core_for_CSR_bus.html" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="http://milkymist.org/wiki/index.php?title=How_to_make_a_simple_core_for_CSR_bus&amp;action=edit" title="You can edit this page.&#10;Please use the preview button before saving [e]" accesskey="e">Edit</a></li>
+				 <li id="ca-history"><a href="http://milkymist.org/wiki/index.php?title=How_to_make_a_simple_core_for_CSR_bus&amp;action=history" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://milkymist.org/wiki/index.php?title=Special:UserLogin&amp;returnto=How_to_make_a_simple_core_for_CSR_bus" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://www.milkymist.org/wikilogo.png);" href="../wiki.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="../wiki.html">Main Page</a></li>
+				<li id="n-portal"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="http://milkymist.org/wiki/index.php?title=Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="http://milkymist.org/wiki/index.php?title=Help:Contents" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://milkymist.org/wiki/index.php?title=Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search Milkymist Wiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://milkymist.org/wiki/index.php?title=Special:WhatLinksHere/How_to_make_a_simple_core_for_CSR_bus" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://milkymist.org/wiki/index.php?title=Special:RecentChangesLinked/How_to_make_a_simple_core_for_CSR_bus" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="http://milkymist.org/wiki/index.php?title=Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://milkymist.org/wiki/index.php?title=How_to_make_a_simple_core_for_CSR_bus&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://milkymist.org/wiki/index.php?title=How_to_make_a_simple_core_for_CSR_bus&amp;oldid=1730" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="http://www.milkymist.org/wiki/index.php?title=Copyright"><img src="skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.3 and CC-BY-SA 3.0 Unported' /></a></div>
+			<ul id="f-list">
+					<li id="lastmod"> This page was last modified on 19 October 2011, at 20:37.</li>
+					<li id="viewcount">This page has been accessed 13,638 times.</li>
+					<li id="copyright">Content is available under <a href="http://www.milkymist.org/wiki/index.php?title=Copyright" class="external " title="http://www.milkymist.org/wiki/index.php?title=Copyright">GNU Free Documentation License 1.3 and CC-BY-SA 3.0 Unported</a>.</li>
+					<li id="privacy"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Privacy_policy" title="Milkymist Wiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:About" title="Milkymist Wiki:About">About Milkymist Wiki</a></li>
+					<li id="disclaimer"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:General_disclaimer" title="Milkymist Wiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.201 secs. --></body></html>

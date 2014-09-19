@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.14.0" />
+		<meta name="keywords" content="Flickernoise build instructions,RTEMS build instructions" />
+		<link rel="alternate" type="application/x-wiki" title="Edit" href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit" />
+		<link rel="edit" title="Edit" href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit" />
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.php" title="Milkymist Wiki (en)" />
+		<link title="Creative Commons" type="application/rdf+xml" href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=creativecommons" rel="meta" />
+		<link rel="copyright" href="http://www.milkymist.org/wiki/index.php?title=Copyright" />
+		<link rel="alternate" type="application/rss+xml" title="Milkymist Wiki RSS Feed" href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges&amp;feed=rss" />
+		<link rel="alternate" type="application/atom+xml" title="Milkymist Wiki Atom Feed" href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+		<title>Flickernoise build instructions - Milkymist Wiki</title>
+		<link rel="stylesheet" href="skins/common/shared.css%3F195.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="skins/common/commonPrint.css%3F195.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="skins/monobook/main.css%3F195.css" type="text/css" media="screen" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE50Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki/skins/monobook/IE55Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/wiki/skins/monobook/IE60Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/wiki/skins/monobook/IE70Fixes.css?195" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" media="print" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=18000&amp;action=raw&amp;maxage=18000" type="text/css" />
+		<link rel="stylesheet" href="http://milkymist.org/wiki/index.php?title=-&amp;action=raw&amp;maxage=18000&amp;gen=css" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/wiki/skins/common/IEFixes.js?195"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/wiki/skins";
+		var wgArticlePath = "/wiki/index.php?title=$1";
+		var wgScriptPath = "/wiki";
+		var wgScript = "/wiki/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://milkymist.org";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Flickernoise_build_instructions";
+		var wgTitle = "Flickernoise build instructions";
+		var wgAction = "view";
+		var wgArticleId = "110";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "1816";
+		var wgVersion = "1.14.0";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="skins/common/wikibits.js%3F195"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="skins/common/ajax.js%3F195"></script>
+		<script type="text/javascript" src="http://milkymist.org/wiki/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Flickernoise_build_instructions skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">Flickernoise build instructions</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Milkymist Wiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="index.php%3Ftitle=Flickernoise_build_instructions.html#column-one">navigation</a>, <a href="index.php%3Ftitle=Flickernoise_build_instructions.html#searchInput">search</a></div>			<!-- start content -->
+			<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="index.php%3Ftitle=File:Flickernoise.png.html" class="image" title="Flickernoise screenshot"><img alt="" src="images/thumb/d/d8/Flickernoise.png/200px-Flickernoise.png" width="200" height="150" border="0" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="index.php%3Ftitle=File:Flickernoise.png.html" class="internal" title="Enlarge"><img src="skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Flickernoise screenshot</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="index.php%3Ftitle=File:Screenshot-video-in.png.html" class="image" title="Flickernoise Video-in Performance"><img alt="" src="images/thumb/b/b0/Screenshot-video-in.png/200px-Screenshot-video-in.png" width="200" height="150" border="0" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="index.php%3Ftitle=File:Screenshot-video-in.png.html" class="internal" title="Enlarge"><img src="skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Flickernoise Video-in Performance</div></div></div>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#Build_products"><span class="tocnumber">1</span> <span class="toctext">Build products</span></a></li>
+<li class="toclevel-1"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#Automatic_build"><span class="tocnumber">2</span> <span class="toctext">Automatic build</span></a></li>
+<li class="toclevel-1"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#Manual_build_steps"><span class="tocnumber">3</span> <span class="toctext">Manual build steps</span></a>
+<ul>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#RTEMS_and_toolchain"><span class="tocnumber">3.1</span> <span class="toctext">RTEMS and toolchain</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#libpng"><span class="tocnumber">3.2</span> <span class="toctext">libpng</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#libjpeg"><span class="tocnumber">3.3</span> <span class="toctext">libjpeg</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#libcurl"><span class="tocnumber">3.4</span> <span class="toctext">libcurl</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#expat"><span class="tocnumber">3.5</span> <span class="toctext">expat</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#Softusb_firmware"><span class="tocnumber">3.6</span> <span class="toctext">Softusb firmware</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#libFPVM"><span class="tocnumber">3.7</span> <span class="toctext">libFPVM</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#MTK"><span class="tocnumber">3.8</span> <span class="toctext">MTK</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#liboscparse_.28lop.29"><span class="tocnumber">3.9</span> <span class="toctext">liboscparse (lop)</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#Yaffs"><span class="tocnumber">3.10</span> <span class="toctext">Yaffs</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#Flickernoise"><span class="tocnumber">3.11</span> <span class="toctext">Flickernoise</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#Extra_libraries_.28normally_not_needed.29"><span class="tocnumber">4</span> <span class="toctext">Extra libraries (normally not needed)</span></a>
+<ul>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#freetype2"><span class="tocnumber">4.1</span> <span class="toctext">freetype2</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#libgd"><span class="tocnumber">4.2</span> <span class="toctext">libgd</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#openjpeg"><span class="tocnumber">4.3</span> <span class="toctext">openjpeg</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#jbig2dec"><span class="tocnumber">4.4</span> <span class="toctext">jbig2dec</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#mupdf"><span class="tocnumber">4.5</span> <span class="toctext">mupdf</span></a></li>
+<li class="toclevel-2"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html#FFMPEG"><span class="tocnumber">4.6</span> <span class="toctext">FFMPEG</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Build_products" id="Build_products"></a><h1><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=1" title="Edit section: Build products">edit</a>]</span> <span class="mw-headline"> Build products </span></h1>
+<p>The Automatic or Manual build procedures create the Flickernoise VJ application for the Milkymist One.  The final Flickernoise executable is an ELF binary. From that, you can either:
+</p>
+<ul><li> try the ELF binary in the QEMU emulator with <code>qemu-system-lm32 -M milkymist -kernel flickernoise</code>
+</li><li> generate a raw binary file with <code>make flickernoise.ralf</code>, suitable for TFTP netbooting (recommended), booting from the memory card or downloading over the serial line with flterm. Using flterm is not recommended as this method is slow because of the large size of the binary.
+</li><li> generate a FBI image with <code>make flickernoise.fbi</code> that you can use with the auto-upgrade feature of Flickernoise (0.2+).
+</li></ul>
+<a name="Automatic_build" id="Automatic_build"></a><h1><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=2" title="Edit section: Automatic build">edit</a>]</span> <span class="mw-headline"> Automatic build </span></h1>
+<p><a href="http://en.qi-hardware.com/wiki/User:Xiangfu" class="external text" title="http://en.qi-hardware.com/wiki/User:Xiangfu" rel="nofollow">xiangfu</a> wrote some <a href="https://github.com/milkymist/scripts" class="external text" title="https://github.com/milkymist/scripts" rel="nofollow">Makefiles</a> to compile the lm32 toolchain and flickernoise. Please read the <a href="https://github.com/milkymist/scripts/blob/master/README.html" class="external text" title="https://github.com/milkymist/scripts/blob/master/README.html" rel="nofollow">README.html</a> for detailed directions and host specific requirements. Build steps are below:
+</p>
+<ul><li> Download the script files:
+</li></ul>
+<pre>   $ git clone git://github.com/milkymist/scripts.git
+</pre>
+<ul><li> Read and follow the directions in the <a href="https://github.com/milkymist/scripts/blob/master/README.html" class="external text" title="https://github.com/milkymist/scripts/blob/master/README.html" rel="nofollow">README.html</a> file:
+</li></ul>
+<pre>   $ cd scripts  
+   $ vi README
+</pre>
+<a name="Manual_build_steps" id="Manual_build_steps"></a><h1><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=3" title="Edit section: Manual build steps">edit</a>]</span> <span class="mw-headline"> Manual build steps </span></h1>
+<p>Note: The automatic build procedure is the preferred way of building the Flickernoise application.
+</p>
+<a name="RTEMS_and_toolchain" id="RTEMS_and_toolchain"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=4" title="Edit section: RTEMS and toolchain">edit</a>]</span> <span class="mw-headline"> RTEMS and toolchain </span></h2>
+<p>First you need to follow the <a href="index.php%3Ftitle=RTEMS_build_instructions.html" title="RTEMS build instructions">RTEMS build instructions</a>. We will assume you have installed both RTEMS and the toolchain in <code>/opt/rtems</code> (or /opt/rtems-VERSION). Not installing RTEMS and the toolchain in the same directory tends to cause problems w.r.t. finding include files.
+</p><p>We recommend using the GCC 4.5.1 based toolchain, which works reasonably well. You will however need to patch GCC a bit so the base C libraries can use all the features of our LM32 implementation:
+</p>
+<pre>diff -Naur gcc-4.5.1.orig/gcc/config/lm32/t-lm32 gcc-4.5.1/gcc/config/lm32/t-lm32
+--- gcc-4.5.1.orig/gcc/config/lm32/t-lm32	2010-03-30 12:26:24.000000000 +0200
++++ gcc-4.5.1/gcc/config/lm32/t-lm32	2010-11-28 12:42:30.047795004 +0100
+@@ -1,2 +1,2 @@
+ # for multilib
+-MULTILIB_OPTIONS = mmultiply-enabled mbarrel-shift-enabled
++MULTILIB_OPTIONS = mbarrel-shift-enabled mmultiply-enabled mdivide-enabled msign-extend-enabled
+</pre>
+<p>Once you have the toolchain and RTEMS installed:
+</p>
+<ul><li> make sure the toolchain binary directory (e.g. <code>/opt/rtems/bin</code>) is in your <code>PATH</code>, so that the <code>lm32-rtems4.11-*</code> family of commands is found. 
+</li></ul>
+<pre>export PATH=/opt/rtems-4.11/bin:$PATH 
+</pre>
+<ul><li> set the <code>RTEMS_MAKEFILE_PATH</code> environment variable, e.g. to <code>/opt/rtems-4.11/lm32-rtems4.11/milkymist</code>
+</li></ul>
+<pre>export RTEMS_MAKEFILE_PATH=/opt/rtems-4.11/lm32-rtems4.11/milkymist
+</pre>
+<a name="libpng" id="libpng"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=5" title="Edit section: libpng">edit</a>]</span> <span class="mw-headline"> libpng </span></h2>
+<p>We use <a href="http://www.libpng.org/pub/png/libpng.html" class="external text" title="http://www.libpng.org/pub/png/libpng.html" rel="nofollow">libpng</a> 1.5.6. Sometimes, GNU/Autocrap-infected software packages happen to work almost correctly, and libpng is one of those rare cases.
+</p>
+<pre>CC=lm32-rtems4.11-gcc CFLAGS="-O9 -Wall -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -I $RTEMS_MAKEFILE_PATH/lib/include -B $RTEMS_MAKEFILE_PATH/lib -specs bsp_specs -qrtems" CPPFLAGS="-DPNG_NO_FLOATING_ARITHMETIC -DPNG_NO_FLOATING_POINT" ./configure --disable-shared --prefix=$RTEMS_MAKEFILE_PATH --host=lm32-rtems4.11
+make
+make install
+</pre>
+<p>Again, move the include files:
+</p>
+<pre>mv /opt/rtems-4.11/lm32-rtems4.11/milkymist/include/* /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib/include
+</pre>
+<a name="libjpeg" id="libjpeg"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=6" title="Edit section: libjpeg">edit</a>]</span> <span class="mw-headline"> libjpeg </span></h2>
+<p>This is known to work with jpegsrc v8c from <a href="http://www.ijg.org/" class="external text" title="http://www.ijg.org/" rel="nofollow">IJG</a>.
+</p>
+<pre>wget <a href="http://www.ijg.org/files/jpegsrc.v8c.tar.gz" class="external free" title="http://www.ijg.org/files/jpegsrc.v8c.tar.gz" rel="nofollow">http://www.ijg.org/files/jpegsrc.v8c.tar.gz</a>
+</pre>
+<pre>CFLAGS="-O9 -Wall -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -I $RTEMS_MAKEFILE_PATH/lib/include -B $RTEMS_MAKEFILE_PATH/lib -specs bsp_specs -qrtems" ./configure --host=lm32-rtems4.11 --disable-shared --prefix=$RTEMS_MAKEFILE_PATH
+make
+make install
+mv /opt/rtems-4.11/lm32-rtems4.11/milkymist/include/* /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib/include
+</pre>
+<a name="libcurl" id="libcurl"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=7" title="Edit section: libcurl">edit</a>]</span> <span class="mw-headline"> libcurl </span></h2>
+<p>Tested with curl 7.22.0. Configure with the usual Autocrap command line (as above). Special parameters are: <code>--host=lm32-rtems4.11 --disable-shared --without-librtmp --disable-ftp --disable-ldap --disable-ldaps --disable-rtsp --disable-dict --disable-telnet --disable-tftp --disable-pop3 --disable-imap --disable-smtp --disable-gopher --disable-manual --prefix=$RTEMS_MAKEFILE_PATH</code>
+</p><p>Then you need to hack the generated files:
+</p>
+<ul><li> at the end of lib/setup.h add <code>#define HAVE_SOCKET 1</code>
+</li></ul>
+<a name="expat" id="expat"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=8" title="Edit section: expat">edit</a>]</span> <span class="mw-headline"> expat </span></h2>
+<p>Works with expat 2.0.1. Edit <code>conftools/config.sub</code> and replace <code>ppc</code> with <code>lm32</code>, then proceed like with Freetype.
+</p>
+<a name="Softusb_firmware" id="Softusb_firmware"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=9" title="Edit section: Softusb firmware">edit</a>]</span> <span class="mw-headline"> Softusb firmware </span></h2>
+<p>You will need gcc-avr.
+</p><p>Make sure the <code>RTEMS_MAKEFILE_PATH</code> environment variable is set (see above). 
+</p><p>Run these commands from the top directory of the SoC distribution:
+</p>
+<pre> $ cd softusb-input
+ $ make
+ # make install
+</pre>
+<a name="libFPVM" id="libFPVM"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=10" title="Edit section: libFPVM">edit</a>]</span> <span class="mw-headline"> libFPVM </span></h2>
+<p>Flickernoise uses the FPVM compilation library to generate microcode for the <a href="http://www.milkymist.org/mmsoc.html" class="external text" title="http://www.milkymist.org/mmsoc.html" rel="nofollow">PFPU</a>. It is part of the <a href="http://www.github.com/lekernel/milkymist" class="external text" title="http://www.github.com/lekernel/milkymist" rel="nofollow">SoC distribution</a>.
+</p><p>You will need <a href="http://www.hwaci.com/sw/lemon/" class="external text" title="http://www.hwaci.com/sw/lemon/" rel="nofollow">Lemon</a> and <a href="http://re2c.org/" class="external text" title="http://re2c.org/" rel="nofollow">RE2C</a> to compile libFPVM.
+</p><p>Make sure the <code>RTEMS_MAKEFILE_PATH</code> environment variable is set (see above).
+</p><p>dont forget PATH too, ie PATH=/opt/rtems-4.11/bin:$PATH
+</p><p>Run these commands from the top directory of the SoC distribution:
+</p>
+<pre> $ cd software/libfpvm
+ $ make
+ # make install
+</pre>
+<a name="MTK" id="MTK"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=11" title="Edit section: MTK">edit</a>]</span> <span class="mw-headline"> MTK </span></h2>
+<p><a href="http://github.com/lekernel/mtk" class="external text" title="http://github.com/lekernel/mtk" rel="nofollow">MTK</a> (Milkymist Toolkit) is a lightweight and portable GUI toolkit, based on <a href="http://www.genode-labs.com" class="external text" title="http://www.genode-labs.com" rel="nofollow">Genode FX</a>.
+</p><p>After you have cloned the git repository, compilation and installation are very simple:
+</p>
+<pre>make milkymist
+make install-milkymist
+</pre>
+<p>(Again, these commands requires the RTEMS_MAKEFILE_PATH environment variable)
+</p>
+<a name="liboscparse_.28lop.29" id="liboscparse_.28lop.29"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=12" title="Edit section: liboscparse (lop)">edit</a>]</span> <span class="mw-headline"> liboscparse (lop) </span></h2>
+<p><a href="https://github.com/lekernel/liboscparse" class="external text" title="https://github.com/lekernel/liboscparse" rel="nofollow">Liboscparse</a> is used to implement <a href="http://www.opensoundcontrol.org" class="external text" title="http://www.opensoundcontrol.org" rel="nofollow">Opensoundcontrol (OSC)</a>. It is based on <a href="http://liblo.sourceforge.net/" class="external text" title="http://liblo.sourceforge.net/" rel="nofollow">liblo</a>, but it does not use the <a href="http://www.varnish-cache.org/docs/2.1/phk/autocrap.html" class="external text" title="http://www.varnish-cache.org/docs/2.1/phk/autocrap.html" rel="nofollow">GNU/Autocrap</a> "build system" and does not contain any network-dependent code (the original liblo networking code does not play nice with RTEMS).
+</p><p>Run the following commands (making sure the environment variables listed above are set):
+</p>
+<pre> make
+ make install
+</pre>
+<a name="Yaffs" id="Yaffs"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=13" title="Edit section: Yaffs">edit</a>]</span> <span class="mw-headline"> Yaffs </span></h2>
+<p><a href="http://github.com/milkymist/rtems-yaffs2" class="external text" title="http://github.com/milkymist/rtems-yaffs2" rel="nofollow">rtems-yaffs2</a> YAFFS (Yet Another Flash File System) is now in its second generation and provides a fast robust file system for NAND and NOR Flash.
+</p><p>After you have cloned the git repository, compilation is very simple:
+</p>
+<pre>make -f Makefile.rtems
+make -f Makefile.rtems install
+</pre>
+<p>(Again, this command requires the RTEMS_MAKEFILE_PATH environment variable)
+</p>
+<a name="Flickernoise" id="Flickernoise"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=14" title="Edit section: Flickernoise">edit</a>]</span> <span class="mw-headline"> <a href="http://www.milkymist.org/flickernoise.html" class="external text" title="http://www.milkymist.org/flickernoise.html" rel="nofollow">Flickernoise</a> </span></h2>
+<p>Compile it with:
+</p>
+<pre> cd src
+ make
+</pre>
+<p>Do not forget to set the <code>RTEMS_MAKEFILE_PATH</code> environment variable to the right directory where your RTEMS is installed.
+</p><p>This produces an ELF binary. From that, you can either:
+</p>
+<ul><li> try the ELF binary in the QEMU emulator with <code>qemu-system-lm32 -M milkymist -kernel flickernoise</code>
+</li><li> generate a raw binary file with <code>make flickernoise.ralf</code>, suitable for TFTP netbooting (recommended), booting from the memory card or downloading over the serial line with flterm. Using flterm is not recommended as this method is slow because of the large size of the binary.
+</li><li> generate a FBI image with <code>make flickernoise.fbi</code> that you can use with the auto-upgrade feature of Flickernoise (0.2+).
+</li><li> generate a MCS flash image with <code>make flickernoise.mcs</code> that you can download into the board's flash memory so that Flickernoise automatically starts at every boot.
+</li></ul>
+<a name="Extra_libraries_.28normally_not_needed.29" id="Extra_libraries_.28normally_not_needed.29"></a><h1><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=15" title="Edit section: Extra libraries (normally not needed)">edit</a>]</span> <span class="mw-headline"> Extra libraries (normally not needed) </span></h1>
+<a name="freetype2" id="freetype2"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=16" title="Edit section: freetype2">edit</a>]</span> <span class="mw-headline"> freetype2 </span></h2>
+<p>This is known to work with <a href="http://www.freetype.org" class="external text" title="http://www.freetype.org" rel="nofollow">freetype</a> 2.4.4.
+</p>
+<pre>wget <a href="http://ufpr.dl.sourceforge.net/project/freetype/freetype2/2.4.4/freetype-2.4.4.tar.gz" class="external free" title="http://ufpr.dl.sourceforge.net/project/freetype/freetype2/2.4.4/freetype-2.4.4.tar.gz" rel="nofollow">http://ufpr.dl.sourceforge.net/project/freetype/freetype2/2.4.4/freetype-2.4.4.tar.gz</a>
+</pre>
+<pre>CFLAGS="-O9 -Wall -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -I $RTEMS_MAKEFILE_PATH/lib/include -B $RTEMS_MAKEFILE_PATH/lib -specs bsp_specs -qrtems" ./configure --host=lm32-rtems4.11 --disable-shared --prefix=$RTEMS_MAKEFILE_PATH
+make
+make install
+mv /opt/rtems-4.11/lm32-rtems4.11/milkymist/include/* /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib/include
+</pre>
+<a name="libgd" id="libgd"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=17" title="Edit section: libgd">edit</a>]</span> <span class="mw-headline"> libgd </span></h2>
+<p>This works with <a href="https://bitbucket.org/pierrejoye/gd-libgd/src/5551f61978e3" class="external text" title="https://bitbucket.org/pierrejoye/gd-libgd/src/5551f61978e3" rel="nofollow">GD 2.0.33</a>.
+</p><p>RTEMS lacks the required include file bits/wordsize.h so we create one:
+</p>
+<pre>mkdir /opt/rtems-4.11/lm32-rtems4.11/include/bits
+cat &lt;&lt; EOF &gt; /opt/rtems-4.11/lm32-rtems4.11/include/bits/wordsize.h
+#define __WORDSIZE 32
+EOF
+</pre>
+<p>Edit the beginning of the Makefile to set:
+</p>
+<pre>COMPILER=lm32-rtems4.11-gcc
+AR=lm32-rtems4.11-ar
+CFLAGS=-O9 -Wall -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -fsingle-precision-constant -I$(RTEMS_MAKEFILE_PATH)/lib/include -I/opt/rtems-4.11/lm32-rtems4.11/milkymist/lib/include/freetype2 -g -DHAVE_LIBPNG -DHAVE_LIBJPEG -DHAVE_LIBFREETYPE -DHAVE_FT2BUILD_H
+LIBS=-lgd -lpng -lz -ljpeg -lfreetype -lm
+INCLUDEDIRS=-I.
+LIBDIRS=
+</pre>
+<p>Also, they seem to have forgotten gd_security.c to the list of objects, so add it to LIBOBJS.
+</p><p>Compile with:
+</p>
+<pre>make libgd.a
+</pre>
+<p>Then copy libgd.a to /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib and gd.h, gdcache.h, gd_io.h, gdfontg.h, gdfontl.h, gdfontmb.h, gdfonts.h and gdfontt.h to /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib/include.
+</p>
+<a name="openjpeg" id="openjpeg"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=18" title="Edit section: openjpeg">edit</a>]</span> <span class="mw-headline"> openjpeg </span></h2>
+<p>We use <a href="http://www.openjpeg.org" class="external text" title="http://www.openjpeg.org" rel="nofollow">openjpeg</a> version 1.2.
+</p>
+<pre>wget <a href="http://www.openjpeg.org/openjpeg_v1_2.tar.gz" class="external free" title="http://www.openjpeg.org/openjpeg_v1_2.tar.gz" rel="nofollow">http://www.openjpeg.org/openjpeg_v1_2.tar.gz</a>
+</pre>
+<p>Uncompress the archive, and edit the Makefile:
+</p>
+<ol><li> set CC = lm32-rtems4.11-gcc -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled
+</li><li> set AR = lm32-rtems4.11-ar
+</li><li> for the target OpenJPEG, comment out $(SHAREDLIB)
+</li></ol>
+<p>RTEMS lacks memory.h so we create a fake one:
+</p>
+<pre>echo "#include &lt;string.h&gt;" &gt; libopenjpeg/memory.h
+</pre>
+<p>Type make to compile. Then ranlib and copy the library and its include file to the RTEMS directory:
+</p>
+<pre>lm32-rtems4.11-ranlib libopenjpeg.a
+cp libopenjpeg.a /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib
+cp libopenjpeg/openjpeg.h /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib/include
+</pre>
+<a name="jbig2dec" id="jbig2dec"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=19" title="Edit section: jbig2dec">edit</a>]</span> <span class="mw-headline"> jbig2dec </span></h2>
+<p>We use <a href="http://jbig2dec.sourceforge.net" class="external text" title="http://jbig2dec.sourceforge.net" rel="nofollow">jbig2dec</a> 0.11.
+</p>
+<pre>wget <a href="http://ghostscript.com/~giles/jbig2/jbig2dec/jbig2dec-0.11.tar.gz" class="external free" title="http://ghostscript.com/~giles/jbig2/jbig2dec/jbig2dec-0.11.tar.gz" rel="nofollow">http://ghostscript.com/~giles/jbig2/jbig2dec/jbig2dec-0.11.tar.gz</a>
+</pre>
+<p>You will first need to re-generate config.sub using a recent version of automake. Indeed, the steaming pile of shit that constitutes GNU/Autocrap has a hardcoded list of CPUs it would support, and lm32 isn't included with many software packages.
+</p>
+<pre>rm config.sub
+automake --add-missing
+</pre>
+<p>Ignore any warning about version mismatches that automake may puke out - trying to fix it actually makes the problem worse.
+</p><p>Run the configure script, compile and install:
+</p>
+<pre>CFLAGS="-O9 -Wall -mbarrel-shift-enabled \ 
+-mmultiply-enabled -mdivide-enabled -msign-extend-enabled \
+-I $RTEMS_MAKEFILE_PATH/lib/include \
+-B $RTEMS_MAKEFILE_PATH/lib -specs bsp_specs -qrtems" \
+./configure --host=lm32-rtems4.11 --disable-shared --prefix=$RTEMS_MAKEFILE_PATH
+make
+make install
+</pre>
+<p>Again, move the include file:
+</p>
+<pre>mv /opt/rtems-4.11/lm32-rtems4.11/milkymist/include/* /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib/include
+</pre>
+<a name="mupdf" id="mupdf"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=20" title="Edit section: mupdf">edit</a>]</span> <span class="mw-headline"> mupdf </span></h2>
+<p>These instructions are known to work with <a href="http://mupdf.com/" class="external text" title="http://mupdf.com/" rel="nofollow">mupdf</a> 0.7.
+</p>
+<pre>wget <a href="http://mupdf.com/download/mupdf-0.7.tar.gz" class="external free" title="http://mupdf.com/download/mupdf-0.7.tar.gz" rel="nofollow">http://mupdf.com/download/mupdf-0.7.tar.gz</a>
+</pre>
+<p>First, compile the code generation tools natively:
+</p>
+<pre>gcc -o build/release/cmapdump ./mupdf/cmapdump.c  -lfreetype -ljpeg -lz -lm -Ifitz
+gcc -o build/release/fontdump ./mupdf/fontdump.c  -lfreetype -ljpeg -lz -lm -Ifitz
+</pre>
+<p>Then, edit <b>Makerules</b> and:
+</p>
+<ol><li> comment out the two lines at the beginning setting the OS variable
+</li><li> set <code>CC&nbsp;:= lm32-rtems4.11-gcc</code>
+</li><li> set <code>CFLAGS&nbsp;:= -Ifitz -Imupdf -Wall -O9 -Wall -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -I $(RTEMS_MAKEFILE_PATH)/lib/include -I $(RTEMS_MAKEFILE_PATH)/lib/include/freetype2 -B $(RTEMS_MAKEFILE_PATH)/lib -specs bsp_specs -qrtems</code>
+</li></ol>
+<p>Compile the MuPDF library with:
+</p>
+<pre>make build=release build/release/libmupdf.a
+</pre>
+<p>Finally, copy the includes and binaries to the RTEMS folder:
+</p>
+<pre>cp fitz/fitz.h /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib/include
+cp mupdf/mupdf.h /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib/include
+cp build/release/libmupdf.a /opt/rtems-4.11/lm32-rtems4.11/milkymist/lib
+</pre>
+<a name="FFMPEG" id="FFMPEG"></a><h2><span class="editsection">[<a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit&amp;section=21" title="Edit section: FFMPEG">edit</a>]</span> <span class="mw-headline"> FFMPEG </span></h2>
+<pre>#undef __STRICT_ANSI__
+#include &lt;stdlib.h&gt;
+</pre>
+<pre>CFLAGS="-O9 -Wall -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -I $RTEMS_MAKEFILE_PATH/lib/include -B $RTEMS_MAKEFILE_PATH/lib -specs bsp_specs -qrtems" ./configure --cross-prefix=lm32-rtems4.11- --enable-cross-compile --target-os=none --arch=lm32 --disable-shared --disable-network --prefix=$RTEMS_MAKEFILE_PATH
+</pre>
+<!-- 
+NewPP limit report
+Preprocessor node count: 45/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key sbsql1-mw_:pcache:idhash:110-0!1!0!!en!2 and timestamp 20140823131812 -->
+<div class="printfooter">
+Retrieved from "<a href="index.php%3Ftitle=Flickernoise_build_instructions.html">http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions</a>"</div>
+						<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="index.php%3Ftitle=Flickernoise_build_instructions.html" title="View the content page [c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="http://milkymist.org/wiki/index.php?title=Talk:Flickernoise_build_instructions&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=edit" title="You can edit this page.&#10;Please use the preview button before saving [e]" accesskey="e">Edit</a></li>
+				 <li id="ca-history"><a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;action=history" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://milkymist.org/wiki/index.php?title=Special:UserLogin&amp;returnto=Flickernoise_build_instructions" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://www.milkymist.org/wikilogo.png);" href="../wiki.html" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="../wiki.html">Main Page</a></li>
+				<li id="n-portal"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="http://milkymist.org/wiki/index.php?title=Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="http://milkymist.org/wiki/index.php?title=Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="http://milkymist.org/wiki/index.php?title=Help:Contents" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://milkymist.org/wiki/index.php?title=Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Search Milkymist Wiki [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://milkymist.org/wiki/index.php?title=Special:WhatLinksHere/Flickernoise_build_instructions" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://milkymist.org/wiki/index.php?title=Special:RecentChangesLinked/Flickernoise_build_instructions" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="http://milkymist.org/wiki/index.php?title=Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://milkymist.org/wiki/index.php?title=Flickernoise_build_instructions&amp;oldid=1816" title="Permanent link to this version of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="http://www.milkymist.org/wiki/index.php?title=Copyright"><img src="skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.3 and CC-BY-SA 3.0 Unported' /></a></div>
+			<ul id="f-list">
+					<li id="lastmod"> This page was last modified on 26 February 2012, at 15:03.</li>
+					<li id="viewcount">This page has been accessed 41,047 times.</li>
+					<li id="copyright">Content is available under <a href="http://www.milkymist.org/wiki/index.php?title=Copyright" class="external " title="http://www.milkymist.org/wiki/index.php?title=Copyright">GNU Free Documentation License 1.3 and CC-BY-SA 3.0 Unported</a>.</li>
+					<li id="privacy"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:Privacy_policy" title="Milkymist Wiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:About" title="Milkymist Wiki:About">About Milkymist Wiki</a></li>
+					<li id="disclaimer"><a href="http://milkymist.org/wiki/index.php?title=Milkymist_Wiki:General_disclaimer" title="Milkymist Wiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.175 secs. --></body></html>
