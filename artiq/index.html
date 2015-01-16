@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>M-Labs &raquo; indie high-tech development</title>
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+
+</head>
+
+<body>
+
+<a href="https://github.com/m-labs/artiq"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1;" src="forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+
+<div id="header">
+    <div id="headerinside">
+        <div id="logo"><a href="../index.html"><img src="../logo.png"></a></div>
+        <ul id="menu">
+            <li><a class="selected" href="index.html">artiq</a></li>
+            <li><a href="../gateware.html">gateware</a></li>
+            <li><a href="../m1.html">m1</a></li>
+            <li><a href="../mixxeo.html">mixxeo</a></li>
+            <li><a href="../about.html">about</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="container">
+    <div class="full">
+        <div style="float: right;"><img src="ion_trap.png"></div>
+        <p>ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) is a next-generation control system for quantum information experiments. It is being developed in partnership with the <a href="http://www.nist.gov/pml/div688/grp10/index.cfm">Ion Storage Group</a> at NIST, and its applicability reaches beyond ion trapping.</p>
+
+        <p>Modern research on quantum information systems poses particular challenges to the control system:
+            <ul>
+                <li>dozens of signals need to be received and generated with extremely precise timing, in particular to ensure phase coherence</li>
+                <li>quantum error correction schemes require very low reaction latency in response to a measurement</li>
+                <li>real-world implementations of quantum gates, and a fortiori quantum algorithms, involve structurally complex protocols</li>
+                <li>ever-improving experimental techniques drive the need for a flexible and programmable system</li>
+                <li>the diversity of equipment, device drivers and data analysis software involved in a single experiment results in a distributed and multi-platform environment</li>
+            </ul>
+        </p>
+
+        <p><center><img src="lab_hardware.png"></center></p>
+
+        <h2>Enter ARTIQ</h2>
+
+        <p>ARTIQ features a high-level programming language, based on Python, that helps describing complex experiments. It is compiled and executed on dedicated FPGA hardware with nanosecond timing resolution and sub-microsecond latency.</p>
+
+        <p>The time-critical code (a <i>kernel</i>) running on the FPGA (the <i>core device</i>) is easily interfaced with Python code on the computer using a remote procedure call (RPC) mechanism.</p>
+
+        <p>The FPGA design is highly portable so that it can adapt to different laboratory setups and resist hardware obsolescence.</p>
+
+        <p>ARTIQ drivers for non-realtime devices can be run on remote machines with different operating systems.</p>
+
+        <p>The project also includes a graphical user interface, an experiment scheduling system, and databases for experiments, devices, parameters and results.</p>
+
+        <p>Technologies employed include <a href="http://python.org">Python</a>, <a href="../gateware.html">Migen</a>, <a href="../gateware.html">MiSoC</a>/<a href="https://github.com/openrisc/mor1kx">mor1kx</a>, <a href="http://llvm.org">LLVM</a> and <a href="https://github.com/numba/llvmlite">llvmlite</a>.</p>
+
+        <p><center><img src="comp.png"></center></p>
+
+
+<h2>A taste of the programming language</h2>
+<h4>Timing language basics</h4>
+<pre>
+trigger.sync()               # wait for trigger input
+start = now()                # capture trigger time
+for i in range(3):
+    delay(5*us)
+    dds.pulse(900*MHz, 7*us) # first pulse 5 µs after trigger
+at(start + 1*ms)             # re-reference time-line
+dds.pulse(200*MHz, 11*us)    # exactly 1 ms after trigger
+</pre>
+<p>
+<ul>
+<li>now(), at(), delay() describe time-line of an experiment</li>
+<li>Exact time is kept in an internal variable</li>
+<li>That variable only loosely tracks the execution time of CPU instructions</li>
+<li>The value of that variable is exchanged with the real-time input/output (RTIO) core that does precise timing</li>
+</ul>
+</p>
+<h4>Parallelism</h4>
+<pre>
+with sequential:
+    with parallel:
+        a.pulse(100*MHz, 10*us)
+        b.pulse(200*MHz, 20*us)
+    with parallel:
+        c.pulse(300*MHz, 30*us)
+        d.pulse(400*MHz, 20*us)
+</pre>
+<ul>
+<li>Experiments are inherently parallel: simultaneous laser pulses, parallel cooling of ions in different trap zones</li>
+<li>parallel and sequential contexts with arbitrary nesting</li>
+<li>a and b pulses both start at the same time</li>
+<li>c and d pulses both start when a and b are both done (after 20 µs)</li>
+<li>Currently implemented by inlining, loop-unrolling, and interleaving (i.e. static scheduling at compile time)</li>
+</ul>
+<h4>Organize experiment components and reuse code</h4>
+<pre>
+class Experiment(AutoDB):
+    def build(self):
+        self.ion1 = Ion(...)
+        self.ion2 = Ion(...)
+        self.transporter = Transporter(...)
+
+    @kernel
+    def run(self):
+        with parallel:
+            self.ion1.cool(duration=10*us)
+            self.ion2.cool(frequency=...)
+        self.transporter.move(speed=...)
+        delay(100*ms)
+        self.ion1.detect(duration=...)
+</pre>
+
+        <h2>Is ARTIQ right for my lab?</h2>
+        <div style="float: right;"><img src="logo_small.png"></div>
+        <p>If you don't mind <a href="manual/installing.html">getting your hands dirty</a> (i.e. compiling software and FPGA bitstreams), it's easy to find out by yourself! The core device is based on the resource-efficient MiSoC system-on-chip design, and you can use a limited version of ARTIQ with the small and low-cost <a href="http://papilio.cc/">Papilio Pro</a> board. Feel free to send feedback to the mailing list!</p>
+
+        <p>Note that ARTIQ is still in development and we expect to deploy a fully functional release (that will include a GUI) at NIST by June 2015. We are also working on making the installation procedure easier.</p>
+
+        <h2>Resources</h2>
+        <p>
+        <ul>
+            <li><a href="https://github.com/m-labs/artiq">Source code repository</a></li>
+            <li><a href="https://ssl.serverraum.org/lists/listinfo/artiq">Public mailing list</a></li>
+            <li><a href="slides_taaccs.pdf">Slide-show</a></li>
+            <li><a href="manual/">Manual</a> (work in progress)</a>
+            <li>Commercial support available - contact sb at m-labs.hk</li>
+        </ul></p>
+    </div>
+</div>
+
+
+<div id="footer">
+    <div id="footerinside">
+        <table width="100%"><tr>
+        <td><p><img src="../logo_small.png"><br /><br />fka the Milkymist project<br />est. 2007</p></td>
+        <td><p><b>M-Labs Limited</b><br />5/F., Yat Chau Building<br />262 Des Voeux Road Central<br />Hong Kong<br />+852-59362721</p></td>
+        <td><a href="https://webchat.freenode.net/?channels=m-labs">Freenode #m-labs</a><br /><a href="https://ssl.serverraum.org/lists/listinfo/devel/">Developer mailing list</a><br />
+        GitHub: <a href="https://github.com/m-labs">m-labs</a><br />
+        Twitter: @<a href="http://twitter.com/M_Labs_Ltd">M_Labs_Ltd</a><br />
+        </td>
+        </tr></table>
+    </div>
+</div>
+
+</body>
+</html>

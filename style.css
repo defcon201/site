@@ -44,6 +44,14 @@ h3 {
 	text-align: center;
 }
 
+h4 {
+	font-size: 16px;
+	margin: 10px 0 3px;
+	color: #fff;
+	clear: both;
+	border-bottom: 1px solid #27272a;
+}
+
 p {
 	padding: 4px 0;
 	line-height: 1.5;
@@ -202,6 +210,7 @@ div.full {
 	font-size: 9px;
 	color: #595965;
 	line-height: 1.5em;
+	clear: both;
 	background: rgb(23,24,20); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(23,24,20,1) 0%, rgba(29,29,32,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(23,24,20,1)), color-stop(100%,rgba(29,29,32,1))); /* Chrome,Safari4+ */
