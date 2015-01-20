@@ -62,9 +62,14 @@
 
         <p><center><img src="comp.png"></center></p>
 
+        <h2>Open source</h2>
 
-<h2>A taste of the programming language</h2>
-<h4>Timing language basics</h4>
+        <p>Another goal of ARTIQ is to streamline and simplify the design flow of quantum physics instrumentation by promoting design reuse through the development of platform-independent, open-source hardware and software.</p>
+
+        <p>Our aim is to provide a control system suitable for the challenges of modern quantum information research, which is based on modular, parameterized and open components that allow physicists to rapidly design and deploy new experiments.</p>
+
+        <h2>A taste of the programming language</h2>
+        <h4>Timing language basics</h4>
 <pre>
 trigger.sync()               # wait for trigger input
 start = now()                # capture trigger time
@@ -74,15 +79,15 @@ for i in range(3):
 at(start + 1*ms)             # re-reference time-line
 dds.pulse(200*MHz, 11*us)    # exactly 1 ms after trigger
 </pre>
-<p>
-<ul>
-<li>now(), at(), delay() describe time-line of an experiment</li>
-<li>Exact time is kept in an internal variable</li>
-<li>That variable only loosely tracks the execution time of CPU instructions</li>
-<li>The value of that variable is exchanged with the real-time input/output (RTIO) core that does precise timing</li>
-</ul>
-</p>
-<h4>Parallelism</h4>
+        <p>
+        <ul>
+        <li>now(), at(), delay() describe time-line of an experiment</li>
+        <li>Exact time is kept in an internal variable</li>
+        <li>That variable only loosely tracks the execution time of CPU instructions</li>
+        <li>The value of that variable is exchanged with the real-time input/output (RTIO) core that does precise timing</li>
+        </ul>
+        </p>
+        <h4>Parallelism</h4>
 <pre>
 with sequential:
     with parallel:
@@ -92,14 +97,14 @@ with sequential:
         c.pulse(300*MHz, 30*us)
         d.pulse(400*MHz, 20*us)
 </pre>
-<ul>
-<li>Experiments are inherently parallel: simultaneous laser pulses, parallel cooling of ions in different trap zones</li>
-<li>parallel and sequential contexts with arbitrary nesting</li>
-<li>a and b pulses both start at the same time</li>
-<li>c and d pulses both start when a and b are both done (after 20 µs)</li>
-<li>Currently implemented by inlining, loop-unrolling, and interleaving (i.e. static scheduling at compile time)</li>
-</ul>
-<h4>Organize experiment components and reuse code</h4>
+        <ul>
+        <li>Experiments are inherently parallel: simultaneous laser pulses, parallel cooling of ions in different trap zones</li>
+        <li>parallel and sequential contexts with arbitrary nesting</li>
+        <li>a and b pulses both start at the same time</li>
+        <li>c and d pulses both start when a and b are both done (after 20 µs)</li>
+        <li>Currently implemented by inlining, loop-unrolling, and interleaving (i.e. static scheduling at compile time)</li>
+        </ul>
+        <h4>Organize experiment components and reuse code</h4>
 <pre>
 class Experiment(AutoDB):
     def build(self):
