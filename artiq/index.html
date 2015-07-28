@@ -48,6 +48,8 @@
 
         <h2>Enter ARTIQ</h2>
 
+        <div style="float: right;"><a href="gui_screenshot.png"><img src="gui_screenshot_small.jpg"></a></div>
+
         <p>ARTIQ features a high-level programming language, based on Python, that helps describing complex experiments. It is compiled and executed on dedicated FPGA hardware with nanosecond timing resolution and sub-microsecond latency.</p>
 
         <p>The time-critical code (a <i>kernel</i>) running on the FPGA (the <i>core device</i>) is easily interfaced with Python code on the computer using a remote procedure call (RPC) mechanism.</p>
@@ -72,11 +74,12 @@
         <h4>Timing language basics</h4>
 <pre>
 trigger.sync()               # wait for trigger input
-start = now()                # capture trigger time
+start = now_mu()             # capture trigger time
 for i in range(3):
     delay(5*us)
     dds.pulse(900*MHz, 7*us) # first pulse 5 µs after trigger
-at(start + 1*ms)             # re-reference time-line
+at_mu(start) # re-reference time-line
+delay(1*ms)
 dds.pulse(200*MHz, 11*us)    # exactly 1 ms after trigger
 </pre>
         <p>
@@ -106,7 +109,7 @@ with sequential:
         </ul>
         <h4>Organize experiment components and reuse code</h4>
 <pre>
-class Experiment(AutoDB):
+class Experiment(EnvExperiment):
     def build(self):
         self.ion1 = Ion(...)
         self.ion2 = Ion(...)
@@ -126,9 +129,20 @@ class Experiment(AutoDB):
         <div style="float: right;"><img src="logo_small.png"></div>
         <p>It's easy to find out by yourself! The core device is based on the resource-efficient MiSoC system-on-chip design, and you can use a limited version of ARTIQ with the small and low-cost <a href="http://pipistrello.saanlima.com/">Pipistrello</a> board. Feel free to send feedback to the mailing list!</p>
 	<ul>
-		<li><a href="manual/installing.html#installing-from-source">Install from sources</a> (be prepared to compile software and FPGA bitstreams)</li>
+		<li><a href="manual/installing.html">Install from sources</a> (be prepared to compile software and FPGA bitstreams)</li>
 	or
-		<li><a href="manual/installing.html">Install from pre-compiled binaries</a> (Linux only)</li>
+		<li>Install from pre-compiled binaries</li>
+	<p>First you need to flash your Pipistrello board with pre-compiled binaries</p>
+	<ul>
+		<li>Download the binaries<pre>$ wget http://m-labs.hk/artiq/binaries/binary_package.tar.gz</pre></li>
+		<li>Extract them<pre>$ tar xzf binary_package.tar.gz</pre></li>
+		<li>Flash your Pipistrello board<pre>$ cd binary_package && ./flash.sh -t pipistrello</pre></li>
+	</ul>
+        <p>Installing host-side ARTIQ software on your Windows or Linux computer is quick and easy since it can be installed via <a href="http://conda.pydata.org/">Conda packages</a> as part of the <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> scientific computing Python distribution:</p>
+        <ul>
+		<li>Install <a href="http://continuum.io/downloads">Anaconda3</a> (Python 3.4)</li>
+		<li>Add our package delivery channel: <pre>$ conda config --add channels fallen</pre></li>
+		<li>Install ARTIQ: <pre>$ conda install artiq</pre></li>
 	</ul>
 	<p>Then you can follow the <a href="manual/">manual</a> to run basic ARTIQ examples:</p>
 	<ul>
@@ -136,8 +150,6 @@ class Experiment(AutoDB):
 		<li><a href="manual/getting_started.html#real-time-i-o">Real-time I/O example</a></li>
 		<li><a href="manual/getting_started.html#parallel-and-sequential-blocks">Precisely timed parallel and sequential pulses</a></li>
 	</ul></ul>
-
-        <p>Note that ARTIQ is still in development and we expect to deploy a fully functional release (that will include a GUI) at NIST by June 2015.</p>
 
         <h2>Resources</h2>
         <p>
