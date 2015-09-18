@@ -126,30 +126,7 @@ class Experiment(EnvExperiment):
 </pre>
 
         <h2>Is ARTIQ right for my lab?</h2>
-        <div style="float: right;"><img src="logo_small.png"></div>
-        <p>It's easy to find out by yourself! The core device is based on the resource-efficient MiSoC system-on-chip design, and you can use a limited version of ARTIQ with the small and low-cost <a href="http://pipistrello.saanlima.com/">Pipistrello</a> board. Feel free to send feedback to the mailing list!</p>
-	<ul>
-		<li><a href="manual/installing.html">Install from sources</a> (be prepared to compile software and FPGA bitstreams)</li>
-	or
-		<li>Install from pre-compiled binaries</li>
-	<p>First you need to flash your Pipistrello board with pre-compiled binaries</p>
-	<ul>
-		<li>Download the binaries<pre>$ wget http://m-labs.hk/artiq/binaries/binary_package.tar.gz</pre></li>
-		<li>Extract them<pre>$ tar xzf binary_package.tar.gz</pre></li>
-		<li>Flash your Pipistrello board<pre>$ cd binary_package && ./flash.sh -t pipistrello</pre></li>
-	</ul>
-        <p>Installing host-side ARTIQ software on your Windows or Linux computer is quick and easy since it can be installed via <a href="http://conda.pydata.org/">Conda packages</a> as part of the <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> scientific computing Python distribution:</p>
-        <ul>
-		<li>Install <a href="http://continuum.io/downloads">Anaconda3</a> (Python 3.4)</li>
-		<li>Add our package delivery channel: <pre>$ conda config --add channels m-labs</pre></li>
-		<li>Install ARTIQ: <pre>$ conda install artiq</pre></li>
-	</ul>
-	<p>Then you can follow the <a href="manual/">manual</a> to run basic ARTIQ examples:</p>
-	<ul>
-		<li><a href="manual/getting_started.html#connecting-to-the-core-device">The LED blinking basics</a></li>
-		<li><a href="manual/getting_started.html#real-time-i-o">Real-time I/O example</a></li>
-		<li><a href="manual/getting_started.html#parallel-and-sequential-blocks">Precisely timed parallel and sequential pulses</a></li>
-	</ul></ul>
+        <p>It's easy to find out by yourself! The core device is based on the resource-efficient MiSoC system-on-chip design, and you can use a limited version of ARTIQ with the small and low-cost <a href="http://pipistrello.saanlima.com/">Pipistrello</a> board. Feel free to send feedback to the mailing list! See <a href="manual/installing.html">the manual</a> for instructions.</p>
 
         <h2>Resources</h2>
         <p>
@@ -157,8 +134,8 @@ class Experiment(EnvExperiment):
             <li><a href="https://github.com/m-labs/artiq">Source code repository</a></li>
             <li><a href="https://ssl.serverraum.org/lists/listinfo/artiq">Public mailing list</a></li>
             <li><a href="artiq_overview.pdf">Slide-show</a></li>
-            <li><a href="manual/">Manual</a> (work in progress)</a>
-            <li>Commercial support available - contact sb at m-labs.hk</li>
+            <li><a href="manual/">Manual</a></a>
+            <li>Commercial support and jobs available - contact sb at m-labs.hk</li>
             <li>Press release: <a href="http://nist.gov/pml/div688/grp10/open-source-software-for-quantum-information.cfm">Open-Source Software for Quantum Information</a></li>
         </ul></p>
     </div>
