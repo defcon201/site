@@ -65,6 +65,14 @@ td {
 	padding: 1em;
 }
 
+table.td {
+	border: 1px solid #777;
+}
+
+table.td td {
+	border: 1px solid #777;
+}
+
 div#header {
 	background: #171814;
 	height: 91px;
