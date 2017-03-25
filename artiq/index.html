@@ -14,8 +14,6 @@
 
 <body>
 
-<a href="https://github.com/m-labs/artiq"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1;" src="forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
-
 <div id="header">
     <div id="headerinside">
         <div id="logo"><a href="../index.html"><img src="../logo.png"></a></div>
@@ -24,7 +22,6 @@
             <li><a href="../solvespace/index.html">solvespace</a></li>
             <li><a href="../gateware.html">gateware</a></li>
             <li><a href="../video.html">video</a></li>
-            <li><a href="../public_events.html">events</a></li>
             <li><a href="../about.html">about</a></li>
         </ul>
     </div>
@@ -32,8 +29,8 @@
 
 <div id="container">
     <div class="full">
-        <div style="float: right;"><img src="ion_trap.png"></div>
-        <p>ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) is a next-generation control system for quantum information experiments. It is being developed in partnership with the <a href="http://www.nist.gov/pml/div688/grp10/index.cfm">Ion Storage Group</a> at NIST, and its applicability reaches beyond ion trapping.</p>
+        <div style="float: right;"><img src="lab_hardware.png"></div>
+        <p>ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) is a next-generation control system for quantum information experiments. It was initiated and is supported by the <a href="https://www.nist.gov/pml/time-and-frequency-division/ion-storage">Ion Storage Group</a> at NIST, and its applicability reaches beyond ion trapping.</p>
 
         <p>Modern research on quantum information systems poses particular challenges to the control system:
             <ul>
@@ -45,7 +42,7 @@
             </ul>
         </p>
 
-        <p><center><img src="lab_hardware.png"></center></p>
+        <p><center><img src="nist_crate1.jpg"> <img src="nist_crate2.jpg"></center></p>
 
         <h2>Enter ARTIQ</h2>
 
@@ -63,7 +60,7 @@
 
         <p>Technologies employed include <a href="http://python.org">Python</a>, <a href="../gateware.html">Migen</a>, <a href="../gateware.html">MiSoC</a>/<a href="https://github.com/openrisc/mor1kx">mor1kx</a>, <a href="http://llvm.org">LLVM</a> and <a href="https://github.com/numba/llvmlite">llvmlite</a>.</p>
 
-        <p><center><img src="comp.png"></center></p>
+        <p><center><img src="comp.svg" width="60%"></center></p>
 
         <h2>Open source</h2>
 
@@ -71,63 +68,20 @@
 
         <p>Our aim is to provide a control system suitable for the challenges of modern quantum information research, which is based on modular, parameterized and open components that allow physicists to rapidly design and deploy new experiments.</p>
 
-        <h2>A taste of the programming language</h2>
-        <h4>Timing language basics</h4>
-<pre>
-trigger.sync()               # wait for trigger input
-start = now_mu()             # capture trigger time
-for i in range(3):
-    delay(5*us)
-    dds.pulse(900*MHz, 7*us) # first pulse 5 µs after trigger
-at_mu(start) # re-reference time-line
-delay(1*ms)
-dds.pulse(200*MHz, 11*us)    # exactly 1 ms after trigger
-</pre>
-        <p>
-        <ul>
-        <li>now(), at(), delay() describe time-line of an experiment</li>
-        <li>Exact time is kept in an internal variable</li>
-        <li>That variable only loosely tracks the execution time of CPU instructions</li>
-        <li>The value of that variable is exchanged with the real-time input/output (RTIO) core that does precise timing</li>
-        </ul>
-        </p>
-        <h4>Parallelism</h4>
-<pre>
-with sequential:
-    with parallel:
-        a.pulse(100*MHz, 10*us)
-        b.pulse(200*MHz, 20*us)
-    with parallel:
-        c.pulse(300*MHz, 30*us)
-        d.pulse(400*MHz, 20*us)
-</pre>
-        <ul>
-        <li>Experiments are inherently parallel: simultaneous laser pulses, parallel cooling of ions in different trap zones</li>
-        <li>parallel and sequential contexts with arbitrary nesting</li>
-        <li>a and b pulses both start at the same time</li>
-        <li>c and d pulses both start when a and b are both done (after 20 µs)</li>
-        <li>Currently implemented by inlining, loop-unrolling, and interleaving (i.e. static scheduling at compile time)</li>
-        </ul>
-        <h4>Organize experiment components and reuse code</h4>
-<pre>
-class Experiment(EnvExperiment):
-    def build(self):
-        self.ion1 = Ion(...)
-        self.ion2 = Ion(...)
-        self.transporter = Transporter(...)
+        <h2>Sinara hardware</h2>
 
-    @kernel
-    def run(self):
-        with parallel:
-            self.ion1.cool(duration=10*us)
-            self.ion2.cool(frequency=...)
-        self.transporter.move(speed=...)
-        delay(100*ms)
-        self.ion1.detect(duration=...)
-</pre>
+        <p>The ARTIQ core device currently uses hardware built in-house by physicists (based on a Xilinx KC705 development board with custom FMC cards). To improve the quality, features and scalability of ARTIQ systems, we are developing the Sinara device family. It aims at providing turnkey control hardware that is reproducible, open, flexible, modular, well-tested, and well-supported by the ARTIQ control software.</p>
 
-        <h2>Is ARTIQ right for my lab?</h2>
-        <p>It's easy to find out by yourself! The core device is based on the resource-efficient MiSoC system-on-chip design, and you can use a limited version of ARTIQ with the small and low-cost <a href="http://pipistrello.saanlima.com/">Pipistrello</a> board. Feel free to send feedback to the mailing list! See <a href="manual/installing.html">the manual</a> for instructions. Note that Windows is not currently supported with the Pipistrello due to problems with the Windows PPP stack.</p>
+        <p>One of the main devices of the Sinara family is the Sayma card, which includes 8 channels of 2.4GSPS 16-bit DACs and a Kintex Ultrascale FPGA. The FPGA synthesizes waveforms for the DAC and our gateware supports two-tone direct digital synthesis and shaping of the waveform parameters with splines. Multiple Sayma cards can be installed in a MicroTCA chassis and synchronized.</p>
+
+        <p><center><img src="sinara1.png"> <img src="sinara2.png"></center></p>
+
+        <div style="float: right;"><a href="http://www.ise.pw.edu.pl/"><img src="logo_ise.png"></a></div>
+
+        <p>The Sinara hardware is still in development, and more information is available <a href="https://github.com/m-labs/sinara/wiki">on the wiki</a>. Most of the hardware engineering is done at the <a href="http://www.ise.pw.edu.pl/">Institute for Electronics Systems</a> at the Warsaw University of Technology.</p>
+
+        <h2>A low-cost entry point</h2>
+        <p>The core device is based on the resource-efficient MiSoC system-on-chip design, and you can use a limited version of ARTIQ with the small and low-cost <a href="http://pipistrello.saanlima.com/">Pipistrello</a> board. See <a href="manual/installing.html">the manual</a> for instructions. Note that Windows is not currently supported with the Pipistrello due to problems with the Windows PPP stack, so you will need a Linux system for trying ARTIQ on the Pipistrello. Feel free to send feedback to the mailing list, report problems to the <a href="https://github.com/m-labs/artiq/issues">GitHub issue tracker</a> and submit pull requests!</p>
 
         <h2>Resources</h2>
         <p>
@@ -140,6 +94,18 @@ class Experiment(EnvExperiment):
             <li>Commercial support available (ports to your hardware, feature development, technical support, bugfixing) - contact sales at m-labs.hk. We welcome inquiries from research groups of all sizes. <a href="https://github.com/m-labs/artiq/issues?q=is%3Aissue+is%3Aopen+label%3Atype%3Afor-contract">Proposed extensions</a>.</li>
             <li>NIST press release: <a href="https://www.nist.gov/news-events/news/2015/01/open-source-software-quantum-information">Open-Source Software for Quantum Information</a></li>
         </ul></p>
+
+        <h2>Users and contributors</h2>
+        <p>ARTIQ was initiated by the Ion Storage Group at NIST, and several other institutions have later contributed to ARTIQ and/or Sinara.</p>
+        <p>
+        <center><table>
+        <tr><td><a href="https://www.nist.gov/pml/time-and-frequency-division/ion-storage"><img src="logo_nist.png"></a></td>
+        <td><a href="https://www2.physics.ox.ac.uk/"><img src="logo_oxford.png"></a></td>
+        <tr><td><a href="http://jqi.umd.edu/"><img src="logo_jqi.png"></a></td>
+        <td><img src="logo_arl.png"></td></tr>
+        <tr><td><a href="http://www.duke.edu"><img src="logo_duke.png"></a></td><td></td></tr>
+        </table></center>
+        </p>
     </div>
 </div>
 
@@ -149,7 +115,7 @@ class Experiment(EnvExperiment):
         <table width="100%"><tr>
         <td><p><img src="../logo_small.png"><br /><br />Open tools for open physics</p></td>
         <td><p><b>M-Labs Limited</b><br />Workshop 15B 6/F Block B1<br />17 Ko Fai Road, Yau Tong<br />Hong Kong<br />+852-59362721</p></td>
-        <td><a href="https://webchat.freenode.net/?channels=m-labs">Freenode #m-labs</a><br /><a href="https://ssl.serverraum.org/lists/listinfo/devel/">Developer mailing list</a><br />
+        <td><a href="https://webchat.freenode.net/?channels=m-labs">Freenode #m-labs</a><br />
         GitHub: <a href="https://github.com/m-labs">m-labs</a><br />
         Twitter: @<a href="http://twitter.com/M_Labs_Ltd">M_Labs_Ltd</a><br />
         </td>
