@@ -1,0 +1,59 @@
+{{{ header("ARTIQ", "artiq") }}}
+
+<h1>ARTIQ</h1>
+
+<div style="float: right;"><img src="lab_hardware.png"></div>
+<p>ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) is a leading-edge control system for quantum information experiments. It was initiated and developed in partnership with the <a href="https://www.nist.gov/pml/time-and-frequency-division/ion-storage">Ion Storage Group</a> at NIST, and is now used and supported by a growing number of research institutions worldwide. While ARTIQ is currently mostly used by atomic physics groups, its applicability reaches beyond ion trapping.</p>
+
+<p>Modern research on quantum information systems poses particular challenges to the control system:
+    <ul>
+        <li>dozens of signals need to be received and generated with extremely precise timing, in particular to ensure phase coherence</li>
+        <li>quantum error correction schemes require very low reaction latency in response to a measurement</li>
+        <li>real-world implementations of quantum gates, and a fortiori quantum algorithms, involve structurally complex protocols</li>
+        <li>ever-improving experimental techniques drive the need for a flexible and programmable system</li>
+        <li>the diversity of equipment, device drivers and data analysis software involved in a single experiment results in a distributed and multi-platform environment</li>
+    </ul>
+</p>
+
+<p><center><img src="nist_crate1.jpg"> <img src="nist_crate2.jpg"></center></p>
+
+<h2>Enter ARTIQ</h2>
+
+<div style="float: right;"><a href="gui_screenshot.png"><img src="gui_screenshot_small.jpg"></a></div>
+
+<p>ARTIQ features a high-level programming language, based on Python, that helps describing complex experiments. It is compiled and executed on dedicated FPGA hardware with nanosecond timing resolution and sub-microsecond latency.</p>
+
+<p>The time-critical code (a <i>kernel</i>) running on the FPGA (the <i>core device</i>) is easily interfaced with Python code on the computer using a remote procedure call (RPC) mechanism.</p>
+
+<p>The FPGA design is highly portable so that it can adapt to different laboratory setups and resist hardware obsolescence.</p>
+
+<p>ARTIQ drivers for non-realtime devices can be run on remote machines with different operating systems.</p>
+
+<p>The project also includes a graphical user interface, an experiment scheduling system, and databases for experiments, devices, parameters and results.</p>
+
+<p>Technologies employed include <a href="http://python.org">Python</a>, <a href="../gateware.html">Migen</a>, <a href="../gateware.html">MiSoC</a>/<a href="https://github.com/openrisc/mor1kx">mor1kx</a>, <a href="http://llvm.org">LLVM</a> and <a href="https://github.com/numba/llvmlite">llvmlite</a>.</p>
+
+<p><center><img src="comp.svg" width="60%"></center></p>
+
+<h2>Open source</h2>
+
+<div style="float: right;"><a href="gui_screenshot_allcock.jpg"><img src="gui_screenshot_allcock_small.jpg"></a></div>
+
+<p>Another goal of ARTIQ is to streamline and simplify the design flow of quantum physics instrumentation by promoting design reuse through the development of platform-independent, open-source hardware and software.</p>
+
+<p>Our aim is to provide a control system suitable for the challenges of modern quantum information research, which is based on modular, parameterized and open components that allow physicists to rapidly design and deploy new experiments.</p>
+
+<h2>Users and contributors</h2>
+<p>ARTIQ was initiated by the Ion Storage Group at NIST, and several other institutions have later contributed to ARTIQ and/or Sinara.</p>
+<p>
+<center><table>
+<tr><td><a href="https://www.nist.gov/pml/time-and-frequency-division/ion-storage"><img src="logo_nist.png"></a></td>
+<td><a href="https://www2.physics.ox.ac.uk/"><img src="logo_oxford.png"></a></td>
+<tr><td><a href="http://jqi.umd.edu/"><img src="logo_jqi.png"></a></td>
+<td><img src="logo_arl.png"></td></tr>
+<tr><td><a href="http://www.duke.edu"><img src="logo_duke.png"></a></td>
+<td><a href="https://www.qsim.uni-freiburg.de/"><img src="logo_freiburg.png"></a></td></tr>
+</table></center>
+</p>
+
+{{{ footer() }}}

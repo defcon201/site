@@ -1,0 +1,31 @@
+{{{ header("ARTIQ Sinara hardware", "artiq") }}}
+
+<h1>Sinara hardware</h1>
+
+<div style="float: right;"><img src="sinara_logo.svg" height="80px"></div>
+<p>The first ARTIQ core devices used hardware built in-house by physicists (based on a Xilinx KC705 development board with custom FMC cards). To improve the quality, features and scalability of ARTIQ systems, we have been developing the Sinara device family. It aims at providing turnkey control hardware that is reproducible, open, flexible, modular, well-tested, and well-supported by the ARTIQ control software.</p>
+<p>The Sinara hardware is in active development, and the latest information is available <a href="https://github.com/m-labs/sinara/wiki">on the wiki</a>. Most of the hardware engineering is done at the <a href="http://www.ise.pw.edu.pl/">Institute for Electronics Systems</a> at the Warsaw University of Technology.</p>
+
+<h2>Kasli</h2>
+<p>One of the main devices in the Sinara family is the Kasli core device. It contains an Artix-7 100T FPGA, DDR3 SDRAM, three SFP connectors, and can control up to 8 daughtercards (Eurocard Extension Module, EEM). The Kasli and its EEMs are installed in one Eurocard 3U chassis. One SFP connector is used for a Gigabit Ethernet connection to your computer network.</p>
+
+<p><center><img src="kasli.jpg"></center></p>
+
+<h2>TTL I/O EEMs</h2>
+<p>For simple TTL signals, we offer I/O cards with 8 channels over BNC or SMA connectors in the EEM form factor. The IOs are divided into two banks of 4, with per-bank ground isolation. The direction (input/output) and termination (high-Z/50R) is selectable on a per-channel basis via I2C or on-board switches. Outputs can supply 5V into 25Ohm, and can tolerate an indefinite short-circuit to ground.</p>
+
+<p><center><img src="dio_bnc.jpg"> <img src="dio_sma.jpg"></center></p>
+
+<h2>Urukul DDS card</h2>
+<p>Urukul is a 4 channel DDS-based frequency synthesizer for the EEM form factor. It provides sub-Hz frequency resolution, controlled phase steps, and accurate output amplitude control. We offer it in two variants, with either the AD9910 or the AD9912 chip.</p>
+
+<p><center><img src="urukul.jpg"></center></p>
+
+<h2>Purchasing Sinara hardware</h2>
+<p>Kasli and most EEMs can be ordered now. We can deliver a rack-mountable crate that contains all the cards, is fully tested, and is ready to be connected to your experiment and computer network. Contact sales@m-***s.hk with your requirements and we will establish a quote.</p>
+
+<h2>Metlino and Sayma</h2>
+For more demanding experiments, we have been developing the Metlino and Sayma system. One Sayma card includes 8 channels of 2.4GSPS 16-bit DACs and a Kintex Ultrascale FPGA. The FPGA synthesizes waveforms for the DACs and our gateware supports two-tone direct digital synthesis and shaping of the waveform parameters with splines. Multiple Sayma cards can be installed in a MicroTCA chassis together with one Metlino master. Clock synchronization will be supported.</p>
+
+
+{{{ footer() }}}
