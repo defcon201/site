@@ -44,6 +44,7 @@ class PageMethods:
         item("migen/index.html", "Migen", "migen")
         item("smoltcp.html", "smoltcp", "smoltcp")
         item("solvespace/index.html", "SolveSpace", "solvespace")
+        item("ionpak.html", "ionpak", "ionpak")
         item("about.html", "About", "about")
         subitem("about.html", "Company")
         subitem("office.html", "Office")

@@ -1,0 +1,37 @@
+{{{ header("ionpak", "ionpak") }}}
+
+<h1>ionpak</h1>
+
+<p>A modern, low-cost universal controller for hot-cathode ionization vacuum gauges.</p>
+
+<p><center><img src="ionpak.jpg"></center></p>
+
+<p>Many physics experiments require a good vacuum and therefore tools to diagnose vacuum-related problems. Ionization gauges provide a way to measure pressures in the medium to ultra-high vacuum regimes.</p>
+
+<p>While the gauges themselves can be procured quite easily, the controller situation is more problematic. Existing commercial and DIY solutions have one or more of the following issues:</p>
+<ul>
+<li>expensive</li>
+<li>proprietary</li>
+<li>poor performance at low (pA) collector currents</li>
+<li>designed with obsolete components and overly bulky</li>
+<li>lack of gauge voltage/current programmability</li>
+<li>no/poor connectivity to a logging database</li>
+<li>poor design and construction</li>
+</ul>
+</p>
+
+<p>The ionpak features:
+<ul>
+<li>a single-board low-cost design with modern components</li>
+<li>open hardware and software</li>
+<li>sub-pA electrometer performance</li>
+<li>configurable voltages and emission current to adapt to various gauges</li>
+<li>Ethernet connectivity</li>
+</ul>
+</p>
+
+<h2>How to get an ionpak?</h2>
+We will offer it for sale later, and it will come in a nice enclosure. For the moment, you can <a href="https://github.com/m-labs/ionpak">build your own</a> - it is open hardware.
+
+{{{ footer() }}}
+
