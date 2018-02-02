@@ -4,11 +4,6 @@ import os
 import re
 
 
-#
-#'ssdf'
-
-
-
 class PageMethods:
     def __init__(self, path):
         self.path = path
@@ -47,6 +42,7 @@ class PageMethods:
         subitem("artiq/sinara.html", "Sinara hardware")
         subitem("artiq/resources.html", "Resources")
         item("migen/index.html", "Migen", "migen")
+        item("smoltcp.html", "smoltcp", "smoltcp")
         item("solvespace/index.html", "SolveSpace", "solvespace")
         item("about.html", "About", "about")
         subitem("about.html", "Company")

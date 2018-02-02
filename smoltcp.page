@@ -1,0 +1,16 @@
+{{{ header("smoltcp", "smoltcp") }}}
+
+<h1>smoltcp</h1>
+
+<p>smoltcp is a standalone, event-driven TCP/IP stack that is designed for bare-metal, real-time systems. Its design goals are simplicity and robustness. Its design anti-goals include complicated compile-time computations, such as macro or type tricks, even at cost of performance degradation.</p>
+
+<p>smoltcp does not need heap allocation at all, is <a href="https://docs.rs/smoltcp/">extensively documented</a>, and compiles on stable Rust 1.20 and later. It is used in embedded systems such as the ARTIQ core device and ionpak.</p>
+
+<p>smoltcp achieves <a href="https://github.com/m-labs/smoltcp#examplesbenchmarkrs">~Gbps of throughput</a> when tested against the Linux TCP stack in loopback mode.</p>
+
+<p>The source code is available <a href="https://github.com/m-labs/smoltcp">on GitHub</a>.
+
+<h2>Commercial support</h2>
+Commercial support for smoltcp is available. Email sales@m-l***s.hk.
+
+{{{ footer() }}}
