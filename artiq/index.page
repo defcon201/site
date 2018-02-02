@@ -44,7 +44,7 @@
 <p>Our aim is to provide a control system suitable for the challenges of modern quantum information research, which is based on modular, parameterized and open components that allow physicists to rapidly design and deploy new experiments.</p>
 
 <h2>Users and contributors</h2>
-<p>ARTIQ was initiated by the Ion Storage Group at NIST, and several other institutions have later contributed to ARTIQ and/or Sinara.</p>
+<p>ARTIQ was initiated by the Ion Storage Group at NIST, and many other institutions have later contributed to ARTIQ and/or Sinara.</p>
 <p>
 <center><table>
 <tr><td><a href="https://www.nist.gov/pml/time-and-frequency-division/ion-storage"><img src="logo_nist.png"></a></td>
@@ -53,6 +53,11 @@
 <td><img src="logo_arl.png"></td></tr>
 <tr><td><a href="http://www.duke.edu"><img src="logo_duke.png"></a></td>
 <td><a href="https://www.qsim.uni-freiburg.de/"><img src="logo_freiburg.png"></a></td></tr>
+<tr><td><a href="http://ptb.de"><img src="logo_ptb.png"></a></td>
+<td><a href="https://www.lnqe.uni-hannover.de"><img src="logo_uh.png"></a></td></tr>
+<tr><td><a href="https://www.physics.hu-berlin.de/en/qom"><img src="logo_hu.png"></a></td>
+<td><a href="https://bmbf.de"><img src="logo_bmbf.png"></a></td></tr>
+<tr><td colspan="2" align="center"><a href="http://spa.sysu.edu.cn/en"><img src="logo_sysu.png"></a></td></tr>
 </table></center>
 </p>
 
