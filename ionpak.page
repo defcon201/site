@@ -4,7 +4,7 @@
 
 <p>A modern, low-cost universal controller for hot-cathode ionization vacuum gauges.</p>
 
-<p><center><img src="ionpak.jpg"></center></p>
+<p><center><img src="ionpak_front.jpg"></center></p>
 
 <p>Many physics experiments require a good vacuum and therefore tools to diagnose vacuum-related problems. Ionization gauges provide a way to measure pressures in the medium to ultra-high vacuum regimes.</p>
 
@@ -30,8 +30,10 @@
 </ul>
 </p>
 
+<p><center><img src="ionpak_back.jpg"></center></p>
+
 <h2>How to get an ionpak?</h2>
-We will offer it for sale later, and it will come in a nice enclosure. For the moment, you can <a href="https://github.com/m-labs/ionpak">build your own</a> - it is open hardware.
+We will offer it for sale later; for the moment, you can <a href="https://github.com/m-labs/ionpak">build your own</a> - it is open hardware.
 
 {{{ footer() }}}
 
