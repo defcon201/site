@@ -21,6 +21,18 @@
 
 <p><center><img src="urukul.jpg"></center></p>
 
+<h2>Sampler ADC card</h2>
+<p>Sampler is an 8-channel, 16-bit ADC EEM with an update rate of up to 1.5MSPS (all channels simultaneously). It has low-noise differential front end with a digitally programmable gain, providing full-scale input ranges between +-10mV (G=1000) and +-10V (G=1).</p>
+
+<p><center><img src="sampler.jpg"></center></p>
+
+<h2>Grabber Camera Link interface</h2>
+<p>Grabber allows the connection of typical scientific (EM)CCD cameras with a Camera Link port to the core FPGA.</p>
+
+<p>In the FPGA, frame data streamed through "ROI engines". Each ROI engine gates on one rectangular pixel region and accumulates pixel values for each frame. The ROI engines operate independently and can be overlapping. After the frame, the accumulated value is pushed as an RTIO input event. Regions of interest (ROI) can be configured at runtime, and are defined with the computer.</p>
+
+<p><center><img src="grabber.jpg"></center></p>
+
 <h2>Purchasing Sinara hardware</h2>
 <p>Kasli and most EEMs can be ordered now. We can deliver a rack-mountable crate that contains all the cards, is fully tested, and is ready to be connected to your experiment and computer network. Contact sales@m-***s.hk with your requirements and we will establish a quote.</p>
 
