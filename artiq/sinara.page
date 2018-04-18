@@ -4,7 +4,7 @@
 
 <div style="float: right;"><img src="sinara_logo.svg" height="80px"></div>
 <p>The first ARTIQ core devices used hardware built in-house by physicists (based on a Xilinx KC705 development board with custom FMC cards). To improve the quality, features and scalability of ARTIQ systems, we have been developing the Sinara device family. It aims at providing turnkey control hardware that is reproducible, open, flexible, modular, well-tested, and well-supported by the ARTIQ control software.</p>
-<p>The Sinara hardware is in active development, and the latest information is available <a href="https://github.com/m-labs/sinara/wiki">on the wiki</a>. Most of the hardware engineering is done at the <a href="http://www.ise.pw.edu.pl/">Institute for Electronics Systems</a> at the Warsaw University of Technology.</p>
+<p>The Sinara hardware is in active development, and the latest information is available <a href="https://github.com/sinara-hw">on the wiki of each project's page</a>. Most of the hardware engineering is done at the <a href="http://www.ise.pw.edu.pl/">Institute for Electronics Systems</a> at the Warsaw University of Technology.</p>
 
 <h2>Kasli</h2>
 <p>One of the main devices in the Sinara family is the Kasli core device. It contains an Artix-7 100T FPGA, DDR3 SDRAM, three SFP connectors, and can control up to 8 daughtercards (Eurocard Extension Module, EEM). The Kasli and its EEMs are installed in one Eurocard 3U chassis. One SFP connector is used for a Gigabit Ethernet connection to your computer network.</p>
@@ -20,6 +20,13 @@
 <p>Urukul is a 4 channel DDS-based frequency synthesizer for the EEM form factor. It provides sub-Hz frequency resolution, controlled phase steps, and accurate output amplitude control. We offer it in two variants, with either the AD9910 or the AD9912 chip.</p>
 
 <p><center><img src="urukul.jpg"></center></p>
+
+<h2>Zotino DAC card</h2>
+<p>Zotino is a 32-channel, 16-bit DAC EEM with an update rate of 1MSPS (divided between the channels). It was designed for low noise and good stability.</p>
+
+<p>Zotino connects the 32 channels to both (a) a HD68 connector on its front panel and (b) to four IDC connectors on the board. Each IDC connection with 8 channels can be broken out to BNC using BNC-IDC.</p>
+
+<p><center><img src="zotino.jpg"></center></p>
 
 <h2>Sampler ADC card</h2>
 <p>Sampler is an 8-channel, 16-bit ADC EEM with an update rate of up to 1.5MSPS (all channels simultaneously). It has low-noise differential front end with a digitally programmable gain, providing full-scale input ranges between +-10mV (G=1000) and +-10V (G=1).</p>
