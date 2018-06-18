@@ -58,6 +58,17 @@
 
 <p>Our aim is to provide a control system suitable for the challenges of modern quantum information research, which is based on modular, parameterized and open components that allow physicists to rapidly design and deploy new experiments.</p>
 
+<h2>Sinara hardware</h2>
+<p>The first ARTIQ core devices used hardware built in-house by physicists. To improve the quality, features and scalability of ARTIQ systems, we have been developing the Sinara device family. It aims at providing turnkey control hardware that is reproducible, open, flexible, modular, well-tested, and well-supported by the ARTIQ control software.</p>
+
+<p><center><img src="sinara_crate_small.jpg" style="max-width: 60%;"></center></p>
+
+<p>
+<ul>
+<li><a href="sinara.html">Learn more</a></li>
+</ul>
+</p>
+
 <h2>Other users and contributors</h2>
 <p>
 <center><table>

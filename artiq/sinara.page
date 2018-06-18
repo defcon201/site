@@ -6,39 +6,44 @@
 <p>The first ARTIQ core devices used hardware built in-house by physicists (based on a Xilinx KC705 development board with custom FMC cards). To improve the quality, features and scalability of ARTIQ systems, we have been developing the Sinara device family. It aims at providing turnkey control hardware that is reproducible, open, flexible, modular, well-tested, and well-supported by the ARTIQ control software.</p>
 <p>The Sinara hardware is in active development, and the latest information is available <a href="https://github.com/sinara-hw">on the wiki of each project's page</a>. Most of the hardware engineering is done at the <a href="http://www.ise.pw.edu.pl/">Institute for Electronics Systems</a> at the Warsaw University of Technology.</p>
 
+<p><center>
+<a href="sinara_crate.jpg"><img src="sinara_crate_small.jpg" style="max-width: 60%;"></a>
+<a href="sinara_boards.jpg"><img src="sinara_boards_small.jpg" style="max-width: 60%;"></a>
+</center></p>
+
 <h2>Kasli</h2>
 <p>One of the main devices in the Sinara family is the Kasli core device. It contains an Artix-7 100T FPGA, DDR3 SDRAM, three SFP connectors, and can control up to 8 daughtercards (Eurocard Extension Module, EEM). The Kasli and its EEMs are installed in one Eurocard 3U chassis. One SFP connector is used for a Gigabit Ethernet connection to your computer network.</p>
 
-<p><center><img src="kasli.jpg"></center></p>
+<p><center><img src="kasli.jpg" width="600"></center></p>
 
 <h2>TTL I/O EEMs</h2>
 <p>For simple TTL signals, we offer I/O cards with 8 channels over BNC or SMA connectors in the EEM form factor. The IOs are divided into two banks of 4, with per-bank ground isolation. The direction (input/output) and termination (high-Z/50R) is selectable on a per-channel basis via I2C or on-board switches. Outputs can supply 5V into 25Ohm, and can tolerate an indefinite short-circuit to ground.</p>
 
-<p><center><img src="dio_bnc.jpg"> <img src="dio_sma.jpg"></center></p>
+<p><center><img src="dio_bnc.jpg" width="300"> <img src="dio_sma.jpg" width="300"></center></p>
 
 <h2>Urukul DDS card</h2>
 <p>Urukul is a 4 channel DDS-based frequency synthesizer for the EEM form factor. It provides sub-Hz frequency resolution, controlled phase steps, and accurate output amplitude control. We offer it in two variants, with either the AD9910 or the AD9912 chip.</p>
 
-<p><center><img src="urukul.jpg"></center></p>
+<p><center><img src="urukul.jpg" width="600"></center></p>
 
 <h2>Zotino DAC card</h2>
 <p>Zotino is a 32-channel, 16-bit DAC EEM with an update rate of 1MSPS (divided between the channels). It was designed for low noise and good stability.</p>
 
 <p>Zotino connects the 32 channels to both (a) a HD68 connector on its front panel and (b) to four IDC connectors on the board. Each IDC connection with 8 channels can be broken out to BNC using BNC-IDC.</p>
 
-<p><center><img src="zotino.jpg"></center></p>
+<p><center><img src="zotino.jpg" width="600"></center></p>
 
 <h2>Sampler ADC card</h2>
 <p>Sampler is an 8-channel, 16-bit ADC EEM with an update rate of up to 1.5MSPS (all channels simultaneously). It has low-noise differential front end with a digitally programmable gain, providing full-scale input ranges between +-10mV (G=1000) and +-10V (G=1).</p>
 
-<p><center><img src="sampler.jpg"></center></p>
+<p><center><img src="sampler.jpg" width="600"></center></p>
 
 <h2>Grabber camera interface</h2>
 <p>Grabber allows the connection of certain scientific (EM)CCD cameras port to the core FPGA. Those cameras have a Camera Link interface.</p>
 
 <p>In the FPGA, frame data streamed through "ROI engines". Each ROI engine gates on one rectangular pixel region and accumulates pixel values for each frame. The ROI engines operate independently and can be overlapping. After the frame, the accumulated value is pushed as an RTIO input event. Regions of interest (ROI) can be configured at runtime, and are defined with the computer.</p>
 
-<p><center><img src="grabber.jpg"></center></p>
+<p><center><img src="grabber.jpg" width="350"></center></p>
 
 <h2>Purchasing Sinara hardware</h2>
 <p>Kasli and most EEMs can be ordered now. We can deliver a rack-mountable crate that contains all the cards, is fully tested, and is ready to be connected to your experiment and computer network. Contact sales@m-***s.hk with your requirements and we will establish a quote.</p>
