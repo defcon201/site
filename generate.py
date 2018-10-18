@@ -29,8 +29,8 @@ class PageMethods:
         <meta charset="utf-8"/>
         <title>""" + title + """</title>
         <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("style.css") +  """\" />
-        <link rel="stylesheet" href=\"""" + self.resource("res/font/stencil_camera.css") +  """\" charset="utf-8">
-        <link rel="stylesheet" href=\"""" + self.resource("res/font/Voltaire-webfont.css") +  """\" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href=\"""" + self.resource("res/font/dc201stencam/dc201-stencil-camera.css") +  """\" charset="utf-8">
+        <link rel="stylesheet" href=\"""" + self.resource("res/font/voltaire-webfont/voltaire-webfont.css") +  """\" type="text/css" charset="utf-8">
         <link rel="stylesheet" href=\"""" + self.resource("res/font/overpass-webfont/overpass.css") +  """\" type="text/css" charset="utf-8">
 
     </head>
@@ -40,7 +40,7 @@ class PageMethods:
 
             <div id="header-logos">
                 <div class="dc201-logo">
-                    <span class="image njbell-logo"><img class="njbell-logo-print" src="njbell.svg"></span>
+                    <span class="image njbell-logo"><img class="njbell-logo-print" src=\"""" + self.resource("res/img/njbell.svg") +  """\"></span>
                     <h4 class="dc201-wordmark">DEFCON&hairsp;<span class="image jersey">&nbsp;</span>&hairsp;201</h4>
                 </div>
                 <div class="dc201-logo-subheader">
@@ -100,8 +100,8 @@ class PageMethods:
             <footer id="attrib">
                 <div>
                     &copy; 2018 DEFCON 201.
-                    Text content: CC-BY 4.0
-                    Site code: <a href="http://github.com/defcon201/site">Github</a>
+                    Text content: CC-BY 4.0<br>
+                    Site code: <a href="http://twitter.com/sirocyl">sirocyl</a> &mdash; <a href="http://github.com/defcon201/site">Github</a><br>
                 </div>
             </footer>
         </div>

@@ -216,7 +216,7 @@ h5 {
 }
 
 .njbell-logo {
-    background-image: url("njbell-white.svg");
+    background-image: url("res/img/njbell-white.svg");
 
     width: 48px;
     height: 48px;
@@ -226,7 +226,7 @@ h5 {
 
 .dc201-wordmark {
     font-size: 48px;
-    font-family: "stencil_camera";
+    font-family: "dc201-stencil-camera";
     font-weight: normal;
     line-height: 66%;
 
@@ -236,7 +236,7 @@ h5 {
 }
 
 .jersey {
-    background-image: url("jersey-white.svg");
+    background-image: url("res/img/jersey-white.svg");
     width: auto;
     height: auto;
 }
