@@ -1,0 +1,135 @@
+/* SUBSET
+
+愛のあるユニークで豊かな書体□あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン
+
+*/
+
+/* M+ Type-1 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@font-face
+{
+font-family: 'M+ Type-1 (sample-j) Thin';
+src: url('mplus-1-thin-sub.eot');
+src: url('mplus-1-thin-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-1-thin-sub.woff') format('woff'),
+url('mplus-1-thin-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-1 (sample-j) Light';
+src: url('mplus-1-light-sub.eot');
+src: url('mplus-1-light-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-1-light-sub.woff') format('woff'),
+url('mplus-1-light-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-1 (sample-j) Regular';
+src: url('mplus-1-regular-sub.eot');
+src: url('mplus-1-regular-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-1-regular-sub.woff') format('woff'),
+url('mplus-1-regular-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-1 (sample-j) Medium';
+src: url('mplus-1-medium-sub.eot');
+src: url('mplus-1-medium-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-1-medium-sub.woff') format('woff'),
+url('mplus-1-medium-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-1 (sample-j) Bold';
+src: url('mplus-1-bold-sub.eot');
+src: url('mplus-1-bold-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-1-bold-sub.woff') format('woff'),
+url('mplus-1-bold-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-1 (sample-j) Heavy';
+src: url('mplus-1-heavy-sub.eot');
+src: url('mplus-1-heavy-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-1-heavy-sub.woff') format('woff'),
+url('mplus-1-heavy-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-1 (sample-j) Black';
+src: url('mplus-1-black-sub.eot');
+src: url('mplus-1-black-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-1-black-sub.woff') format('woff'),
+url('mplus-1-black-sub.ttf') format('truetype');
+}
+
+/* M+ Type-2 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@font-face
+{
+font-family: 'M+ Type-2 (sample-j) Thin';
+src: url('mplus-2-thin-sub.eot');
+src: url('mplus-2-thin-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-2-thin-sub.woff') format('woff'),
+url('mplus-2-thin-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-2 (sample-j) Light';
+src: url('mplus-2-light-sub.eot');
+src: url('mplus-2-light-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-2-light-sub.woff') format('woff'),
+url('mplus-2-light-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-2 (sample-j) Regular';
+src: url('mplus-2-regular-sub.eot');
+src: url('mplus-2-regular-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-2-regular-sub.woff') format('woff'),
+url('mplus-2-regular-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-2 (sample-j) Medium';
+src: url('mplus-2-medium-sub.eot');
+src: url('mplus-2-medium-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-2-medium-sub.woff') format('woff'),
+url('mplus-2-medium-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-2 (sample-j) Bold';
+src: url('mplus-2-bold-sub.eot');
+src: url('mplus-2-bold-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-2-bold-sub.woff') format('woff'),
+url('mplus-2-bold-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-2 (sample-j) Heavy';
+src: url('mplus-2-heavy-sub.eot');
+src: url('mplus-2-heavy-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-2-heavy-sub.woff') format('woff'),
+url('mplus-2-heavy-sub.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: 'M+ Type-2 (sample-j) Black';
+src: url('mplus-2-black-sub.eot');
+src: url('mplus-2-black-sub.eot?#iefix') format('embedded-opentype'),
+url('mplus-2-black-sub.woff') format('woff'),
+url('mplus-2-black-sub.ttf') format('truetype');
+}
