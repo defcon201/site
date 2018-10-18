@@ -41,11 +41,11 @@ class PageMethods:
             <div id="header-logos">
                 <div class="dc201-logo">
                     <span class="image njbell-logo"><img class="njbell-logo-print" src=\"""" + self.resource("res/img/njbell.svg") +  """\"></span>
-                    <h4 class="dc201-wordmark">DEFCON&hairsp;<span class="image jersey">&nbsp;</span>&hairsp;201</h4>
+                    <h4 class="dc201-wordmark">DEFCON&#x200a;<span class="image jersey">&nbsp;</span>&#x200a;201</h4>
                 </div>
                 <div class="dc201-logo-subheader">
                     <span class="subheader-left-side"></span>
-                    <h4>Jersey City&thinsp;<span class="image liberty"><span>&emsp;</span></span>&thinsp;New Jersey</h4>
+                    <h4>Jersey City&#x2009;<span class="image liberty"><span>&#x2003;</span></span>&#x2009;New Jersey</h4>
                     <span class="subheader-right-side"></span>
                 </div>
             </div>
@@ -74,7 +74,7 @@ class PageMethods:
                 r += target
             else:
                 r += self.resource(target)
-            r += "\" class=\"sub\">" + title + "</a></li>\n"
+            r += "\" class=\"sub\">&#x200a;" + title + "</a></li>\n"
 
         # TODO: generate sidebar nav link list from existing .page or .link (for ext/special link) files in directory
 
