@@ -1,0 +1,37 @@
+{{{ header("Location", "meetings", nodiv=True, white_bg=True) }}}
+
+<div class="main">
+<h1>About the Location</h1>
+</div>
+
+<div class="fullpic" style="background-image: url({{{ resource("res/img/photo/whealth.jpg") }}});">
+<h3>Whealth &amp; Co. Cafe</h3>
+<h4>Journal Square, Jersey City</h4>
+
+<p>Centered right at the heart of Journal Square by the PATH station, with mobile accessibility, coffee and food, inside and outside areas and a passion for the hacker community, we invite everyone to join us in welcoming our new venue and breaking in the house (but not breaking the house). Plus, our venue is allowing us to BYOB so continue that tradition!</p>
+
+<p><a href="https://www.whealthandco.com/jsq-cafe/">Visit their site</a></p>
+</div>
+
+<div class="fullpic" style="background-image: url({{{ resource("res/img/photo/whealth-outside.png") }}});">
+<h4>Directions</h4>
+<p>WHEALTH @ JSQ Cafe is on the ground floor of the Journal Squared building complex.</p>
+<h4>From PATH trains</h4>
+<h5>by escalator</h5>
+<p>
+From the PATH turnstile, go up the escalator to the mezzanine level; enter the concourse, turn right, and follow signs for "Parking Lot/Kiss &amp; Ride". Make a left, then head down the alleyway toward Pavonia Ave.
+</p>
+<h4>From PATH trains</h4>
+<h5>by elevator (accessible route)</h5>
+<p>
+Take the elevators up to street level, then exit north toward Pavonia Ave., and follow the sidewalk east on Pavonia, past the bus depot.
+</p>
+<h4>From Journal Square Transportation Center</h4>
+<h5>NJ Transit Bus terminal</h5>
+<p>
+From the bus depot, exit at Pavonia Ave., turn right, then follow signs to WHEALTH Cafe.
+</p>
+<p><a href="https://tools.wmflabs.org/geohack/geohack.php?pagename=Journal_Squared&params=40_43_52_N_74_10_25_W_type:landmark">Directions and maps</a></p>
+</div>
+
+{{{ footer(nodiv=True) }}}
