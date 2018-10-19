@@ -1,0 +1,8 @@
+{{{ header("Meetings", "meetings") }}}
+<div>
+<h2>Special events:</h2>
+<h4>None scheduled.</h4>
+<p>Check back regularly for up-to-the-minute information.</p>
+</div>
+
+{{{ footer() }}}
