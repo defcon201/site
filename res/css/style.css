@@ -216,7 +216,7 @@ h5 {
 }
 
 .njbell-logo {
-    background-image: url("res/img/njbell-white.svg");
+    background-image: url("../img/njbell-white.svg");
 
     width: 48px;
     height: 48px;
@@ -236,7 +236,7 @@ h5 {
 }
 
 .jersey {
-    background-image: url("res/img/jersey-white.svg");
+    background-image: url("../img/jersey-white.svg");
     width: auto;
     height: auto;
 }

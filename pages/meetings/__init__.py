@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend against it for semantics sake.
-    from meetings.previous import PreviousMeetings
+    from pages.meetings.previous import PreviousMeetings
     def Date():			# Date of the meeting (Weekday, Month DD)
         return "Friday, October 19"
     def Title():		# Title of the meeting

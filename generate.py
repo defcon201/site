@@ -4,15 +4,16 @@
 
 import os
 import re
+import shutil
 
-from meetings import MeetingDetails
+from pages.meetings import MeetingDetails
 
 class PageMethods:
     def __init__(self, path):
         self.path = path
 
     def resource(self, resource):
-        return os.path.relpath(resource, self.path)
+        return os.path.relpath("output/" + resource, self.path)
 
     def header(self, title, menu_hl=None, nodiv=False, white_bg=False):
         bodystyle = " style=\"background: #fff; color: #000;\"" if white_bg else ""
@@ -28,7 +29,7 @@ class PageMethods:
 
         <meta charset="utf-8"/>
         <title>""" + title + """</title>
-        <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("style.css") +  """\" />
+        <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/style.css") +  """\" />
         <link rel="stylesheet" href=\"""" + self.resource("res/font/dc201stencam/dc201-stencil-camera.css") +  """\" charset="utf-8">
         <link rel="stylesheet" href=\"""" + self.resource("res/font/voltaire-webfont/voltaire-webfont.css") +  """\" type="text/css" charset="utf-8">
         <link rel="stylesheet" href=\"""" + self.resource("res/font/overpass-webfont/overpass.css") +  """\" type="text/css" charset="utf-8">
@@ -127,14 +128,15 @@ class PageMethods:
         }
 
 
-def process(path, name_in, name_out):
-    fullname = os.path.join(path, name_in)
-    print("processing", fullname)
+def process(path_in, path_out, name_in, name_out):
+    fullname = os.path.join(path_in, name_in)
+    print("process: processing", str(fullname))
     with open(fullname, "r") as infile:
         indata = infile.read()
 
-    pm = PageMethods(path)
+    pm = PageMethods(path_out)
     outdata = ""
+
     # FIXME: this is just a buggy quick hack
     splits = re.split("({{{[^}]+}}})", indata)
     for split in splits:
@@ -143,17 +145,29 @@ def process(path, name_in, name_out):
         else:
             outdata += split
 
-    with open(os.path.join(path, name_out), "w") as outfile:
+    try:
+        os.makedirs(path_out)
+    except FileExistsError:
+        pass
+
+    with open(os.path.join(path_out, name_out), "w") as outfile:
         outfile.write(outdata)
 
 
 def main():
-#    print(MeetingDetails.Date() + ": " + MeetingDetails.Title())
-    for root, dirs, files in os.walk("."):
+    print("generate: clearing output")
+    try:
+        shutil.rmtree("output/")
+    except FileNotFoundError:
+        print("generate: nothing to clear")
+        pass
+    print("generate: copying static resources")
+    shutil.copytree("res/", "output/res/")
+
+    for root, dirs, files in os.walk("./pages"):
         for file in files:
             if file.endswith(".page"):
-                process(root, file, file[:-5] + ".html")
-
+                process(root, "output/", file, file[:-5] + ".html")
 
 if __name__ == "__main__":
     main()
