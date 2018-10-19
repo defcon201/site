@@ -129,7 +129,6 @@ class PageMethods:
 
 
 def process(path_in, path_out, name_in, name_out):
-    print("process: DEBUG:", path_in, path_out, name_in, name_out)
     fullname = os.path.join(path_in, name_in)
     print("process: processing", str(fullname))
     with open(fullname, "r") as infile:
@@ -167,7 +166,6 @@ def main():
 
     for root, dirs, files in os.walk("./pages"):
         for file in files:
-            print(str(root), str(dirs), str(files), str(file))
             if file.endswith(".page"):
                 process(root, "output/" + os.path.relpath(root, "pages/"), file, file[:-5] + ".html")
 
