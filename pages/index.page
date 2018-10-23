@@ -6,7 +6,7 @@
 
 <div class="fullpic condensedbox" style="/* background-image: url({{{ resource("res/img/dc201meeting.jpg") }}}); background-position: bottom; */">
     <h2>Meetings</h2>
-    <p><span style="font-size: 18px; font-weight: 600;">DEFCON 201 meets monthly, every <strong>third Friday</strong>, at the <strong><a href="{{{ resource("meetings/location.html") }}}">WHEALTH &amp; Co. Cafe,</a></strong> Journal Square.<span></p>
+    <p><span style="font-size: 18px; font-weight: 600;">DEFCON 201 meets monthly, every <strong>third Friday</strong>, at the <strong><a href="{{{ resource("meetings/location.html") }}}">WHEALTH &amp; Co. Cafe,</a></strong> Journal Square.</span></p>
 
     <h3>This month's meeting:</h3> <h5>{{{ MeetingDetails.Date() }}}</h5>
     <h4><em><a href="{{{ resource("meetings/meetings.html") }}}">{{{ MeetingDetails.Title() }}}</a></em></h4>
