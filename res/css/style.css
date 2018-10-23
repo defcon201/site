@@ -191,6 +191,10 @@ h5 {
     transition: 0.5s;
 }
 
+.condensedbox {
+    padding: 50px 100px 10px 100px;    
+}
+
 .fullpic h1, .fullpic h2, .fullpic h3, .fullpic h4, .fullpic h5, p {
     background-color: rgba(0,0,0,0.85);
 
@@ -211,6 +215,11 @@ h5 {
     color: #fff;
 
     text-decoration: underline;
+}
+
+.transmogrify1 {
+    transform: rotate(180deg);
+    display: inline-block;
 }
 
 /* Begin DEFCON 201 Logo definitions. */

@@ -1,29 +1,34 @@
 {{{ header("", nodiv=True, white_bg=False) }}}
 
 <div class="main">
-<h1>Open Technology Workgroup.</h1>
+    <h1>Open Technology Workgroup.</h1>
 </div>
 
-<div class="fullpic" style="/* background-image: url({{{ resource("res/img/dc201meeting.jpg") }}}); background-position: bottom; */">
-<h2>Meetings</h2>
-<p><span style="font-size: 18px; font-weight: 600;">DEFCON 201 meets monthly, every <strong>third Friday</strong>, at the <strong><a href="{{{ resource("meetings/location.html") }}}">WHEALTH &amp; Co. Cafe,</a></strong> Journal Square.<span></p>
+<div class="fullpic condensedbox" style="/* background-image: url({{{ resource("res/img/dc201meeting.jpg") }}}); background-position: bottom; */">
+    <h2>Meetings</h2>
+    <p><span style="font-size: 18px; font-weight: 600;">DEFCON 201 meets monthly, every <strong>third Friday</strong>, at the <strong><a href="{{{ resource("meetings/location.html") }}}">WHEALTH &amp; Co. Cafe,</a></strong> Journal Square.<span></p>
 
-<h3>This month's meeting:</h3> <h5>{{{ MeetingDetails.Date() }}}</h5>
-<h4><em><a href="{{{ resource("meetings/meetings.html") }}}">{{{ MeetingDetails.Title() }}}</a></em></h4>
-<p>{{{ MeetingDetails.Summary() }}}</p>
-<h5><a href="{{{ MeetingDetails.CanonicalLink() }}}">Read the {{{ MeetingDetails.LinkName() }}}...</a></h5>
+    <h3>This month's meeting:</h3> <h5>{{{ MeetingDetails.Date() }}}</h5>
+    <h4><em><a href="{{{ resource("meetings/meetings.html") }}}">{{{ MeetingDetails.Title() }}}</a></em></h4>
+    <p>{{{ MeetingDetails.Summary() }}}</p>
+    <h5><a href="{{{ MeetingDetails.CanonicalLink() }}}">Read the {{{ MeetingDetails.LinkName() }}}...</a></h5>
 </div>
 
-<div class="fullpic" style="/* background-image: url({{{ resource("res/img/dc201gang.jpg") }}}); background-position: top; */">
-<h2>Who we are</h2>
-<p>
-The DEFCON 201 (or DC201) Group is a gathering point for folks interested in the alternate applications of science, technology, and other areas of information security; referred to properly as 'hacking'.
-</p>
-<p>
-Our mission is to help people learn new things, meet new people, mentor others in areas you may be strong in, and provide some cohesion within the hacker culture and it's members in the general New Jersey area. We facillitate this through project collaborations, group gatherings, and group activities that will best serve our community and the world.
-</p>
+<div class="fullpic condensedbox" style="/* background-image: url({{{ resource("res/img/dc201gang.jpg") }}}); background-position: top; */">
+  <h2>Who we are</h2>
+  <p>
+    The DEFCON 201 (or DC201) Group is a gathering point for folks interested in the alternate applications of science, technology, and other areas of information security; referred to properly as 'hacking'.
+  </p>
+  <p>
+    Our mission is to help people learn new things, meet new people, mentor others in areas you may be strong in, and provide some cohesion within the hacker culture and it's members in the general New Jersey area. We facillitate this through project collaborations, group gatherings, and group activities that will best serve our community and the world.
+  </p>
 
-<p><a href="{{{ resource("about/info.html") }}}">Read more...</a></p>
+  <p><a href="{{{ resource("about/info.html") }}}">Read more...</a></p>
+</div>
+
+<div class="fullpic condensedbox" style="/* background-image: url({{{ resource("res/img/dc201gang.jpg") }}}); background-position: top; */">
+    <h2>Contact us: <span style="text-decoration: underline;">info@defcon201.org</span></h2>
+    <p><span style="font-size: 14px;"><span style="font-weight: 600;">Call For Papers:</span> We're accepting submissions for Workshops and Lightning Talks!</span></p>
 </div>
 
 {{{ footer(nodiv=True) }}}
