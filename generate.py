@@ -93,6 +93,7 @@ class PageMethods:
         item("partners.html", "Partners", "partners")
         item("https://www.zazzle.com/defcon201", "Store", "Store", True)
         item(None, "Social", "social")
+        subitem("https://www.meetup.com/DEFCON201/", "Meetup.com", True)
         subitem("https://www.facebook.com/groups/1743426829004414/", "Facebook", True)
         subitem("https://twitter.com/defcon201nj", "Twitter", True)
         subitem("https://instagram.com/defcon201", "Instagram", True)
