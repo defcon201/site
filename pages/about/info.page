@@ -1,0 +1,123 @@
+{{{ header("Meetings", "meetings") }}}
+<div>
+<h2>About DEFCON201</h2>
+<h4>(Preliminary data - this is copied from the previous website for now.)</h4>
+<p>
+The DEFCON 201 (or DC201) Group is a gathering point for folks interested in
+the alternate applications of science, technology, and other areas of
+information security; referred to properly as 'hacking'.
+
+Our mission is to help people learn new things, meet new people, mentor
+others in areas you may be strong in, and provide some cohesion within the
+hacker culture and it's members in the general New Jersey area.
+We facillitate this through project collaborations, group gatherings, and
+group activities that will best serve our community and the world.
+</p>
+<h4>Frequently Asked Questions about DEFCON 201</h4>
+
+<h5>Question:</h5>
+<p>Do I have to be a "1337 Hacker" to Attend?</p>
+
+<h5>Answer:</h5>
+<p>
+The DEFCON 201 SIG(Special Interest Group) meetings are designed to attract
+not only hackers but members of various technology communities and people
+who want to learn more about Hacking but do not consider themselves hackers.
+We're open to anyone regardless of their skill, age, job, gender, etc.
+The purpose here is to interact with people who may have different backgrounds
+but share the same passion for technology.
+</p>
+
+<h5>Question:</h5>
+<p>What are the meeting rules?</p?
+
+<h5>Answer:</h5>
+<p>
+"Don't Be A Jerk"
+"Be open to learning new skills or perfecting/teaching old ones."
+"Be willing to either start a project or help someone with their own."
+</p>
+
+<h5>Question:</h5>
+<p>What separates DEFCON 201 from other Tech Meet Ups?</p>
+
+<h5>Answer:</h5>
+<p>
+DEFCON 201 lives in harmony with other hacker, maker and tech organizations
+in the New Jersey/New York Tri-State Area. In fact, two of our founders are
+long time regulars at the NYC 2600 group. We welcome those from said groups
+to check us out, as our goal is to be an active, hands-on, project-building
+group, whose members bring in ideas that we help create bring to fruition.
+</p>
+
+<h5>Question:</h5>
+<p>What qualifies and/or quantifies as a "Project"?</[?
+
+<h5>Answer:</h5>
+<p>
+A Project is the focused application of constructive and deconstructive skill
+to build something in physical and/or digital space;
+Ideas often within the themes of...
+</p>
+<ul>
+<li>circuit building & pcb design</li>
+<li>software defined radio</li>
+<li>social engineering</li>
+<li>osint</li>
+<li>physical locks</li>
+<li>programs & apps</li>
+<li>netops</li>
+<li>infosec</li>
+<li>robotics</li>
+<li>red/blue team drills</li>
+<li>data mining</li>
+<li>tailoring and textiles</li>
+<li>research</li>
+<li>advocacy</li>
+<li>law</li>
+<li>and much, much more!</li>
+</ul>
+<p>
+In short, as long as you have an idea that you want to create into a
+realistic tangible result, please bring it and our members will try
+to bring it to fruition with the tools and resources at our disposal!
+</p>
+
+<h5>Question:</h5>
+<p>Can I attend if I only want to meet people?</p>
+
+<h5>Answer:</h5>
+<p>
+We understand if people feel overwhelmed by the idea of working on projects.
+If you want to show up to socialize, you are more than welcome to, but to get
+the full experience of our group you can use your social skills to help out
+with projects and DEFCON 201.
+NEVER think that you are useless, everyone has a skill in something and if you
+want to learn new ones, we are more than happy to teach you.
+We are also looking into pure social gatherings in the near future and host
+short talks on various STEM subjects.
+</p>
+
+<h5>Question:</h5>
+<p>When is DEFCON 201?</p>
+
+<h5>Answer:</h5>
+<p>
+DEFCON 201 members meet from all over the Hudson County Area in Jersey City,
+Hoboken and Newark, and from New York City, Long Island, and Northern New Jersey
+in Union, Secaucus, and as far as Piscataway!
+Our current home is easily accessible by bus or train from all corners of the
+Northeast Corridor, directly in Journal Square at the Whealth Bar.</p>
+<p>
+We always meet during the third weekend of every month.
+</p>
+<p>
+Venues for monthly meetings are typically the same - Whealth Cafe at Journal Square.
+However, venue may be subject to change for special meet ups, and depending on the
+schedule of said venues, so please check our websites and social media
+for the exact time and location.
+</p>
+
+</div>
+
+{{{ footer() }}}
