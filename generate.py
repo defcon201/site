@@ -106,6 +106,9 @@ class PageMethods:
                     Text content: <a href="https://creativecommons.org/licenses/by/4.0">CC-BY 4.0</a><br>
                     Site code: <a href="https://twitter.com/sirocyl">sirocyl</a> &mdash; <a href="http://github.com/defcon201/site">Github</a><br>
                     DEFCON201 Logo: <a href="https://twitter.com/tekcopedis">sidepocket</a> &amp; <a href="http://1dark1.com/">1dark1</a> &amp; <a href="https://twitter.com/sirocyl">sirocyl</a><br>
+                    <br>
+                    Questions, changes or comments about the website? <a href="https://github.com/defcon201/site/issues">See the issue tracker.</a><br>
+                    <br>
                     <span style="font-family: Voltaire-webfont;"><span class="image jersey" style="">&emsp;</span> Proudly made in New Jersey.</span>
                 </div>
             </footer>
