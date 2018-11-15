@@ -90,7 +90,7 @@ class PageMethods:
         subitem("about/info.html", "About DEFCON 201")
         subitem("about/partners.html", "Partners")
         subitem("about/contact.html", "Contact us")
-        item("projects.html", "Projects", "projects")
+        item("https://github.com/defcon201", "Projects", "projects", True)
         item("https://www.zazzle.com/defcon201", "Store", "Store", True)
         item(None, "Social", "social")
         subitem("https://www.meetup.com/DEFCON201/", "Meetup.com", True)
