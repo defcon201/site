@@ -1,4 +1,4 @@
-{{{ header("Meetings", "meetings") }}}
+{{{ header("Info | About", "info") }}}
 <div>
 <h2>About DEFCON201</h2>
 <h4>(Preliminary data - this is copied from the previous website for now.)</h4>
