@@ -1,7 +1,7 @@
 {{{ header("", nodiv=True, white_bg=False) }}}
 
 <div class="main">
-    <h1>Open Technology Workgroup.</h1>
+    <h1>Open Technology Workgroup</h1>
 </div>
 
 <div class="fullpic condensedbox" style="/* background-image: url({{{ resource("res/img/dc201meeting.jpg") }}}); background-position: bottom; */">
