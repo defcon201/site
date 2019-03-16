@@ -3,29 +3,31 @@
 class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend against it for semantics sake.
     from pages.meetings.previous import PreviousMeetings
     def Date():			# Date of the meeting (Weekday, Month DD)
-        return "Friday, January 18"
+        return "Friday, April 19"
     def Title():		# Title of the meeting
-        return "Shmoo-zing Around"
+        return "#Moonstruck"
     def Location():		# Location of the meeting (usually "WHEAlTH at Journal Square")
         return "WHEALTH at Journal Square"
     def Notice():		# Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():	# A link that refers to this meeting
-        return "https://medium.com/@defcon201/defcon-201-january-2019-shmoo-zing-around-905955bcbf5a"
+        return "https://www.meetup.com/DEFCON201/events/259623485/"
     def LinkName():		# What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
-        return "post on our Medium"
+        return "Meetup event"
     def Summary():		# Short, 1-2 sentences about this meeting.
         return """
-Welcome to the first DEFCON 201 Meet Up of 2019! Despite a crazy schedule and a potential snowstorm, we are still meeting up today for some hacker shenanigans. In this installment, we are going to learn about WebPKI, live stream Shmoocon and share some good times together as we launch big workshops, projects and events February and beyond!
+#Moonstruck is the new day of reckoning in a distracted world. No digital. No screens. All analog. Welcome to the Real World.
 """
     def Schedule():
         schedstruct = ['starttime', 'endtime', 'eventtype', 'title', 'speaker', 'summary']
         schedtable = []
         schedlist = []
-        schedlist.append(['7:00PM', '8:00PM', 'Intro', 'Meet &amp; Greet + Shmoocon Live Stream', 'DEFCON 201 members', 'Chat amongst friends, coordinate your public key portfolio, add cards to your Rolodex&trade;, and warm up for the talks!'])
-        schedlist.append(['8:00PM', '8:05PM', 'Talk',  'DEFCON 201: The First Half of 2019', 'Sidepocket', '<em>[Pending description]</em>'])
-        schedlist.append(['8:05PM', '9:00PM', 'Talk',  'Understanding WebPKI', 'NCommander', '<em>[Pending description.]</em>'])
-        schedlist.append(['8:50PM', '9:55PM', 'Workshops', 'January 2019', 'Open participation', 'During workshops, Shmoocon will be streamed in the background.'])
+        schedlist.append(['7:00PM', '8:00PM', 'Intro', 'Meet &amp; Greet + Digital Detox', 'DEFCON 201 members', 'Chat amongst friends, coordinate your public key portfolio, add cards to your Rolodex&trade;, and warm up for the talks!'])
+        schedlist.append(['8:00PM', '8:05PM', 'Lightning Talk',  '#Moonstruck', 'Adbusters c/o Sidepocket', '<em>[Pending description]</em>'])
+        schedlist.append(['8:05PM', '8:25PM', 'Talk',  'Ham Radio talk', 'ARRL', '<em>[Pending description.]</em>'])
+        schedlist.append(['8:25PM', '8:50PM', 'Talk', '\'Fone\'s broke? I\'ll just call a repairman!', 'Sidepocket', '<em>[Pending description]</em>'])
+        schedlist.append(['8:50PM', '9:00PM', 'Talk',  'Introduction to Lockpicking', 'TOOOL', '<em>[Pending description.]</em>'])
+        schedlist.append(['9:00PM', '9:55PM', 'Workshops', 'January 2019', 'Open participation', 'Talk about and work together on projects!'])
         schedlist.append(['9:55PM', '10:00PM', 'Wrap-Up', 'Official end of meeting', 'Good night!', ''])
         for item in schedlist:
             schedtable.append( dict(zip(schedstruct, item)) )
