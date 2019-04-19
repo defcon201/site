@@ -9,7 +9,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
     def Location():		# Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "SUBCULTURE Jersey City, 260 Newark Ave."
     def Notice():		# Any important notices about the meeting or the information.
-        return "<h3>Note! Meeting location changed!</h3><p style=\"font-size: larger\">The April meeting, and all following meetings for the foreseeable future, will be held at SUBCULTURE Jersey City.</p><h5>Do not arrive at WHEALTH!</h5>"
+        return "<h3>Note! Meeting location changed!</h3><p style=\"font-size: larger\">The April meeting, and all following meetings for the foreseeable future, will be held at SUBCULTURE Jersey City.</p><h4>Do not arrive at WHEALTH!</h4>"
     def CanonicalLink():	# A link that refers to this meeting
         return "https://www.meetup.com/DEFCON201/events/259623485/"
     def LinkName():		# What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
