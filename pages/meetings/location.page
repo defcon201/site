@@ -4,34 +4,43 @@
 <h1>About the Location</h1>
 </div>
 
-<div class="fullpic" style="background-image: url({{{ resource("res/img/photo/whealth.jpg") }}});">
-<h3>Whealth &amp; Co. Cafe</h3>
-<h4>Journal Square, Jersey City</h4>
+<div class="fullpic" style="background-image: url({{{ resource("res/img/photo/subculture-logo.jpg") }}});">
+<h3>SUB CULTURE</h3>
+<h4>Downtown Jersey City</h4>
 
-<p>Centered right at the heart of Journal Square by the PATH station, with mobile accessibility, coffee and food, inside and outside areas and a passion for the hacker community, we invite everyone to join us in welcoming our new venue and breaking in the house (but not breaking the house). Plus, our venue is allowing us to BYOB so continue that tradition!</p>
+<p>Centered right at the heart of Jersey City's Historic Downtown district, with classic video games, sandwiches and coffee, and a passion for the hacker community, we invite everyone to join us in welcoming our new venue.</p>
 
-<p><a href="https://www.whealthandco.com/jsq-cafe/">Visit their site</a></p>
+<p><a href="https://subculturejc.com/">Visit their site</a></p>
 </div>
 
-<div class="fullpic" style="background-image: url({{{ resource("res/img/photo/whealth-outside.png") }}});">
+<div class="fullpic" style="background-image: url({{{ resource("res/img/photo/subculture-outside.png") }}});">
 <h4>Directions</h4>
-<p>WHEALTH @ JSQ Cafe is on the ground floor of the Journal Squared building complex.</p>
+<p>SUB CULTURE is located at <strong>260 Newark Ave.</strong></p>
 <h4>From PATH trains</h4>
-<h5>by escalator</h5>
+<h5>Grove Street PATH Station - <em>0.5mi walk</em></h5>
 <p>
-From the PATH turnstile, go up the escalator to the mezzanine level; enter the concourse, turn right, and follow signs for "Parking Lot/Kiss &amp; Ride". Make a left, then head down the alleyway toward Pavonia Ave.
+From the PATH station, go up Newark Ave. on the right side, across Grove Street, through the pedestrian area. Continue until you cross 2nd Street, and it will be on your right.
 </p>
-<h4>From PATH trains</h4>
-<h5>by elevator (accessible route)</h5>
+<h4>From Light Rail trains</h4>
+<h5>Harsimus Cove HBLR Station - <em>0.75mi walk</em></h5>
 <p>
-Take the elevators up to street level, then exit north toward Pavonia Ave., and follow the sidewalk east on Pavonia, past the bus depot.
+Head down 2nd Street, across Marin Ave. Continue until Newark Ave., and it will be in the block around the corner to your right.
 </p>
-<h4>From Journal Square Transportation Center</h4>
-<h5>NJ Transit Bus terminal</h5>
+<h4>From NY Waterway Ferry, Light Rail trains or Exchange Place PATH trains</h4>
+<h5>Harborside Financial District, Exchange Place - <em>1mi walk</em></h5>
 <p>
-From the bus depot, exit at Pavonia Ave., turn right, then follow signs to WHEALTH Cafe.
+Head down Bay Street. Continue onto Newark Ave. until you cross 2nd Street, and it will be on your right.
 </p>
-<p><a href="https://tools.wmflabs.org/geohack/geohack.php?pagename=Journal_Squared&params=40_43_58_N_74_03_42_W_type:landmark">Directions and maps</a></p>
+<h4>Via NJ Transit Buses <strong>80</strong> from Jersey City - <em>Gates Ave., Sip Ave., Journal Square;</em> <strong>86</strong> from Union City</h4>
+<h5>Eastbound - <strong>Newark Ave. at Monmouth St.</strong> <em>NJTRANSIT MyBus stop #20960</em></h5>
+<p>
+From the bus stop, continue east. Cross the street twice, and it will be to the left.
+</p>
+<h5>Westbound - <strong>Newark Ave. at 3rd St.</strong> <em>NJTRANSIT MyBus stop #31008</em></h5>
+<p>
+From the bus stop, head back east. Cross Newark Ave., and it will be to your left.
+</p>
+<p><a href="https://goo.gl/maps/3BHeBFcVUmMKXSv5A">Directions and maps</a> (Google Maps)</p>
 </div>
 
 {{{ footer(nodiv=True) }}}
