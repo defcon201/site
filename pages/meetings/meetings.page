@@ -10,11 +10,6 @@
 
 MeetingDetails.FormattedSchedule()
 
-}}}
-
-<h4>Past meetings:</h4>
-<p>Information from the meeting immediately preceding the current one will go here following the website refresh.</p>
-<p><a href="{{{ resource("meetings/previous.html") }}}">Read more...</a></p>
-</div>
+}}
 
 {{{ footer() }}}
