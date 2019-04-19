@@ -72,7 +72,10 @@ class PageMethods:
         def subitem(target, title, ext_link=False, item_icon=None):
             nonlocal r
             r += "                "
-            r += "<li class=\"sublink\"><a href=\""
+            r += "<li class=\"sublink\"><a"
+            if title is "Mastodon":
+                r += " rel=\"me\""
+            r += " href=\""
             if ext_link:
                 r += target
             else:
