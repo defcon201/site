@@ -83,7 +83,6 @@ class PageMethods:
 
         item("meetings/meetings.html", "Meetings", "meetings")
         subitem("meetings/location.html", "About the location")
-        subitem("meetings/previous.html", "Previous meetings")
         subitem("meetings/events.html", "Special events")
         item("https://medium.com/@defcon201/", "News", "news", True)
         item("about/info.html", "Info", "info")
