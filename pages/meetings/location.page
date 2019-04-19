@@ -4,18 +4,16 @@
 <h1>About the Location</h1>
 </div>
 
-<div class="fullpic" style="background-image: url({{{ resource("res/img/photo/subculture-logo.jpg") }}});">
-<h3>SUB CULTURE</h3>
+<div class="fullpic" style="background-image: url({{{ resource("res/img/photo/subculture-outside.jpg") }}});">
+<h3>SUBCULTURE</h3>
 <h4>Downtown Jersey City</h4>
 
 <p>Centered right at the heart of Jersey City's Historic Downtown district, with classic video games, sandwiches and coffee, and a passion for the hacker community, we invite everyone to join us in welcoming our new venue.</p>
 
-<p><a href="https://subculturejc.com/">Visit their site</a></p>
-</div>
+<p><a href="https://subculturejc.com/">Visit their site</a></p><br>
 
-<div class="fullpic" style="background-image: url({{{ resource("res/img/photo/subculture-outside.png") }}});">
-<h4>Directions</h4>
-<p>SUB CULTURE is located at <strong>260 Newark Ave.</strong></p>
+<h3>Directions</h3>
+<p style="font-size: bigger">SUBCULTURE is located at <strong>260 Newark Ave.</strong></p>
 <h4>From PATH trains</h4>
 <h5>Grove Street PATH Station - <em>0.5mi walk</em></h5>
 <p>
