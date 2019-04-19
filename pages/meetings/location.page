@@ -1,4 +1,4 @@
-{{{ header("Location", "meetings", nodiv=True, white_bg=True) }}}
+{{{ header("Location", "meetings", nodiv=True, white_bg=False) }}}
 
 <div class="main">
 <h1>About the Location</h1>
