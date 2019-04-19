@@ -6,10 +6,10 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
         return "Friday, April 19"
     def Title():		# Title of the meeting
         return "#Moonstruck"
-    def Location():		# Location of the meeting (usually "WHEAlTH at Journal Square")
-        return "WHEALTH at Journal Square"
+    def Location():		# Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
+        return "SUBCULTURE Jersey City, 260 Newark Ave."
     def Notice():		# Any important notices about the meeting or the information.
-        return ""
+        return "<h2>Note! Meeting location changed!</h2><p>The April meeting, and all following meetings for the foreseeable future, will be held at SUBCULTURE Jersey City</p><h4>Do not arrive at WHEALTH!</h4>"
     def CanonicalLink():	# A link that refers to this meeting
         return "https://www.meetup.com/DEFCON201/events/259623485/"
     def LinkName():		# What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
@@ -28,7 +28,8 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
         schedlist.append(['8:25PM', '8:50PM', 'Talk', '\'Fone\'s broke? I\'ll just call a repairman!', 'Sidepocket', '<em>[Pending description]</em>'])
         schedlist.append(['8:50PM', '9:00PM', 'Talk',  'Introduction to Lockpicking', 'TOOOL', '<em>[Pending description.]</em>'])
         schedlist.append(['9:00PM', '9:55PM', 'Workshops', 'January 2019', 'Open participation', 'Talk about and work together on projects!'])
-        schedlist.append(['9:55PM', '10:00PM', 'Wrap-Up', 'Official end of meeting', 'Good night!', ''])
+        schedlist.append(['9:55PM', '10:00PM', 'Wrap-Up', 'Official end of meeting', 'Good night!', '<em>Note: SUBCULTURE closes at 10pm. Please make sure your belongings are together before closing time.'])
+        schedlist.append(['10:00PM', 'zzz', 'Unofficial Ad-Hoc Hours', 'Downtown JC', 'Who\'s up?', 'We may decide to regroup at a local late night venue such as a diner or bar afterwards; this is ad-hoc and entirely unregulated airspace. Participate at your own risk.'])
         for item in schedlist:
             schedtable.append( dict(zip(schedstruct, item)) )
         return schedtable
