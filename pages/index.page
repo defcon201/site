@@ -7,6 +7,10 @@
 <div class="fullpic condensedbox" style="/* background-image: url({{{ resource("res/img/dc201meeting.jpg") }}}); background-position: bottom; */">
     <h2>Meetings</h2>
     <p><span style="font-size: 18px; font-weight: 600;">DEFCON 201 meets monthly, every <strong>third Friday</strong>, at <strong><a href="{{{ resource("meetings/location.html") }}}">SubCulture</a></strong>.</span></p>
+    <br>
+    <h2>ALERT: July meeting rescheduled.</h2>
+    <p><span style="font-size: 18px; font-weight: 600;">For the month of July 2019, due to the extreme heat forecasted, this month's meeting will be held on the <strong>fourth Friday</strong>, July 26th, 7:00pm, at <strong><a href="{{{ resource("meetings/location.html") }}}">SubCulture</a></strong>.</span><br>
+    Some of us will be present on the typical meeting day of July 16th, but this is an informal gathering and no meeting plan is in place.</p><br>
 
     <h3>This month's meeting:</h3> <h5>{{{ MeetingDetails.Date() }}}</h5>
     <h4><em><a href="{{{ resource("meetings/meetings.html") }}}">{{{ MeetingDetails.Title() }}}</a></em></h4>
