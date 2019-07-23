@@ -264,7 +264,7 @@ h5 {
     width: auto;
     height: auto;
 }
-.liberty:before { content: "—"; }
+.liberty:before { content: "\2014"; }
 .liberty > span { display: none; }
 
 .dc201-logo-subheader > .left-side, #dc201-logo-subheader > .right-side {
