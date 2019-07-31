@@ -90,6 +90,8 @@ class PageMethods:
         item("https://medium.com/@defcon201/", "News", "news", True)
         item("about/info.html", "Info", "info")
         subitem("about/info.html", "About DEFCON 201")
+        subitem("about/coc.html", "Code of Conduct")
+        subitem("about/constitution.html", "Constitution")
         subitem("about/partners.html", "Partners")
         subitem("about/contact.html", "Contact us")
         item("https://github.com/defcon201", "Projects", "projects", True)
@@ -100,6 +102,7 @@ class PageMethods:
         subitem("https://twitter.com/defcon201nj", "Twitter", True)
         subitem("https://instagram.com/defcon201", "Instagram", True)
         subitem("https://hostux.social/@defcon201", "Mastodon", True)
+        subitem("https://github.com/defcon201", "GitHub", True)
 
         r += """
             </ul>
