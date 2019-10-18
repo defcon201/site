@@ -2,31 +2,31 @@
 
 class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend against it for semantics sake.
     def Date():			# Date of the meeting (Weekday, Month DD)
-        return "Friday, September 20th"
+        return "Friday, October 18th"
     def Title():		# Title of the meeting
-        return "Hak2Skool"
+        return "Hacktoberfest 3.0"
     def Location():		# Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "SUBCULTURE Jersey City, 260 Newark Ave."
     def Notice():		# Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():	# A link that refers to this meeting
-        return "https://medium.com/@defcon201/defcon-201-meet-up-september-2019-hak2skool-fc249f83ce0b?sk=5d08defbbb29caab82129cac33fde4f1"
+        return "https://medium.com/@defcon201/defcon-201-meet-up-october-2019-hacktoberfest-3-0-92960ca339"
     def LinkName():		# What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "Medium:"
     def Summary():		# Short, 1-2 sentences about this meeting.
         return """
-        Join #DEFCON201 at SubCulture (260 Newark Ave, Jersey City NJ) on Friday, September 20th from 7pm - 10pm to learn about amamzing Hackers who happen to be Transgender, Lockpicking, VR, LISP and more DC201 goodness!
+        Join #DEFCON201 at SubCulture (260 Newark Ave, Jersey City NJ) on Friday, October 18th from 7pm - 10pm to learn about SSH Hardening, Hacktoberfest Github Pull Requests, Free Swag, Pumpcon Prep and more DC201 goodness!
 """
     def Schedule():
         schedstruct = ['starttime', 'endtime', 'eventtype', 'title', 'speaker', 'summary']
         schedtable = []
         schedlist = []
         schedlist.append(['7:00PM', '8:05PM', 'Intro', 'Meet &amp; Greet', 'DEFCON 201 members', 'Chat amongst friends, coordinate your public key portfolio, add cards to your Rolodex&trade;, and warm up for the talks!'])
-        schedlist.append(['8:05PM', '8:30PM', 'Making Diversity A Reality: Lessons Learned from Hypatia Software',  'Dr. Brian Callahan', 'DEFCON 201', 'This talk documents the efforts of one particular diversity in tech group, Hypatia Software Organization, Inc., and its work to normalize the trans experience in the tech sector.'])
-        schedlist.append(['8:30PM', '8:35PM', '<em>Curing LISP with Stutter</em>',  'sirocyl', 'DEFCON 201', 'Stutter is a stack-oriented LISP-alike program notation language with homo-iconic, declarative, passive program structure that works on stack frames at it’s base.'])
-        schedlist.append(['8:35PM', '9:55PM', 'Workshops', 'June 2019', 'Open participation', 'Talk about and work together on projects!'])
+        schedlist.append(['8:00PM', '8:35PM', 'Locking Down Production Access at Startup Scale',  'Liz Fong-Jones', 'DEFCON 201', 'Learn about what lessons translated when going from Google to a 25-person startup, and how a modicum of effort can better secure user data and access to production.'])
+        schedlist.append(['8:35PM', '8:40PM', '<em>Hacktoberfest: The Stupid Content Tracker</em>',  'sirocyl', 'DEFCON 201', 'In this quick primer, you will learn how to navigate GitHub, how Git works, how to log into the Hacktoberfest website, how to do a Pull Request and what you need to do to earn your FREE T-Shirt and swag!'])
+        schedlist.append(['8:40PM', '9:55PM', 'Workshops + Hacktoberfest 2019', 'June 2019', 'Open participation', 'Talk about and work together on projects! Do GitHub Pull Requests for Digital Ocean`s Hacktoberfest to win exclusive swag and prizes!'])
         schedlist.append(['9:55PM', '10:00PM', 'Wrap-Up', 'Official end of meeting', 'Good night!', '<em>Note: SUBCULTURE closes at 10pm. Please make sure your belongings are together before closing time.'])
-        schedlist.append(['10:00PM', 'zzz', 'Unofficial Ad-Hoc Hours', 'Downtown JC', 'Who\'s up?', 'We may decide to regroup at a local late night venue such as a diner or bar afterwards; this is ad-hoc and entirely unregulated airspace. Participate at your own risk.'])
+        schedlist.append(['10:00PM', 'zzz', 'Pumpcon + Unofficial Ad-Hoc Hours', 'Downtown JC', 'Who\'s up?', 'A chunk of us will be heading to Pumpcon (https://www.pumpcon.org) in Philly! We also may decide to regroup at a local late night venue such as a diner or bar afterwards; this is ad-hoc and entirely unregulated airspace. Participate at your own risk.'])
         for item in schedlist:
             schedtable.append( dict(zip(schedstruct, item)) )
         return schedtable
