@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/sidepocket
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.defcon201.org
+  * I am sidepocket (https://keybase.io/sidepocket) on keybase.
+  * I have a public key ASByrz4421RbNXAfWS4hqShgJgWLGjY74wS_DPfIaGaulQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012072af3e38db545b35701f592e21a9286026058b1a363be304bf0cf7c86866ae950a",
+      "host": "keybase.io",
+      "kid": "012072af3e38db545b35701f592e21a9286026058b1a363be304bf0cf7c86866ae950a",
+      "uid": "e0e11dace0137cd0c100a1e617dd0a19",
+      "username": "sidepocket"
+    },
+    "merkle_root": {
+      "ctime": 1528907656,
+      "hash": "56ae9836f246d4455af8e066358a757bc10e3972d80ff7da0bad763bd0a85985f1a9d50cd0da59c49d123d7e6b88f2ac7cfb2541f89ebf3d97dbc08f80aeae74",
+      "hash_meta": "2ce7a90fd14a5dec37e605d0097ec2a9a770179b0a178e4054b3d4d7efe50968",
+      "seqno": 3071583
+    },
+    "service": {
+      "hostname": "www.defcon201.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.45"
+  },
+  "ctime": 1528907632,
+  "expire_in": 504576000,
+  "prev": "559fe7a03c07107679ff05b00e54f20fee7044b655251eca72af51e739d75c01",
+  "seqno": 42,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgcq8+ONtUWzVwH1kuIakoYCYFixo2O+MEvwz3yGhmrpUKp3BheWxvYWTFA0x7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNzJhZjNlMzhkYjU0NWIzNTcwMWY1OTJlMjFhOTI4NjAyNjA1OGIxYTM2M2JlMzA0YmYwY2Y3Yzg2ODY2YWU5NTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNzJhZjNlMzhkYjU0NWIzNTcwMWY1OTJlMjFhOTI4NjAyNjA1OGIxYTM2M2JlMzA0YmYwY2Y3Yzg2ODY2YWU5NTBhIiwidWlkIjoiZTBlMTFkYWNlMDEzN2NkMGMxMDBhMWU2MTdkZDBhMTkiLCJ1c2VybmFtZSI6InNpZGVwb2NrZXQifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1Mjg5MDc2NTYsImhhc2giOiI1NmFlOTgzNmYyNDZkNDQ1NWFmOGUwNjYzNThhNzU3YmMxMGUzOTcyZDgwZmY3ZGEwYmFkNzYzYmQwYTg1OTg1ZjFhOWQ1MGNkMGRhNTljNDlkMTIzZDdlNmI4OGYyYWM3Y2ZiMjU0MWY4OWViZjNkOTdkYmMwOGY4MGFlYWU3NCIsImhhc2hfbWV0YSI6IjJjZTdhOTBmZDE0YTVkZWMzN2U2MDVkMDA5N2VjMmE5YTc3MDE3OWIwYTE3OGU0MDU0YjNkNGQ3ZWZlNTA5NjgiLCJzZXFubyI6MzA3MTU4M30sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJ3d3cuZGVmY29uMjAxLm9yZyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjQ1In0sImN0aW1lIjoxNTI4OTA3NjMyLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjU1OWZlN2EwM2MwNzEwNzY3OWZmMDViMDBlNTRmMjBmZWU3MDQ0YjY1NTI1MWVjYTcyYWY1MWU3MzlkNzVjMDEiLCJzZXFubyI6NDIsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAcn8+lvdN5Msm6UGozX+q6WL8HZj+Slbi4kDu2Gop21FXgSqXXkhAULq2eenQmxRZzRWtzNW3VzAVKniPhKIlD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDUBOspTs6rbkEYg0w96GxdYSCiuo4DJHoprBPJPmT3qo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sidepocket
+
+==================================================================
