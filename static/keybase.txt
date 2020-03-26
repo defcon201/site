@@ -53,3 +53,60 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/sidepocket
 
 ==================================================================
+
+==================================================================
+https://keybase.io/sirocyl
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://defcon201.org
+  * I am sirocyl (https://keybase.io/sirocyl) on keybase.
+  * I have a public key ASBKLI2oRZB985rDE20Gdd1Q6NKcnZylaEnLhvAwusNGrgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d58c87625d7001c08ca9b229fadd6ad1a5f4088d24d517ad5436123515f97d7a0a",
+      "host": "keybase.io",
+      "kid": "01204a2c8da845907df39ac3136d0675dd50e8d29c9d9ca56849cb86f030bac346ae0a",
+      "uid": "02835d680a884ac234d4353fb36db619",
+      "username": "sirocyl"
+    },
+    "merkle_root": {
+      "ctime": 1585193229,
+      "hash": "f50e5068b44dad4ce6b98b08e2418dc5b385dc7b1e9ad9f4064a95ea06b498b979c03cb742a93e4a48e0e0f1b09063414267671a8b6d57bc6de9ef078d4d4ebe",
+      "hash_meta": "b27bf0c2656c289cf975f0c4568da0b5244c846ccc838574d5f2d01e1d5eed04",
+      "seqno": 15618709
+    },
+    "service": {
+      "entropy": "wEYOUoWzWdWhGz/sQWwz9MrO",
+      "hostname": "defcon201.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.3.0"
+  },
+  "ctime": 1585193254,
+  "expire_in": 504576000,
+  "prev": "3a1097f692c5fabd70cc73baf2dab8c1f2923635acd6a7b8bd22d4687287d901",
+  "seqno": 92,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgSiyNqEWQffOawxNtBnXdUOjSnJ2cpWhJy4bwMLrDRq4Kp3BheWxvYWTESpcCXMQgOhCX9pLF+r1wzHO68tq4wfKSNjWs1qe4vSLUaHKH2QHEIPo4YpSwCDxharAZZY1ZEdXAxtUerNwqku5yYkTLi9z6AgHCo3NpZ8RAI58vczbPUhZht2x/unqVeaQKpi9UHR59V8mTTWAaAXp9IzTyq0HC5E1a65klv6lnE5bxXiAfq3g8Faeg3kKzAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFEsOsMyyso6fL/fUf4oAHOVu/1JQoBHjyheZ2F6i/PFo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sirocyl
+
+==================================================================
