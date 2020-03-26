@@ -174,6 +174,7 @@ def main():
         print("generate: nothing to clear")
         pass
     print("generate: copying static resources")
+    shutil.copytree("static/", "output/")
     shutil.copytree("res/", "output/res/")
 
     for root, dirs, files in os.walk("./pages"):
