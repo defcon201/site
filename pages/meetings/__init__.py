@@ -2,15 +2,15 @@
 
 class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend against it for semantics sake.
     def Date():			# Date of the meeting (Weekday, Month DD)
-        return "Friday, February 21st"
+        return "Friday, April 17th"
     def Title():		# Title of the meeting
-        return "Hackers Lonely Hearts Club"
+        return "Compile Farm"
     def Location():		# Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
-        return "SUBCULTURE Jersey City, 260 Newark Ave."
+        return "ONLINE [SEE LINK]"
     def Notice():		# Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():	# A link that refers to this meeting
-        return "https://medium.com/@defcon201/defcon-201-meet-up-february-2020-hackers-lonely-hearts-club-1edbe21f6de0"
+        return "https://medium.com/@defcon201/defcon-201-online-meet-up-april-2020-compile-farm-ad1e07acb6f5?sk=44919e5c5c42f768ef66fe49ab72de4f"
     def LinkName():		# What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "Medium:"
     def Summary():		# Short, 1-2 sentences about this meeting.
@@ -20,13 +20,13 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
         schedstruct = ['starttime', 'endtime', 'eventtype', 'title', 'speaker', 'summary']
         schedtable = []
         schedlist = []
-        schedlist.append(['7:00PM', '7:45PM', 'Intro', 'Meet &amp; Greet', 'DEFCON 201 members', 'Chat amongst friends, coordinate your public key portfolio, add cards to your Rolodex&trade;, and warm up for the talks!'])
-        schedlist.append(['7:45PM', '7:50PM', 'DEFCON 201 Annoucements & Code of Conduct',  'GI Jack & Sidpocket', 'DEFCON 201', 'DEFCON 201 will start with various updates about our activities in early 2020 and an overview of the Code of Conduct linked on our website.'])
-        schedlist.append(['7:50PM', '8:00PM', '<em>Why Pick Up “Artists” Are A Scam; A Social Engineer’s Perspective</em>',  'Sidepocket', 'DEFCON 201', 'In this talk, our speaker with disect various Pick Up Artist techniques and demonstrate why these techinques do not work, the pyschological damage they cause, the bizzaro culture around this study and who it’s actually designed to social engineer. This talk will be prefaced by a TRIGGER WARNING as topics such as sexual harassment and stalking will be touched upon.'])
-        schedlist.append(['8:00PM', '8:45PM', '<em>An Introduction to Iot Pentetration Testing</em>',  'Libertyunix', 'DEFCON 201', 'In this talk we will explore the basic principles of IoT PenTesting, how to build an effective toolset, reverse engineering, and analyzing wireless signals with software defined radio.'])
-        schedlist.append(['8:45PM', '9:55PM', 'Workshops + Projects', 'Feburary 2020', 'Open participation', 'Talk about and work together on projects! Open Projects include Lockpicking, PWNagotchi, Pi-Hole, and preparing for PAX East! We also encourage to bring your own!'])
-        schedlist.append(['9:55PM', '10:00PM', 'Wrap-Up', 'Official end of meeting', 'Good night!', '<em>Note: SUBCULTURE closes at 10pm. Please make sure your belongings are together before closing time.'])
-        schedlist.append(['10:00PM', 'zzz', 'Unofficial Ad-Hoc Hours', 'Downtown JC', 'Who\'s up?', 'We may decide to regroup at a local late night venue such as a diner or bar afterwards; this is ad-hoc and entirely unregulated airspace. Participate at your own risk.'])
+        schedlist.append(['6:20PM', '7:00PM', 'PRE-MEETING HACKER EDUTAINMENT', 'Online Que', 'DEFCON 201 Members', 'To give time to make sure everyone is watching our LiveStream and logging into our LiveStream chat, DEFCON 201 will be showing various videos that relates to our meeting theme.'])
+        schedlist.append(['7:00PM', '7:05PM', 'DEFCON 201 Annoucements & Code of Conduct',  'GI Jack & Sidpocket', 'DEFCON 201', 'DEFCON 201 will start with various updates about our activities in early 2020 and an overview of the Code of Conduct linked on our website.'])
+        schedlist.append(['7:05PM', '7:15PM', 'Empowering a New Local Food System in Urban Environments',  'Mary Wetherill & Electra Jarvis', 'Mary and Electra of Green Food Solutions, will discuss how they are empowering a new local food system, and how you can grow food practically anywhere that has access to electricity and water. They will also give a live demo of their home growing Tower.'])
+        schedlist.append(['7:15PM', '7:25PM', 'Printing Green: An Ecological Cryptocurrency Future',  'BitGreen Foundation', 'Workshop', 'In this talk, the BitGreen Foundation will go over their future goals on the BitGreen project to fund energy efficient and tech activism, how their Proof Of Stake mining method differs from other cryptocurrencies and how to set up your own Master Node directly from the BitGreen Wallet to mine BitGreen on any hardware.'])
+        schedlist.append(['7:25PM', '7:30PM', 'About Rural Tech Fund', 'Chris Sanders', 'Charity PSA', 'The Rural Technology Fund (RTF) recognizes the very real “digital divide” between rural and non-rural areas.'])
+        schedlist.append(['7:30PM', '???', 'Open Workshops Projects', 'Drinking + Games', 'Open participation', 'Join us in the Zoom Chat (email us for access) for our Hacker Show & Tell, Jackbox Party Games, Drinking Alcohol and Juice and 1337 converstations while we lose our minds in isolation!'])
+        schedlist.append(['Bonus', 'CTF', 'April 17th - April 19th', 'PladCTF', 'https://discord.gg/PGgPNEF', 'If you are new to Online CTF, we will help you get set up and walk you thorugh some of the challenges: https://plaidctf.com/'])
         for item in schedlist:
             schedtable.append( dict(zip(schedstruct, item)) )
         return schedtable
