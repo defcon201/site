@@ -15,7 +15,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
         return "Medium:"
     def Summary():		# Short, 1-2 sentences about this meeting.
         return """
-        Join #DEFCON201 at SubCulture (260 Newark Ave, Jersey City NJ) on Friday, February 21st from 7pm - 10pm to learn Software Defined Radio, hack IoT devices, build a Pi-Hole, share stories of Shmoocon, lockpicking and more!"""
+        Join DEFCON 201 Online via Zoom or broacasted on Twitch, dLive or youtube on Friday, April 17th starting at 7:00 PM EST [6:30 PM EST PRE-SHOW] to learn about agricultural and environmentally friendly hacking techniques! <h2><a href="https://stats.foldingathome.org/team/241960">Join the DEFCON 201 Folding@Home Team: 241960</a></h2>"""
     def Schedule():
         schedstruct = ['starttime', 'endtime', 'eventtype', 'title', 'speaker', 'summary']
         schedtable = []
