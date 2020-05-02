@@ -95,6 +95,7 @@ class PageMethods:
         subitem("about/partners.html", "Partners")
         subitem("about/contact.html", "Contact us")
         item("https://github.com/defcon201", "Projects", "projects", True)
+        subitem("https://stats.foldingathome.org/team/241960", "Folding@Home", True)
         item("https://www.zazzle.com/defcon201", "Store", "Store", True)
         item(None, "Social", "social")
         subitem("https://www.meetup.com/DEFCON201/", "Meetup.com", True)
