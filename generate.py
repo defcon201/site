@@ -73,7 +73,7 @@ class PageMethods:
             nonlocal r
             r += "                "
             r += "<li class=\"sublink\"><a"
-            if title is "Mastodon":
+            if title == "Mastodon":
                 r += " rel=\"me\""
             r += " href=\""
             if ext_link:
