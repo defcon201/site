@@ -99,7 +99,7 @@ class PageMethods:
         item(None, "Social", "social")
         subitem("https://www.meetup.com/DEFCON201/", "Meetup.com", True)
         subitem("https://www.facebook.com/groups/1743426829004414/", "Facebook", True)
-        subitem("https://twitter.com/defcon201nj", "Twitter", True)
+#        subitem("https://twitter.com/defcon201nj", "Twitter", True)
         subitem("https://instagram.com/defcon201", "Instagram", True)
         subitem("https://hostux.social/@defcon201", "Mastodon", True)
         subitem("https://github.com/defcon201", "GitHub", True)
