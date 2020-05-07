@@ -10,12 +10,12 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
     def Notice():		# Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():	# A link that refers to this meeting
-        return "https://medium.com/@defcon201/"
+        return "https://www.meetup.com/DEFCON201/events/270121378/"
     def LinkName():		# What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
-        return "Medium"
+        return "Meetup"
     def Summary():		# Short, 1-2 sentences about this meeting.
         return """
-        More information about this month's meeting is coming soon.
+        <b>More information about this month's meeting is coming soon.</b><br>Meeting details are usually confirmed one week in advance of the scheduled meeting date.
         """
 
     def Schedule():
@@ -61,7 +61,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
 
         schedlist.append([
             '7:00PM',
-            '9:00PM',
+            '10:00PM',
             None,
             'DEFCON 201 Meeting',
             None,
