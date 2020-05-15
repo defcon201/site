@@ -78,11 +78,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
             'Pre-show',
             'Stalkerware: Solutions for Mitigating its Impact on Privacy and Security',
             'Black Hat Webcast Series',
-            """With the sudden and massive shift to users working remotely,
-            individuals and businesses are exposed to privacy and security vulnerabilities more than ever.
-            Nefarious applications such as stalkerware and spouseware are putting people and enterprises increasingly at risk.<br>
-
-            In this webcast, EFF’s Director of Cybersecurity, Eva Galperin examines her research into the market in stalkerware,
+            """In this webcast, EFF’s Director of Cybersecurity, Eva Galperin examines her research into the market in stalkerware,
             spouseware, and other nefarious applications that are being deployed to attack our sense of privacy and security.<br>
             
             She will reveal possible activist, technical, and legal approaches to fighting stalkerware
@@ -106,18 +102,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
             """
             <a href="https://www.mentalhealthhackers.org/">Mental Health Hackers</a> are a group of information security
             professionals passionate about helping others.<br>
-            
-            Their mission is to educate tech professionals about the unique mental health risks faced by those in our field &mdash;
-            and often by the people who we share our lives with &mdash; and provide guidance on reducing their effects
-            and better manage the triggering causes.<br>
-            
-            They also aim at providing support services to those who may be susceptible to related mental health issues
-            such as anxiety, depression, social isolation, eating disorders, etc.<br>
-            
-            In this talk they will explain how they foster conversations about mental health problems in the InfoSec community,
-            how they provide support and information to how to recognize, manage, and conquer mental illness, the unique challenges
-            and situations faced by the hacker community’s social and work enviroments,
-            and how mental health is being exastrubated with the COVID-19 Pandemic."""
+            In this talk they will explain how they foster conversations about mental health problems in the InfoSec community."""
             ])
         schedlist.append([
             '7:30PM',
@@ -125,16 +110,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
             'Talk',
             'WikiLoop Battlefield',
             'Xinbenlv',
-            """
-            Originated from Google, Project WikiLoop is an umbrella program for a series of technical projects
-            intended to contribute datasets and toolings from the technical industry back to the open knowledge world.<br>
-            
-            WikiLoop Battlefield is an open-source, crowd-sourced counter vandalism tool for Wikipedia and Wikidata.org.
-            Built on web technology, WikiLoop Battlefield allows a quick launch from either desktop or mobile phone without
-            needing to install resident software. Its objective is to reduce the barrier for Wikipedians wishing to assist
-            in patrolling Wikipedia revisions.<br>
-            
-            In this DEFCON Group meetup, we will present the WikiLoop Battlefield and give a brief introduction to the
+            """In this DEFCON Group meetup, we will present the WikiLoop Battlefield and give a brief introduction to the
             roadmap of Project WikiLoop overall."""
             ])
         schedlist.append([
@@ -144,9 +120,6 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
             'Hardening Your Face Against COVID-19 With DYI Face Masks',
             'Kira Waszak, Atomic Penguin',
             """
-            Thanks to mass panic buying, proper PPE equiment mainly face masks for both medical and civilian personel
-            have become harder to find. In this COVID-19 crisis, many are forced to create their own.<br>
-            
             In this short video and show & tell, two amazing seamstresses will show off how they made their own
             home made masks that meet PPE standards, one with carbon filters and one that works as a barrier for
             air particles, and how you can obtain them or build them yourself."""
@@ -157,22 +130,9 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
             'Mini-Workshop',
             'Phreaking Out The Northern Pacific Switched Telecommunications Network',
             'DC4US',
-            """
-            The Northern Pacific Switched Telecommunications Network is a peer-to-peer VoIP network started in 2018,
-            based purely on previous Bell System standards and practices.<br>
-            
-            It is a very well structured network with real live 24/7 operators and tons of trunks where you can blue box
-            till you are blue in the face.<br>
-            
-            Conceived as an alternative and supplement to C*NET, NPSTN today is a fully-fledged VOIP telephone network for
-            phone phreaks and telephone collectors with over 80 members in 10 countries.<br>
-            
-            This talk will go into detail on how NPSTN is able to connect network-operated coin telephones without
-            any major hardware modification to the phone itself, other than just a zip-tie on the coin relay to make
-            coins fall straight into the vault instead of waiting in the hopper.<br>
-            
-            This includes the development of the special asterisk code to detect coin-denomination tones that allows
-            anyone to get their payphone on NPSTN to just connect it to a channel bank or VoIP ATA set a few settings on the ATA.<br>
+            """This talk will go into detail on how NPSTN is able to connect network-operated coin telephones, including
+            the development of the special asterisk code to detect coin-denomination tones that allows
+            anyone to get their payphone on NPSTN.<br>
             
             This presentation will conclude into the Open Project segment with a live demo of the NPSTN Coin toll
             ticketing system."""
