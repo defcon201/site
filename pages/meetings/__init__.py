@@ -246,7 +246,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
             ])
 
         
-"""
+        """
         schedlist.append([
             '7:00PM',
             '10:00PM',
@@ -255,7 +255,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
             None,
             None
             ])
-"""
+        """
 #        schedlist.append([None, None, None, None, "Schedule, speakers and participants are to be determined.", None])
 
         schedlist.append([None, None, None, None, None, None])
