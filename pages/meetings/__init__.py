@@ -65,11 +65,10 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
 
         '''
 
-        schedlist.append([None, None, None, "DEFCON 201 is now streaming online.<br>", "Live Streams are available at:", """
-        <b>Twitch:</b> <a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>
-        <b>dLive:</b> <a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>
-        <b>YouTube:</b> <a href="https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg">https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg</a><br>
-        """])
+        schedlist.append([None, None, None, "DEFCON 201 is now streaming online.", None, "Live Streams are available at:"])
+        schedlist.append([None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>', None])
+        schedlist.append([None, None, None, "dLive",   '<a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>', None])
+        schedlist.append([None, None, None, "YouTube", '<a href="https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg">https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg</a><br>', None])
 
         schedlist.append([None, None, None, None, None, None])
 
