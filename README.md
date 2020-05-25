@@ -17,7 +17,7 @@ Clone repo, then just
 This script takes no arguments and should be run from the base directory the script is in.
 
 # Directories:
-> `output/` - Output directory
+> `docs/` - Output directory
 
 Deleted and created every time the generator is run. Contains static output HTML, to copy to the server.
 
