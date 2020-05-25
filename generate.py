@@ -13,7 +13,7 @@ class PageMethods:
         self.path = path
 
     def resource(self, resource):
-        return os.path.relpath("output/" + resource, self.path)
+        return os.path.relpath("docs/" + resource, self.path)
 
     def header(self, title, menu_hl=None, nodiv=False, white_bg=False):
         bodystyle = " style=\"background: #fff; color: #000;\"" if white_bg else ""
@@ -168,20 +168,26 @@ def process(path_in, path_out, name_in, name_out):
 
 
 def main():
-    print("generate: clearing output")
+    print("note: output is now in the docs/ folder.")
+    print("generate: clearing output + docs")
     try:
         shutil.rmtree("output/")
+        shutil.rmtree("docs/")
     except FileNotFoundError:
         print("generate: nothing to clear")
         pass
     print("generate: copying static resources")
-    shutil.copytree("static/", "output/")
-    shutil.copytree("res/", "output/res/")
+    shutil.copytree("static/", "docs/")
+    shutil.copytree("res/", "docs/res/")
 
+    print("generate: begin processing pages")
     for root, dirs, files in os.walk("./pages"):
         for file in files:
             if file.endswith(".page"):
-                process(root, "output/" + os.path.relpath(root, "pages/"), file, file[:-5] + ".html")
+                process(root, "docs/" + os.path.relpath(root, "pages/"), file, file[:-5] + ".html")
+
+    print("generate: finished processing pages.")
+    print("page output is in docs/")
 
 if __name__ == "__main__":
     main()
