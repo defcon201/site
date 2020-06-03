@@ -172,7 +172,6 @@ def main():
     print("note: output is now in the docs/ folder.")
     print("generate: clearing output + docs")
     try:
-        shutil.rmtree("output/")
         shutil.rmtree("docs/")
     except FileNotFoundError:
         print("generate: nothing to clear")
