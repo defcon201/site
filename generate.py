@@ -29,6 +29,7 @@ class PageMethods:
 
         <meta charset="utf-8"/>
         <title>""" + title + """</title>
+        <meta http-equiv="onion-location" content="http://d3amnd5ueqmy5crp.onion/" />
         <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/style.css") +  """\" />
         <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/logo-gay.css") +  """\" />
         <link rel="stylesheet" href=\"""" + self.resource("res/font/dc201stencam/dc201-stencil-camera.css") +  """\" charset="utf-8">
