@@ -171,22 +171,21 @@ def process(path_in, path_out, name_in, name_out):
 
 def main():
     print("note: output is now in the docs/ folder.")
-    print("generate: clearing .git-source folder")
+
+    print("generate: preserving docs submodule git")
+    shutil.move("docs/.git", ".generator-git-source")
+
+    print("generate: clearing docs folder")
     try:
-        shutil.rmtree(".generate-source/")
+        shutil.rmtree("docs/")
     except FileNotFoundError:
         print("generate: nothing to clear")
         pass
 
-    print("generate: initializing docs folder")
-    shutil.move("docs/", ".generate-source/")
-    os.mkdir("docs")
-    shutil.move(".generate-source/.git", "docs/.git")
-    shutil.rmtree(".generate-source/")
-
     print("generate: copying static resources")
     shutil.copytree("static/", "docs/")
     shutil.copytree("res/", "docs/res/")
+    shutil.move(".generator-git-source", "docs/.git")
 
     print("generate: begin processing pages")
     for root, dirs, files in os.walk("./pages"):
