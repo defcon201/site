@@ -1,7 +1,0 @@
-.dc201-wordmark {
-  background: linear-gradient(to top right, red, red, orange, yellow, green, aqua, blue, violet, violet);
-  background-clip: border-box;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: rgba(255,255,255,0.5);
-}
