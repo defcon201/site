@@ -180,7 +180,7 @@ def main():
 
     print("generate: initializing docs folder")
     shutil.move("docs/", ".generate-source/")
-    shutil.move(".generate-source/.git/", "docs/.git")
+    shutil.move(".generate-source/.git", "docs/.git")
     shutil.rmtree(".generate-source/")
 
     print("generate: copying static resources")
