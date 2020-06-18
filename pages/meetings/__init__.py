@@ -2,23 +2,23 @@
 
 class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():			# Date of the meeting (Weekday, Month DD)
-        return "Friday, May 15th"
+        return "Friday, June 19th"
     def Title():		# Title of the meeting
-        return "Mind Games"
+        return "Rainbow tables"
     def Location():		# Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "Online &mdash; Streaming Live"
     def Notice():		# Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():	# A link that refers to this meeting
-        return "https://medium.com/@defcon201/defcon-201-online-meet-up-may-2020-mind-games-d3ff267c3b5f"
+        return "https://medium.com/@defcon201/defcon-201-online-meet-up-june-2020-rainbow-tables-d78aecfcf8cb?source=friends_link&sk=4f7e34c946c60e79b85ccc217f77713d"
     def LinkName():		# What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "post on our Medium"
     def Summary():		# Short, 1-2 sentences about this meeting.
         return """
-        May is Mental Health Awareness Month. This month, we're focusing on mental health,
-        something that has been getting DDoSed since the start of this Coronavirus pandemic,
-        and offering a jam packed meeting with everything from phone phreaking, blue teaming on Wikipedia,
-        Capture The Flag challenges and more!
+        Join Us for the newly declaired DEFCON 201 ANTONMOUS ZONE on Juneteenth as we celebrate Pride as it originally was, a riot!
+        We have a great number of talks and special guests representing the LGBTQ+ community, featuring those who are
+        hackers that identify as queer. This will also include the usual DEFCON 201 insanity of hacking, drinking,
+        eating and being in New Jersey.
         """
         # Default summary is:
         """<b>More information about this month's meeting is coming soon.</b><br>
@@ -73,16 +73,13 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
         schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([
-            '6:15PM',
+            '6:00PM',
             '7:00PM',
             'Pre-show',
-            'Stalkerware: Solutions for Mitigating its Impact on Privacy and Security',
-            'Black Hat Webcast Series',
-            """In this webcast, EFF’s Director of Cybersecurity, Eva Galperin examines her research into the market in stalkerware,
-            spouseware, and other nefarious applications that are being deployed to attack our sense of privacy and security.<br>
-            
-            She will reveal possible activist, technical, and legal approaches to fighting stalkerware
-            and give an overview of how the fight is going so far."""
+            'Q&A for Coded Bias',
+            'Joy Buolamwini',
+            """Coded Bias asks two key questions: what is the impact of Artificial Intelligence’s increasing role in governing 
+            our liberties? And what are the consequences for people stuck in the crosshairs due to their race, color, and gender?"""
             ])
         schedlist.append([
             '7:00PM',
@@ -95,47 +92,44 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
             ])
         schedlist.append([
             '7:05PM',
-            '7:30PM',
+            '7:10PM',
             'Talk',
-            'Mental Health Hackers: Contents Under Pressure',
-            'Amanda Berlin',
+            'LGBTQIA+ Spotlight:',
+            'Tech Learning Collective',
             """
-            <a href="https://www.mentalhealthhackers.org/">Mental Health Hackers</a> are a group of information security
-            professionals passionate about helping others.<br>
-            In this talk they will explain how they foster conversations about mental health problems in the InfoSec community."""
+            DEFCON 201 will hilight fellow EFA group, Tech Leanring Collective. They will describe what their operations 
+            are like and give a preview of their classes such as their command line workshops, how to use Signal without 
+            a phone number, their upcoming Mr. Robot Happy Hacker Hour and adding even lower price tier for attendance to 
+            their next “Signal and Surveillance” webinar workshop for People of Color."""
             ])
         schedlist.append([
-            '7:30PM',
-            '7:40PM',
+            '7:10PM',
+            '7:50PM',
             'Talk',
-            'WikiLoop Battlefield',
-            'Xinbenlv',
-            """In this DEFCON Group meetup, we will present the WikiLoop Battlefield and give a brief introduction to the
-            roadmap of Project WikiLoop overall."""
+            'The Basics of Live Sound: Setup, Acoustical Considerations, EQ and Feedback',
+            'Queensiñera',
+            """This discussion will cover the basics of a live sound setup and dive into more specifics relating to EQ and 
+            Feedback prevention. Practical applications of EQ within examples of confined and non confined spaces go hand in 
+            hand with feedback prevention in terms of noting the acoustic design of a given room."""
             ])
         schedlist.append([
-            '7:40PM',
-            '8:00PM',
-            'Mini-Workshop',
-            'Hardening Your Face Against COVID-19 With DYI Face Masks',
-            'Kira Waszak, Atomic Penguin',
+            '7:50PM',
+            '8:10PM',
+            'Talk',
+            'Gender Transition As Biohacking',
+            'chosystemname',
             """
-            In this short video and show & tell, two amazing seamstresses will show off how they made their own
-            home made masks that meet PPE standards, one with carbon filters and one that works as a barrier for
-            air particles, and how you can obtain them or build them yourself."""
+            A brief look at the biohacking techniques used in gender transition. This will be a Safe For Work talk."""
             ])
         schedlist.append([
-            '8:00PM',
-            '8:30PM',
-            'Mini-Workshop',
-            'Phreaking Out The Northern Pacific Switched Telecommunications Network',
-            'DC4US',
-            """This talk will go into detail on how NPSTN is able to connect network-operated coin telephones, including
-            the development of the special asterisk code to detect coin-denomination tones that allows
-            anyone to get their payphone on NPSTN.<br>
-            
-            This presentation will conclude into the Open Project segment with a live demo of the NPSTN Coin toll
-            ticketing system."""
+            '8:10PM',
+            '8:40PM',
+            'Talk',
+            'Yiff In Hack: DEFCON Furs Presents Fursuits & LEDs',
+            'DEFCON Furs, mBlade, SincX',
+            """<a href = "https://2020.dcfurs.com/">DEFCON Furs</a> presents two talented Furry Hackers, mBlade & SincX, will talk about how theyadds LEDs and 
+            electronics to fursuits. What components he uses and techniques. mBlade will also tell a few stories from 
+            his experience at DC26 and what he has planned for the future."""
             ])
 
         schedlist.append([None, None, None, None, None, None])
@@ -173,20 +167,6 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
             
             Currently F@h is simulating the dynamics of COVID-19 proteins to hunt for new therapeutic opportunities.
             We want to contribute and you can help! Join the DEFCON 201 Folding@Home Team: 241960"""
-            ])
-        schedlist.append([
-            None,
-            None,
-            'Project',
-            'DEF CON CTF Qualifier 2020',
-            None,
-            """
-            This Friday, starting on May 15th at 8:00 PM EST, we invite all DEFCON 201 Members, Attendees and Fans
-            to help us hack the DEF CON CTF Qualifier 2020!<br>
-            
-            If you are new to Online CTF, we will help you get set up and walk you thorugh some of the challenges.<br>
-            
-            To learn more about the CTF, please follow this <a href="https://medium.com/@defcon201/defcon-201-online-ctf-practice-challenge-def-con-ctf-2020-qualifier-may-15th-may-17th-8d93c7d49c6d">link.</a>"""
             ])
         schedlist.append([
             None,
