@@ -180,6 +180,7 @@ def main():
 
     print("generate: initializing docs folder")
     shutil.move("docs/", ".generate-source/")
+    os.mkdir("docs")
     shutil.move(".generate-source/.git", "docs/.git")
     shutil.rmtree(".generate-source/")
 
