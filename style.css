@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(inconsolata.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'), url(notosans.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+body {
+  padding-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background: #fff;
+  color: #000;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+ul {
+  list-style: none;
+  padding: 0 0 0 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul li:before {
+  content: '\25BA';
+  margin: 0 0.5em 0 -0.5em;
+}
+ul li {
+  text-indent: -1em;
+  line-height: 1.5em;
+  padding-bottom: 0.3em;
+}
+
+.main {
+  font-family: "Noto Sans";
+  margin-left: 260px;
+  margin-right: 7px;
+}
+
+.fullpic {
+  font-family: "Noto Sans";
+  margin-left: 250px;
+  margin-right: 0;
+  background-size: cover;
+  color: #fff;
+  padding: 50px 100px 100px 100px;
+  text-align: justify;
+}
+
+.fullpic a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.sidenav {
+    font-family: "Inconsolata", sans-serif;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-size: 24px;
+}
+
+.sidenav img {
+    padding: 8px 8px 28px 25px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a.sub {
+    font-size: 20px;
+    margin-left: 40px;
+    padding: 0px 8px 8px 32px;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav a.highlight {
+    color: #f00;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+h1 {
+    font-family: "Inconsolata", sans-serif;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+h2 {
+    font-family: "Inconsolata", sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 1px dotted;
+    margin-bottom: 2px;
+}
+
+h3 {
+    font-family: "Inconsolata", sans-serif;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    font-size: 20px;
+}
+
+h4 {
+    font-family: "Inconsolata", sans-serif;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
