@@ -171,12 +171,18 @@ def process(path_in, path_out, name_in, name_out):
 
 def main():
     print("note: output is now in the docs/ folder.")
-    print("generate: clearing output + docs")
+    print("generate: clearing .git-source folder")
     try:
-        shutil.rmtree("docs/")
+        shutil.rmtree(".generate-source/")
     except FileNotFoundError:
         print("generate: nothing to clear")
         pass
+
+    print("generate: initializing docs folder")
+    shutil.move("docs/", ".generate-source/")
+    shutil.move(".generate-source/.git/", "docs/.git")
+    shutil.rmtree(".generate-source/")
+
     print("generate: copying static resources")
     shutil.copytree("static/", "docs/")
     shutil.copytree("res/", "docs/res/")
