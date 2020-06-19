@@ -42,6 +42,8 @@ class PageMethods:
         <meta name="twitter:image" content=\"""" + titleimage + """\">
         <meta property="og:title" content=\"""" + title + """\" />
         <meta property="og:type" content="article" />
+        <meta property="og:description" content=\"""" + description + """\">
+        <meta ptoperty="og:image" content=\"""" + titleimage + """\">
 
         <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/style.css") +  """\" />
         <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/logo-gay.css") +  """\" />
