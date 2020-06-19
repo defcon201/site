@@ -1,4 +1,4 @@
-{{{ header("Meetings", "meetings") }}}
+{{{ header("Meetings", "meetings", description=MeetingDetails.Summary()) }}}
 <div>
 <h2>This month's meetup:</h2>
 <h3>{{{ MeetingDetails.Date() }}}: <span style="font-weight: 300;">{{{ MeetingDetails.Title() }}}</span> <small style="font-weight: 100;"><br>{{{ MeetingDetails.Location() }}}</small></h3>

@@ -16,12 +16,14 @@ class PageMethods:
     def resource(self, resource):
         return os.path.relpath("docs/" + resource, self.path)
 
-    def header(self, title, menu_hl=None, nodiv=False, white_bg=False):
+    def header(self, title, menu_hl=None, nodiv=False, white_bg=False, description, titleimage):
         bodystyle = " style=\"background: #fff; color: #000;\"" if white_bg else ""
 
         # TODO: Get header, footer from ext. file like page content
 
         title = "DEFCON 201 | " + title if title else "DEFCON 201"
+        description = description if description else "DEFCON 201 (or DC201) is a gathering point for folks interested in hacking."
+        titleimage = titleimage if titleimage else "https://defcon201.org/res/img/defcon201.png"
 
         r = """<!DOCTYPE html>
 <html lang="en">
@@ -31,6 +33,16 @@ class PageMethods:
         <meta charset="utf-8"/>
         <title>""" + title + """</title>
         <meta http-equiv="onion-location" content="http://d3amnd5ueqmy5crp.onion/" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@defcon201nj">
+        <meta name="twitter:creator" content="@sirocyl">
+        <meta name="twitter:creator" content="@defcon201nj">
+        <meta name="twitter:title" content=""" + title + """>
+        <meta name="twitter:description" content=""" + description + """>
+        <meta name="twitter:image" content=""" + titleimage + """>
+        <meta property="og:title" content=""" + title + """ />
+        <meta property="og:type" content="article" />
+
         <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/style.css") +  """\" />
         <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/logo-gay.css") +  """\" />
         <link rel="stylesheet" href=\"""" + self.resource("res/font/dc201stencam/dc201-stencil-camera.css") +  """\" charset="utf-8">
