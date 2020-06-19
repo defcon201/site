@@ -69,8 +69,25 @@ class PageMethods:
                     <span class="subheader-right-side"></span>
                 </div>
             </div>
-            <ul class="sidelinks">
 """
+        def list_open(root_list=False):
+            nonlocal r
+            r += "            "
+            if root_list:
+                r += '<ul class="sidelinks">'
+            else:
+                r += '    <ul class="sublinks">'
+            r += "\n"
+
+        def list_close(root_list=False):
+            nonlocal r
+            r += "            "
+            if root_list:
+                r += '</ul>'
+            else:
+                r += '    </ul>'
+            r += "\n"
+
         def item(target, title, highlight, ext_link=False, item_icon=None):
             nonlocal r
             r += "                "
@@ -88,7 +105,7 @@ class PageMethods:
 
         def subitem(target, title, ext_link=False, item_icon=None):
             nonlocal r
-            r += "                "
+            r += "                    "
             r += "<li class=\"sublink\"><a"
             if title == "Mastodon":
                 r += " rel=\"me\""
@@ -101,29 +118,38 @@ class PageMethods:
 
         # TODO: generate sidebar nav link list from existing .page or .link (for ext/special link) files in directory
 
+        list_open(True)
         item("meetings/meetings.html", "Meetings", "meetings")
+        list_open()
         subitem("meetings/location.html", "About the location")
         subitem("meetings/events.html", "Special events")
+        list_close()
         item("https://medium.com/@defcon201/", "News", "news", True)
         item("about/info.html", "Info", "info")
+        list_open()
         subitem("about/info.html", "About DEFCON 201")
         subitem("about/coc.html", "Code of Conduct")
         subitem("about/constitution.html", "Constitution")
         subitem("about/partners.html", "Partners")
         subitem("about/contact.html", "Contact us")
+        list_close()
         item("https://github.com/defcon201", "Projects", "projects", True)
+        list_open()
         subitem("https://stats.foldingathome.org/team/241960", "Folding@Home", True)
+        list_close()
         item("https://www.zazzle.com/defcon201", "Store", "Store", True)
         item(None, "Social", "social")
+        list_open()
         subitem("https://www.meetup.com/DEFCON201/", "Meetup.com", True)
         subitem("https://www.facebook.com/groups/1743426829004414/", "Facebook", True)
         subitem("https://twitter.com/defcon201nj", "Twitter", True)
         subitem("https://instagram.com/defcon201", "Instagram", True)
         subitem("https://hostux.social/@defcon201", "Mastodon", True)
         subitem("https://github.com/defcon201", "GitHub", True)
+        list_close()
+        list_close(True)
 
         r += """
-            </ul>
             <footer id="attrib">
                 <div>
                     Text content: <a href="https://creativecommons.org/licenses/by/4.0">CC-BY 4.0</a><br>
