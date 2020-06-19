@@ -3,6 +3,7 @@
 # Based mostly on https://github.com/m-labs/web
 
 import os
+import sys
 import re
 import shutil
 
@@ -169,11 +170,36 @@ def process(path_in, path_out, name_in, name_out):
         outfile.write(outdata)
 
 
+def is_submodule(name="docs"):
+    print("generate: checking if " + name + " is a submodule")
+    with open(".gitmodules", "r") as gitsmfile:
+        if '[submodule \"'+ name +'\"]' in gitsmfile.read():
+            print("generate: " + name + " is a submodule.")
+            return True
+
+def preserve_submodule(name="docs"):
+    print("generate: preserving " + name + " submodule git")
+    try:
+        shutil.move(name + "/.git", ".generator-git-" + name)
+    except FileNotFoundError:
+        print("generate: preserve_submodule: error 66: no .git in " + name + ".", file=sys.stderr)
+        print("(did you remember to do `git submodule update`?)")
+        raise SystemExit(os.EX_NOINPUT) # it's rare when a GNU errno and a Python errno both work :)
+
+def restore_submodule(name="docs"):
+    print("generate: restoring " + name + " submodule git")
+    try:
+        shutil.move(".generator-git-" + name, name + "/.git")
+    except FileNotFoundError:
+        print("generate: restore_submodule: nothing to restore from .generator-git-" + name)
+        pass
+
+
 def main():
     print("note: output is now in the docs/ folder.")
 
-    print("generate: preserving docs submodule git")
-    shutil.move("docs/.git", ".generator-git-source")
+    if is_submodule("docs"):
+        preserve_submodule("docs")
 
     print("generate: clearing docs folder")
     try:
@@ -185,7 +211,7 @@ def main():
     print("generate: copying static resources")
     shutil.copytree("static/", "docs/")
     shutil.copytree("res/", "docs/res/")
-    shutil.move(".generator-git-source", "docs/.git")
+    restore_submodule("docs")
 
     print("generate: begin processing pages")
     for root, dirs, files in os.walk("./pages"):
