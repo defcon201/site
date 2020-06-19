@@ -183,7 +183,7 @@ def preserve_submodule(name="docs"):
         shutil.move(name + "/.git", ".generator-git-" + name)
     except FileNotFoundError:
         print("generate: preserve_submodule: error 66: no .git in " + name + ".", file=sys.stderr)
-        print("(did you remember to do `git submodule update`?)")
+        print("(did you remember to do `git submodule update --init`?)")
         raise SystemExit(os.EX_NOINPUT) # it's rare when a GNU errno and a Python errno both work :)
 
 def restore_submodule(name="docs"):
