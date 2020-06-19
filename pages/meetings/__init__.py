@@ -125,7 +125,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
             '8:10PM',
             '8:40PM',
             'Talk',
-            'Yiff In Hack: DEFCON Furs Presents Fursuits & LEDs',
+            'Hackers With Tails: DEFCON Furs Presents Fursuits & LEDs',
             'DEFCON Furs, mBlade, SincX',
             """<a href = "https://2020.dcfurs.com/">DEFCON Furs</a> presents two talented Furry Hackers, mBlade & SincX, will talk about how theyadds LEDs and 
             electronics to fursuits. What components he uses and techniques. mBlade will also tell a few stories from 
