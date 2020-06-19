@@ -15,7 +15,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
         return "post on our Medium"
     def Summary():		# Short, 1-2 sentences about this meeting.
         return """
-        Join Us for the newly declaired DEFCON 201 ANTONMOUS ZONE on Juneteenth as we celebrate Pride as it originally was, a riot!
+        Join Us for the newly-declared DEFCON 201 AUTONMOUS ZONE on Juneteenth as we celebrate Pride as it originally was, a riot!
         We have a great number of talks and special guests representing the LGBTQ+ community, featuring those who are
         hackers that identify as queer. This will also include the usual DEFCON 201 insanity of hacking, drinking,
         eating and being in New Jersey.
