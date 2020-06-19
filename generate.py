@@ -16,7 +16,7 @@ class PageMethods:
     def resource(self, resource):
         return os.path.relpath("docs/" + resource, self.path)
 
-    def header(self, title, menu_hl=None, nodiv=False, white_bg=False, description, titleimage):
+    def header(self, title, menu_hl=None, nodiv=False, white_bg=False, description=None, titleimage=None):
         bodystyle = " style=\"background: #fff; color: #000;\"" if white_bg else ""
 
         # TODO: Get header, footer from ext. file like page content
@@ -37,10 +37,10 @@ class PageMethods:
         <meta name="twitter:site" content="@defcon201nj">
         <meta name="twitter:creator" content="@sirocyl">
         <meta name="twitter:creator" content="@defcon201nj">
-        <meta name="twitter:title" content=""" + title + """>
-        <meta name="twitter:description" content=""" + description + """>
-        <meta name="twitter:image" content=""" + titleimage + """>
-        <meta property="og:title" content=""" + title + """ />
+        <meta name="twitter:title" content=\"""" + title + """\">
+        <meta name="twitter:description" content=\"""" + description + """\">
+        <meta name="twitter:image" content=\"""" + titleimage + """\">
+        <meta property="og:title" content=\"""" + title + """\" />
         <meta property="og:type" content="article" />
 
         <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/style.css") +  """\" />
