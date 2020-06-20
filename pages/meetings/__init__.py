@@ -2,24 +2,21 @@
 
 class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():			# Date of the meeting (Weekday, Month DD)
-        return "Friday, June 19th"
+        return "Friday, July 17th"
     def Title():		# Title of the meeting
-        return "Rainbow tables"
+        return "<em>To be announced</em>"
     def Location():		# Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
-        return "Online &mdash; Streaming Live"
+        return "<em>Venue TBA</em> + Online &mdash; Streaming Live"
     def Notice():		# Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():	# A link that refers to this meeting
-        return "https://medium.com/@defcon201/defcon-201-online-meet-up-june-2020-rainbow-tables-d78aecfcf8cb?source=friends_link&sk=4f7e34c946c60e79b85ccc217f77713d"
+        return "https://medium.com/@defcon201/"
     def LinkName():		# What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
-        return "post on our Medium"
+        return "our Medium"
     def Summary():		# Short, 1-2 sentences about this meeting.
-        return """
-        Join Us for the newly-declared DEFCON 201 AUTONMOUS ZONE on Juneteenth as we celebrate Pride as it originally was, a riot!
-        We have a great number of talks and special guests representing the LGBTQ+ community, featuring those who are
-        hackers that identify as queer. This will also include the usual DEFCON 201 insanity of hacking, drinking,
-        eating and being in New Jersey.
-        """
+        return """<b>More information about this month's meeting is coming soon.</b><br>
+        Meeting details are usually confirmed one week in advance of the scheduled meeting date."""
+
         # Default summary is:
         """<b>More information about this month's meeting is coming soon.</b><br>
         Meeting details are usually confirmed one week in advance of the scheduled meeting date."""
@@ -72,130 +69,7 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
 
         schedlist.append([None, None, None, None, None, None])
 
-        schedlist.append([
-            '6:00PM',
-            '7:00PM',
-            'Pre-show',
-            'Q&A for Coded Bias',
-            'Joy Buolamwini',
-            """Coded Bias asks two key questions: what is the impact of Artificial Intelligence’s increasing role in governing 
-            our liberties? And what are the consequences for people stuck in the crosshairs due to their race, color, and gender?"""
-            ])
-        schedlist.append([
-            '7:00PM',
-            '7:05PM',
-            'DEFCON 201',
-            'Announcements &amp; Code of Conduct review',
-            'Sidepocket, GI Jack',
-            """DEFCON 201 will start with various updates about our activities in early 2020,
-            our post Corona Virus Pandemic measures and an overview of the Code of Conduct linked on our website."""
-            ])
-        schedlist.append([
-            '7:05PM',
-            '7:10PM',
-            'Talk',
-            'LGBTQIA+ Spotlight:',
-            'Tech Learning Collective',
-            """
-            DEFCON 201 will hilight fellow EFA group, Tech Leanring Collective. They will describe what their operations 
-            are like and give a preview of their classes such as their command line workshops, how to use Signal without 
-            a phone number, their upcoming Mr. Robot Happy Hacker Hour and adding even lower price tier for attendance to 
-            their next “Signal and Surveillance” webinar workshop for People of Color."""
-            ])
-        schedlist.append([
-            '7:10PM',
-            '7:50PM',
-            'Talk',
-            'The Basics of Live Sound: Setup, Acoustical Considerations, EQ and Feedback',
-            'Queensiñera',
-            """This discussion will cover the basics of a live sound setup and dive into more specifics relating to EQ and 
-            Feedback prevention. Practical applications of EQ within examples of confined and non confined spaces go hand in 
-            hand with feedback prevention in terms of noting the acoustic design of a given room."""
-            ])
-        schedlist.append([
-            '7:50PM',
-            '8:10PM',
-            'Talk',
-            'Gender Transition As Biohacking',
-            'chosystemname',
-            """
-            A brief look at the biohacking techniques used in gender transition. This will be a Safe For Work talk."""
-            ])
-        schedlist.append([
-            '8:10PM',
-            '8:40PM',
-            'Talk',
-            'Hackers With Tails: DEFCON Furs Presents Fursuits & LEDs',
-            'DEFCON Furs, mBlade, SincX',
-            """<a href = "https://2020.dcfurs.com/">DEFCON Furs</a> presents two talented Furry Hackers, mBlade & SincX, will talk about how theyadds LEDs and 
-            electronics to fursuits. What components he uses and techniques. mBlade will also tell a few stories from 
-            his experience at DC26 and what he has planned for the future."""
-            ])
-
-        schedlist.append([None, None, None, None, None, None])
-
-        schedlist.append([
-            '8:30PM',
-            None,
-            None,
-            'Projects &amp; Workshops',
-            'Open Participation',
-            """Join us online for some neat projects, experiments and workshops by DEFCON 201 members!"""
-            ])
-        schedlist.append([
-            None,
-            None,
-            'Open Presentation',
-            'Hacker Show &amp; Tell',
-            None,
-            """
-            DEFCON 201 members will be given the section immediately after the Lightning Talks to show off
-            the various projects that they have been working on.<br>
-            
-            We have had heads up on some awesome stuff being worked on that will be showing up for the very first time
-            so you don’t want to miss this on live-stream!"""
-            ])
-        schedlist.append([
-            None,
-            None,
-            'Project',
-            'Folding@Home VS Coronavirus',
-            None,
-            """
-            Folding@home (FAH or F@h) is a distributed computing project for simulating protein dynamics,
-            including the process of protein folding and the movements of proteins implicated in a variety of diseases.<br>
-            
-            Currently F@h is simulating the dynamics of COVID-19 proteins to hunt for new therapeutic opportunities.
-            We want to contribute and you can help! Join the DEFCON 201 Folding@Home Team: 241960"""
-            ])
-        schedlist.append([
-            None,
-            None,
-            'Online Games',
-            'Jackbox Party Pack 3',
-            None,
-            """
-            During our live-stream, we will be offering to join us in various online games in Jackbox Party Pack 3!<br>
-            
-            The threequel to the party game phenomenon features the deadly quiz show Trivia Murder Party,
-            the say-anything sequel Quiplash 2, the surprising survey game Guesspionage, the t-shirt slugfest Tee K.O.,
-            and the sneaky trickster game Fakin’ It.<br>
-            
-            Use your phones or tablets as controllers, and play with up to 8 players, plus an audience of up to 10,000!"""
-            ])
-
-        
-        """
-        schedlist.append([
-            '7:00PM',
-            '10:00PM',
-            None,
-            'DEFCON 201 Meeting',
-            None,
-            None
-            ])
-        """
-#        schedlist.append([None, None, None, None, "Schedule, speakers and participants are to be determined.", None])
+        schedlist.append([None, None, None, None, "Schedule, speakers and participants are to be determined.", None])
 
         schedlist.append([None, None, None, None, None, None])
         schedlist.append([None, None, "COVID-19 Notice", "Keep an eye out for your fellow hacker. Whether you're social or anti-social, practice distancing.", None, None])
