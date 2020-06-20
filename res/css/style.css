@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'defcon201';
+    src: url('../font/defcon201.ttf');
+}
 
 body {
     color: #fff;
@@ -250,7 +254,7 @@ h5 {
 
 .dc201-wordmark {
     font-size: 48px;
-    font-family: "dc201-stencil-camera";
+    font-family: "defcon201", "dc201-stencil-camera", monospace;
     font-weight: normal;
     line-height: 66%;
 

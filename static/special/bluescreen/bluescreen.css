@@ -1,0 +1,153 @@
+/* base fonts */
+@font-face {
+    font-family: 'Px437 Verite 8x8-2y';
+    src: url('../../res/font/px437/Px437_Verite_8x8-2y.ttf');
+}
+
+@font-face {
+    font-family: 'defcon201';
+    src: url('../../res/font/defcon201.ttf');
+}
+
+/* clearing defaults */
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+p { margin: 0; }
+
+/* global color filters */
+body {
+    filter: brightness(1.1) contrast(1.25) saturate(0.8) blur(1px);
+    animation: warmup 30s 1 normal both;
+}
+
+.content {
+    display: block;
+    z-index: 5;
+    position: relative;
+}
+
+
+
+
+/* text effects */
+
+/* common effects */
+.screeneffect {
+    z-index: 4;
+    color: rgba(0,0,0,0);
+	background: transparent;
+    transform-origin: top left;
+    transform: scaleX(4) scaleY(4);
+    text-shadow:
+         0px  0px  1px #ffff,
+         1px  0px  1px #0088,
+         0px  0px  1px #0f0f,
+        -1px  0px  1px #f00f,
+         0px  0px  3px #000f,
+
+         0px -2px  1px #000f,
+        -2px -2px  1px #000f,
+         2px  0px  1px #000f,
+        -2px  0px  1px #000f,
+         2px -2px  1px #000f,
+         0px  0px  3px #ffff;
+}
+
+/* positioning and sizes */
+.screentext {
+    font: normal 16px/18px "Px437 Verite 8x8-2y", System, Fixedsys, Arial, sans-serif;
+    position: absolute;
+    margin-top: 9%;
+    margin-left: 5%;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+.dc201logos {
+    display: inline-block;
+    filter: drop-shadow(5px 5px black);
+    font-family: "defcon201", serif;
+    font-size: 32px;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.timesig {
+    position: absolute;
+    width: 23%;
+    text-align: right;
+    margin-top: -3%;    
+}
+
+
+
+/* screen-space effects */
+canvas, .raster, .rolling-scan-effect, .flickering-scan-effect, .rolling-scan-effect div, .flickering-scan-effect div, .vignette, .bgover {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+/* background */
+.bgover {
+    background-color: #22c;
+}
+
+/* TV tube vignette effect */
+.vignette {
+    z-index: 9;
+    background: -moz-radial-gradient(
+        center, ellipse cover, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 59%, rgba(0, 0, 0, 0.6) 100%
+    ); 
+}
+
+/* canvas, for TV static effect */
+canvas {
+    z-index: 6;
+    animation: signalfade 30s linear infinite;
+}
+
+/* screen-space raster effect */
+.raster {
+    z-index: 10;
+    background: url("/res/img/raster.png");
+}
+
+/* scanline refresh effects screen-space */
+.rolling-scan-effect, .flickering-scan-effect {
+    z-index: 2;
+}
+
+/* scanline refresh effects shapes */
+.rolling-scan-effect div, .flickering-scan-effect div {
+    top: -20%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, .12);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+.flickering-scan-effect { 
+    transform: scaleX(1.2) scaleY(0.8) rotate(12deg);
+}
+
+.rolling-scan-effect div:nth-child(1) { animation-delay: 0s; }
+.rolling-scan-effect div:nth-child(2) { animation-delay: 4s; }
+.rolling-scan-effect div:nth-child(3) { animation-delay: 8s; }
+
+@keyframes scan-effect {
+    0%   {top: -20%;}
+    100% {top: 100%;}
+}
+
+.rolling-scan-effect    div { animation: scan-effect 8s     linear infinite; }
+.flickering-scan-effect div { animation: scan-effect 0.001s linear infinite; }

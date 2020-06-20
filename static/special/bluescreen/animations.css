@@ -1,0 +1,73 @@
+/* Used for the scanning raster line refresh artifact effect. */
+@keyframes scan-effect {
+    0%   {top: -20%;}
+    100% {top: 100%;}
+}
+
+.rolling-scan-effect    div { animation: scan-effect 8s     linear infinite; }
+.flickering-scan-effect div { animation: scan-effect 0.001s linear infinite; }
+
+
+@keyframes slowfading {
+/*  Use as:
+    animation: slowfading 30s linear infinite;
+*/
+    0%   { opacity: .5 ; }
+    40%  { opacity: .7 ; }
+    50%  { opacity: .55; }
+    60%  { opacity: .6 ; }
+    65%  { opacity: .25; }
+    70%  { opacity: .5 ; }
+    80%  { opacity: .7 ; }
+    85%  { opacity: .6 ; }
+    100% { opacity: .5 ; }
+}
+
+
+/* The intro, simulating a tube warmup. */
+@keyframes warmup {
+    from {
+        transform: scaleX(0.001) scaleY(0.001);
+        filter: brightness(0);
+        animation-timing-function: ease-in;
+        border-radius: 250px;
+    }
+    0.1% {
+        transform: scaleX(0.0001) scaleY(0.0001);
+    }
+    0.13% {
+        transform: scaleX(0.0001) scaleY(0.0001);
+    }
+    0.2% {
+        transform: scaleX(0.001) scaleY(0.001);
+        filter: brightness(0);
+    }
+    4.8% {
+        transform: scaleX(0.005) scaleY(0.005);
+        filter: brightness(20);
+    }
+    5% {
+        transform: scaleX(0.7) scaleY(0.1);
+        filter: brightness(20);
+        animation-timing-function: ease-in-out;
+        border-radius: 250px;
+    }
+    20% {
+        transform: scaleX(1) scaleY(1);
+        filter: brightness(1.25);
+        border-radius: 0px;
+    }
+
+}
+
+/* Fading pattern for the signal static. */
+@keyframes signalfade {
+    0%   { opacity:  0;  }
+    40%  { opacity: .50; }
+    50%  { opacity: .15; }
+    60%  { opacity: .10; }
+    70%  { opacity: .20; }
+    80%  { opacity: .50; }
+    85%  { opacity: .10; }
+    100% { opacity: 0;   }
+}
