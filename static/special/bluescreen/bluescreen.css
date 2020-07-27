@@ -18,9 +18,9 @@ html, body {
 }
 p { margin: 0; }
 
-/* global color filters */
+/* global warmup anim & color filters */
 body {
-    filter: brightness(1.1) contrast(1.25) saturate(0.8) blur(1px);
+/*    filter: brightness(1.1) contrast(1.25) saturate(0.8) blur(1px); */
     animation: warmup 30s 1 normal both;
 }
 
