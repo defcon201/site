@@ -46,7 +46,6 @@ class PageMethods:
         <meta ptoperty="og:image" content=\"""" + titleimage + """\">
 
         <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/style.css") +  """\" />
-        <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/logo-gay.css") +  """\" />
         <link rel="stylesheet" href=\"""" + self.resource("res/font/dc201stencam/dc201-stencil-camera.css") +  """\" charset="utf-8">
         <link rel="stylesheet" href=\"""" + self.resource("res/font/voltaire-webfont/voltaire-webfont.css") +  """\" type="text/css" charset="utf-8">
         <link rel="stylesheet" href=\"""" + self.resource("res/font/overpass-webfont/overpass.css") +  """\" type="text/css" charset="utf-8">

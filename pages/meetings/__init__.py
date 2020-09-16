@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
 
-class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
-    def Date():			# Date of the meeting (Weekday, Month DD)
-        return "Friday, July 17th"
-    def Title():		# Title of the meeting
-        return "<em>To be announced</em>"
-    def Location():		# Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
-        return "<em>Venue TBA</em> + Online &mdash; Streaming Live"
-    def Notice():		# Any important notices about the meeting or the information.
+class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
+    def Date():                 # Date of the meeting (Weekday, Month DD)
+        return "Friday, September 18th"
+    def Title():                # Title of the meeting
+        return "Egg Freckles"
+    def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
+        return "Online &mdash; Streaming Live + <em>Limited seating</em> @ SubCulture, 260 Newark Ave., Jersey City"
+    def Notice():               # Any important notices about the meeting or the information.
         return ""
-    def CanonicalLink():	# A link that refers to this meeting
-        return "https://medium.com/@defcon201/"
-    def LinkName():		# What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
-        return "our Medium"
-    def Summary():		# Short, 1-2 sentences about this meeting.
-        return """<b>More information about this month's meeting is coming soon.</b><br>
-        Meeting details are usually confirmed one week in advance of the scheduled meeting date."""
+    def CanonicalLink():        # A link that refers to this meeting
+        return "https://medium.com/@defcon201/defcon-201-online-meet-up-september-2020-egg-freckles-a369f0d3a02b"
+    def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
+        return "post on our Medium"
+    def Summary():              # Short, 1-2 sentences about this meeting.
+        return """We have decided to take this golden oprotunity to have a DCG 201 meeting theme we have wanted to do for a very long time: Hacking Apple."""
 
         # Default summary is:
         """<b>More information about this month's meeting is coming soon.</b><br>
@@ -62,14 +61,102 @@ class MeetingDetails:		# Any of these can be HTML formatted, but I'd recommend a
 
         '''
 
-        schedlist.append([None, None, None, "DEFCON 201 is now streaming online.", None, "Live Streams are available at:"])
+        schedlist.append([None, None, None, "DEFCON 201 is streaming online.", None, "Live Streams are available at:"])
         schedlist.append([None, None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>'])
         schedlist.append([None, None, None, None, "dLive",   '<a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>'])
         schedlist.append([None, None, None, None, "YouTube", '<a href="https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg">https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg</a><br>'])
 
         schedlist.append([None, None, None, None, None, None])
 
-        schedlist.append([None, None, None, None, "Schedule, speakers and participants are to be determined.", None])
+        schedlist.append([
+            '4:00PM',
+            '4:50PM',
+            '(Online) Pre-show',
+            'Steve Wozniak Keynote (2004)',
+            'at The Fifth HOPE Conference',
+            """Lets take a trip back down memory lane with a limited reairing of the
+            historic (yet forgotten about) keynote from The Fifth HOPE (Hackers On Planet Earth)
+            with Apple Co-Founder and guy who actually did all the work; The Wonderful Wizard Of Woz!"""
+            ])
+
+        schedlist.append([
+            '4:00PM',
+            '4:50PM',
+            '(IRL) Intro',
+            'Meet &amp Greet',
+            'DEFCON 201 members',
+            """Chat amongst friends, coordinate your public key portfolio, add cards to your Rolodex&trade;, and warm up for the talks!"""
+            ])
+
+        schedlist.append([
+            '4:50PM',
+            '5:00PM',
+            'Lightning Talk',
+            'A Marathon Of Mac Gaming',
+            'MrMacRight',
+            """In this talk, MrMacRight will go over how Apple is pushing AAA gaming on their platforms and improving In-App purchases."""
+            ])
+
+        schedlist.append([
+            '5:00PM',
+            '6:00PM',
+            'Talk',
+            'The Rise Of Mac Malware',
+            'Thomas Reed',
+            """Join me for a journey through time, as we look at past Mac malware, focusing on when certain behaviors first emerged.
+            Then fast forward through time, where we’ll see what today’s Mac threat landscape looks like, and what behaviors we’re seeing from Mac threats in the wild."""
+            ])
+
+        schedlist.append([
+            '6:00PM',
+            '7:00PM',
+            'Talk',
+            'Abusing & Securing XPC in macOS Apps',
+            'Wojciech',
+            """XPC is a well-known interprocess communication mechanism used on Apple devices.
+            Abusing XPC led to many severe bugs, including those used in jailbreaks.
+            While the XPC bugs in Apple’s components are harder and harder to exploit, did we look at non-Apple apps on macOS?
+            As it turns out, vulnerable apps are everywhere — Anti Viruses, Messengers, Privacy tools, Firewalls, and more."""
+            ])
+
+        schedlist.append([
+            '7:00PM',
+            '7:30PM',
+            'Workshop',
+            'macintosh.js',
+            'Ncommander',
+            """Macintosh.js is an Electron app which emulates a 1991 Macintosh Quadra 900 running Mac OS 8.1.
+            In this brief overview, NCommander of HACK + ALT + NCOMMANDER fame will do what he does best;
+            dissect this retro operating system and point out the quirks and WTF-ness of this unholy emulated beast."""
+            ])
+
+        schedlist.append([
+            '7:30PM',
+            '8:00PM',
+            'Workshop',
+            'A Kinky Hack To Sideload iOS Applications',
+            'sidepocket',
+            """we will walk through how the kink and fetish scene had exploited the development mode of iOS and XCode to inject their own software,
+            bypassing Apple’s insular storefront. Then we will quickly go over how this blew a giant wall in Apple’s iOS software approval proccess."""
+            ])
+
+        schedlist.append([
+            '8:00PM',
+            None,
+            'Finishing remarks',
+            'Old Man Yells At iCloud',
+            'xio',
+            """This rant on Apple products past and present will be so long and so foul that it will end and only end when Sub Culture
+            shuts the place down and our livestream ends! Plus, comments from the peanut gallery will cause this digital caveman to go
+            into cardiac arrest before the #FailFactory he works at does!"""
+            ])
+        schedlist.append([
+            None,
+            '9:00PM',
+            '(IRL) Wrap-Up',
+            'Official end of in-person meeting',
+            'Good night!',
+            '<em>Note: SUBCULTURE closes early due to COVID-19 regulations. Please make sure your belongings are together before closing time.</em>'])
 
         schedlist.append([None, None, None, None, None, None])
         schedlist.append([None, None, "COVID-19 Notice", "Keep an eye out for your fellow hacker. Whether you're social or anti-social, practice distancing.", None, None])
