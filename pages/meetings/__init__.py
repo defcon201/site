@@ -109,7 +109,7 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
 
         schedlist.append([
             '6:00PM',
-            '7:00PM',
+            '6:30PM',
             'Talk',
             'Abusing & Securing XPC in macOS Apps',
             'Wojciech',
@@ -120,8 +120,8 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
             ])
 
         schedlist.append([
+            '6:30PM',
             '7:00PM',
-            '7:30PM',
             'Workshop',
             'macintosh.js',
             'Ncommander',
@@ -131,8 +131,8 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
             ])
 
         schedlist.append([
-            '7:30PM',
-            '8:00PM',
+            '7:00PM',
+            '7:10PM',
             'Workshop',
             'A Kinky Hack To Sideload iOS Applications',
             'sidepocket',
@@ -141,7 +141,7 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
             ])
 
         schedlist.append([
-            '8:00PM',
+            '7:10PM',
             None,
             'Finishing remarks',
             'Old Man Yells At iCloud',
@@ -150,14 +150,26 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
             shuts the place down and our livestream ends! Plus, comments from the peanut gallery will cause this digital caveman to go
             into cardiac arrest before the #FailFactory he works at does!"""
             ])
+
+        schedlist.append([None, None, None, None, None, None])
+        
         schedlist.append([
             None,
-            '9:00PM',
+            '7:30PM',
             '(IRL) Wrap-Up',
             'Official end of in-person meeting',
             'Good night!',
-            '<em>Note: SUBCULTURE closes early due to COVID-19 regulations. Please make sure your belongings are together before closing time.</em>'])
+            '<em>Note: SUB CULTURE closes early due to COVID-19 regulations. Please make sure your belongings are together before closing time.</em>'])
 
+        schedlist.append([
+            None,
+            '9:00PM',
+            '(Online) Sign-Off',
+            'End of programmed content on DEFCON 201 Live.',
+            'Good night!',
+            '<em>Note: Non-programmed streaming content may continue post-meeting - stay tuned!</em>'])
+
+        
         schedlist.append([None, None, None, None, None, None])
         schedlist.append([None, None, "COVID-19 Notice", "Keep an eye out for your fellow hacker. Whether you're social or anti-social, practice distancing.", None, None])
 
