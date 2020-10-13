@@ -6,7 +6,7 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
     def Title():                # Title of the meeting
         return "Revenge Of Hacktoberfest"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
-        return "Online &mdash; Streaming Live + <em>Limited seating</em>"
+        return "Online &mdash; Streaming Live</em>"
     def Notice():               # Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():        # A link that refers to this meeting
