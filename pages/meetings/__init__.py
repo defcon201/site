@@ -2,19 +2,19 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, September 18th"
+        return "Friday, October 16th"
     def Title():                # Title of the meeting
-        return "Egg Freckles"
+        return "Revenge Of Hacktoberfest"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
-        return "Online &mdash; Streaming Live + <em>Limited seating</em> @ SubCulture, 260 Newark Ave., Jersey City"
+        return "Online &mdash; Streaming Live + <em>Limited seating</em>"
     def Notice():               # Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://medium.com/@defcon201/defcon-201-online-meet-up-september-2020-egg-freckles-a369f0d3a02b"
+        return "https://medium.com/@defcon201/defcon-201-online-meet-up-october-2020-revenge-of-hacktoberfest-aaf37809bc3f?source=friends_link&sk=9ee628ebc06bf40d357d8a046298ac24"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "post on our Medium"
     def Summary():              # Short, 1-2 sentences about this meeting.
-        return """We have decided to take this golden oprotunity to have a DCG 201 meeting theme we have wanted to do for a very long time: Hacking Apple."""
+        return """Calling all hackers for a spooky meet up with the Hacktoberfest hackathon, CTF and an amazing all witchy speaker line up!"""
 
         # Default summary is:
         """<b>More information about this month's meeting is coming soon.</b><br>
@@ -69,105 +69,76 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
         schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([
-            '4:00PM',
-            '4:50PM',
+            '6:00PM',
+            '6:30PM',
             '(Online) Pre-show',
-            'Steve Wozniak Keynote (2004)',
-            'at The Fifth HOPE Conference',
-            """Lets take a trip back down memory lane with a limited reairing of the
-            historic (yet forgotten about) keynote from The Fifth HOPE (Hackers On Planet Earth)
-            with Apple Co-Founder and guy who actually did all the work; The Wonderful Wizard Of Woz!"""
-            ])
-
-        schedlist.append([
-            '4:00PM',
-            '4:50PM',
-            '(IRL) Intro',
-            'Meet &amp Greet',
-            'DEFCON 201 members',
-            """Chat amongst friends, coordinate your public key portfolio, add cards to your Rolodex&trade;, and warm up for the talks!"""
-            ])
-
-        schedlist.append([
-            '4:50PM',
-            '5:00PM',
-            'Lightning Talk',
-            'A Marathon Of Mac Gaming',
-            'MrMacRight',
-            """In this talk, MrMacRight will go over how Apple is pushing AAA gaming on their platforms and improving In-App purchases."""
-            ])
-
-        schedlist.append([
-            '5:00PM',
-            '6:00PM',
-            'Talk',
-            'The Rise Of Mac Malware',
-            'Thomas Reed',
-            """Join me for a journey through time, as we look at past Mac malware, focusing on when certain behaviors first emerged.
-            Then fast forward through time, where we’ll see what today’s Mac threat landscape looks like, and what behaviors we’re seeing from Mac threats in the wild."""
-            ])
-
-        schedlist.append([
-            '6:00PM',
-            '6:30PM',
-            'Talk',
-            'Abusing & Securing XPC in macOS Apps',
-            'Wojciech',
-            """XPC is a well-known interprocess communication mechanism used on Apple devices.
-            Abusing XPC led to many severe bugs, including those used in jailbreaks.
-            While the XPC bugs in Apple’s components are harder and harder to exploit, did we look at non-Apple apps on macOS?
-            As it turns out, vulnerable apps are everywhere — Anti Viruses, Messengers, Privacy tools, Firewalls, and more."""
+            'Spoopy Pre-Show + DEFCON 201 Announcements',
+            'Nexpo & DEFCON 201 Staff',
+            """Enjoy this 20 minute video of spooky hacker entertainment followed by community announcements and updates from DEFCON 201 Staff with some casual chat with our audience."""
             ])
 
         schedlist.append([
             '6:30PM',
             '7:00PM',
-            'Workshop',
-            'macintosh.js',
-            'Ncommander',
-            """Macintosh.js is an Electron app which emulates a 1991 Macintosh Quadra 900 running Mac OS 8.1.
-            In this brief overview, NCommander of HACK + ALT + NCOMMANDER fame will do what he does best;
-            dissect this retro operating system and point out the quirks and WTF-ness of this unholy emulated beast."""
-            ])
+            'Talk',
+            'The Horrors Of Voting In The US Election System',
+            'BiaSciLab & Margaret E. MacAlpine',
+            """In this double hitter starts with BiaSciLab on how Mail In Voting works and the myths of it’s security issues debunked. Then a live Q&A with a representative of the DEF CON Voting Machine Hacking Village on current issues with election security.
 
         schedlist.append([
             '7:00PM',
-            '7:10PM',
+            '8:00PM',
+            'Talk',
+            'Cyber Collective Interview',
+            'Tazin Khan',
+            """We at DEFCON 201 are honored to feature a representative of The Cyber Collective, a community-centered organization that hosts events to understand the ways data and privacy impact consumers."""
+            ])
+
+        schedlist.append([
+            '8:00PM',
+            '9:00PM',
             'Workshop',
-            'A Kinky Hack To Sideload iOS Applications',
+            'Spy For A Day: Caesar’s Code C++ Workshop for BeginnersAbusing & Securing XPC in macOS Apps',
+            'vvvalentina',
+            """This is a beginner / intermediate c++ workshop on how to create a cipher using Caesar’s code. This is a lesson on encryption, decryption and how to compile your code through the terminal."""
+            ])
+
+        schedlist.append([
+            '9:00PM',
+            '9:10PM',
+            'Workshop',
+            'Beginners Guide To CTF',
+            'phoenixfyrefly',
+            """Long time friend of DEFCON 201 phoenixfyrefly will go over what a CTF (Capture The Flag)game is, what hardware and software you should run, how to submit a Flag point and getting prepared for the Hacktober CTF in the Open Workshop! <a href="https://medium.com/@defcon201/defcon-201-online-ctf-hacktoberfest-ctf-oct-16th-17th-6d69b2c07ee0?source=friends_link&sk=23d1acbe1d7381acb1322d8889157ef9">Click Here for Hacktoberfest CTF (Oct 16th 10AM — Oct 17th 10PM) Medium Blog Details</a>."""
+            ])
+
+        schedlist.append([
+            '9:10PM',
+            '9:45PM',
+            'Lightning Talks',
+            'Hacktoberfest Primer',
             'sidepocket',
-            """we will walk through how the kink and fetish scene had exploited the development mode of iOS and XCode to inject their own software,
-            bypassing Apple’s insular storefront. Then we will quickly go over how this blew a giant wall in Apple’s iOS software approval proccess."""
+            """At 9:10 PM EST we will begin our LIVE Stream portion of Hacktoberfest featuring an Intro to Hacktoberfest 2020 by Sidepocket, What Is Open Source by GI Jack, A Workshop On How To Use Git by sirocyl, a demo of Hacktoberfest Open Source Projects and Introduction to all partcipating hacker!"""
             ])
 
         schedlist.append([
-            '7:10PM',
-            None,
-            'Finishing remarks',
-            'Old Man Yells At iCloud',
+            '9:45PM',
+            '11:59PM',
+            'Workshop',
+            'Hacktoberfest 2020 Hackathon',
             'xio',
-            """This rant on Apple products past and present will be so long and so foul that it will end and only end when Sub Culture
-            shuts the place down and our livestream ends! Plus, comments from the peanut gallery will cause this digital caveman to go
-            into cardiac arrest before the #FailFactory he works at does!"""
+            """Hacktoberfest — brought to you by DigitalOcean in partnership with Dev & Intel — is a month-long celebration of open source software. First, sign up on the Hacktoberfest site at https://hacktoberfest.digitalocean.com. To qualify for the official limited edition Hacktoberfest shirt, you must register and make four pull requests between October 1–31. Sign Up at <a href="https://organize.mlh.io/participants/events/4435-defcon-201-return-of-hacktoberfest">Major League Hacking</a> for updates and Join Us on the <a href="https://discord.gg/PGgPNEF">DC201 Discord</a> to interact and be on our LIVE Stream!"""
             ])
 
         schedlist.append([None, None, None, None, None, None])
-        
-        schedlist.append([
-            None,
-            '7:30PM',
-            '(IRL) Wrap-Up',
-            'Official end of in-person meeting',
-            'Good night!',
-            '<em>Note: SUB CULTURE closes early due to COVID-19 regulations. Please make sure your belongings are together before closing time.</em>'])
 
         schedlist.append([
             None,
-            '9:00PM',
+            '12:00 MIDNIGHT',
             '(Online) Sign-Off',
             'End of programmed content on DEFCON 201 Live.',
             'Good night!',
-            '<em>Note: Non-programmed streaming content may continue post-meeting - stay tuned!</em>'])
+            '<em>Note: Twitch Viewers will Raid another Stream, dLive Watchers will earn LEMONS!</em>'])
 
         
         schedlist.append([None, None, None, None, None, None])
