@@ -31,9 +31,9 @@ This requires that you have:
 
 2. Make the changes.
 
-3. Generate the pages, and check them in a browser.
+3. Generate the pages. *(You can check them by opening `docs/index.html` in a browser.)*
 
-    `./generate.py && xdg-open docs/index.html`
+    `./generate.py`
 
 4. If it all looks good, then push it to the active site, replacing the commit message with today's date.
 
