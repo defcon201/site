@@ -73,7 +73,7 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
             '6:30PM',
             '(Online) Pre-show',
             'Spoopy Pre-Show + DEFCON 201 Announcements',
-            'Nexpo & DEFCON 201 Staff',
+            'Nexpo &amp; DEFCON 201 Staff',
             """Enjoy this 20 minute video of spooky hacker entertainment followed by community announcements and updates from DEFCON 201 Staff with some casual chat with our audience."""
             ])
 
@@ -82,8 +82,9 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
             '7:00PM',
             'Talk',
             'The Horrors Of Voting In The US Election System',
-            'BiaSciLab & Margaret E. MacAlpine',
-            """In this double hitter starts with BiaSciLab on how Mail In Voting works and the myths of it’s security issues debunked. Then a live Q&A with a representative of the DEF CON Voting Machine Hacking Village on current issues with election security.
+            'BiaSciLab &amp; Margaret E. MacAlpine',
+            """In this double hitter starts with BiaSciLab on how Mail In Voting works and the myths of its security issues debunked. Then a live Q&A with a representative of the DEF CON Voting Machine Hacking Village on current issues with election security."""
+            ])
 
         schedlist.append([
             '7:00PM',
