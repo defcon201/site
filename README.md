@@ -11,6 +11,8 @@ Python 3. Tested on Ubuntu 18.04 and 20.04, WSL with Ubuntu, and Haiku.
 
 Imports `os`, `re`, `shutil`. Doesn't need any external libraries, nor `pip`.
 
+Git, and a clone from ssh, is required to deploy to the live site, but not for the generator to work.
+
 # Usage:
 Clone repo, then just
 > `./generate.py`
