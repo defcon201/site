@@ -1,11 +1,11 @@
 {{{ header("", nodiv=True, white_bg=False) }}}
 
 <div class="main">
-    <h1>&x1f335;&x1f335;&x1f335; CACTUS CACTUS CACTUS &x1f335;&x1f335;&x1f335;</h1>
+    <h1>&x#1f335;&#x1f335;&#x1f335; CACTUS CACTUS CACTUS &#x1f335;&#x1f335;&#x1f335;</h1>
 </div>
 
 <div class="fullpic condensedbox" style="/* background-image: url({{{ resource("res/img/dc201meeting.jpg") }}}); background-position: bottom; */">
-    <center>img src="https://i.imgur.com/SI1RgkV.gif" alt="HACK THE PLANET" /></center>
+    <center><img src="https://i.imgur.com/SI1RgkV.gif" alt="HACK THE PLANET" /></center>
     <h2>Meetings</h2>
     <p><span style="font-size: 18px; font-weight: 600;">DEFCON 201 meets monthly, every <strong>third Friday</strong>, at <strong><a href="{{{ resource("meetings/location.html") }}}">SubCulture</a></strong>.</span></p>
     <br>
