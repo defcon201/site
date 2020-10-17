@@ -1,7 +1,7 @@
 {{{ header("", nodiv=True, white_bg=False) }}}
 
 <div class="main">
-    <h1>&x#1f335;&#x1f335;&#x1f335; CACTUS CACTUS CACTUS &#x1f335;&#x1f335;&#x1f335;</h1>
+    <h1>&#x1f335;&#x1f335;&#x1f335; CACTUS CACTUS CACTUS &#x1f335;&#x1f335;&#x1f335;</h1>
 </div>
 
 <div class="fullpic condensedbox" style="/* background-image: url({{{ resource("res/img/dc201meeting.jpg") }}}); background-position: bottom; */">
