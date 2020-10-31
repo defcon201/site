@@ -2,19 +2,21 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, October 16th"
+        return "Friday, November 20th"
     def Title():                # Title of the meeting
-        return "Revenge Of Hacktoberfest"
+        return "<em>To be announced.</em>"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
-        return "Online &mdash; Streaming Live</em>"
+        return "Online &mdash; Streaming Live"
     def Notice():               # Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://medium.com/@defcon201/defcon-201-online-meet-up-october-2020-revenge-of-hacktoberfest-aaf37809bc3f?source=friends_link&sk=9ee628ebc06bf40d357d8a046298ac24"
+        return "https://medium.com/@defcon201/"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
-        return "post on our Medium"
+        return "Medium</a> - and stay tuned for information about this month's meeting<a>"
     def Summary():              # Short, 1-2 sentences about this meeting.
-        return """Calling all hackers for a spooky meet up with the Hacktoberfest hackathon, CTF and an amazing all witchy speaker line up!"""
+        return """<b>More information about this month's meeting is coming soon.</b><br>
+        Meeting details are usually confirmed one week in advance of the scheduled meeting date."""
+
 
         # Default summary is:
         """<b>More information about this month's meeting is coming soon.</b><br>
@@ -68,80 +70,64 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
 
         schedlist.append([None, None, None, None, None, None])
 
+        schedlist.append([None, None, None, "The following is preliminary and general information for our meetings.", None, None])
         schedlist.append([
             '6:00PM',
             '6:30PM',
-            '(Online) Pre-show',
-            'Spoopy Pre-Show + DEFCON 201 Announcements',
-            'Nexpo &amp; DEFCON 201 Staff',
-            """Enjoy this 20 minute video of spooky hacker entertainment followed by community announcements and updates from DEFCON 201 Staff with some casual chat with our audience."""
+            None,
+            'Pre-show',
+            'The header.',
+            """As we get our stuff together, enjoy a nice video before our feature presentations."""
             ])
+
+        schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([
             '6:30PM',
-            '7:00PM',
-            'Talk',
-            'The Horrors Of Voting In The US Election System',
-            'BiaSciLab &amp; Margaret E. MacAlpine',
-            """In this double hitter starts with BiaSciLab on how Mail In Voting works and the myths of its security issues debunked. Then a live Q&A with a representative of the DEF CON Voting Machine Hacking Village on current issues with election security."""
-            ])
-
-        schedlist.append([
-            '7:00PM',
             '8:00PM',
-            'Talk',
-            'Cyber Collective Interview',
-            'Tazin Khan',
-            """We at DEFCON 201 are honored to feature a representative of The Cyber Collective, a community-centered organization that hosts events to understand the ways data and privacy impact consumers."""
+            None,
+            'Talks',
+            'Our main stack.',
+            """This is the meat and bones of our meeting. Sit a while and listen to hackers talk shop."""
             ])
 
         schedlist.append([
             '8:00PM',
-            '9:00PM',
-            'Workshop',
-            'Spy For A Day: Caesar’s Code C++ Workshop for BeginnersAbusing & Securing XPC in macOS Apps',
-            'vvvalentina',
-            """This is a beginner / intermediate c++ workshop on how to create a cipher using Caesar’s code. This is a lesson on encryption, decryption and how to compile your code through the terminal."""
+            '9:15PM',
+            None,
+            'Workshops',
+            'The data segment.',
+            """Learn and do! We regularly have guests on who love to stretch your brains."""
             ])
 
         schedlist.append([
-            '9:00PM',
-            '9:10PM',
-            'Workshop',
-            'Beginners Guide To CTF',
-            'phoenixfyrefly',
-            """Long time friend of DEFCON 201 phoenixfyrefly will go over what a CTF (Capture The Flag)game is, what hardware and software you should run, how to submit a Flag point and getting prepared for the Hacktober CTF in the Open Workshop! <a href="https://medium.com/@defcon201/defcon-201-online-ctf-hacktoberfest-ctf-oct-16th-17th-6d69b2c07ee0?source=friends_link&sk=23d1acbe1d7381acb1322d8889157ef9">Click Here for Hacktoberfest CTF (Oct 16th 10AM — Oct 17th 10PM) Medium Blog Details</a>."""
-            ])
-
-        schedlist.append([
-            '9:10PM',
+            '9:15PM',
             '9:45PM',
+            None,
             'Lightning Talks',
-            'Hacktoberfest Primer',
-            'sidepocket',
-            """At 9:10 PM EST we will begin our LIVE Stream portion of Hacktoberfest featuring an Intro to Hacktoberfest 2020 by Sidepocket, What Is Open Source by GI Jack, A Workshop On How To Use Git by sirocyl, a demo of Hacktoberfest Open Source Projects and Introduction to all partcipating hacker!"""
+            'Buried under the heap!',
+            """These energizing functional blocks of time in our tightly-woven call graph are meant to spend as few clock cycles as possible to convey some juicy data into your membranes and tactical switches."""
             ])
 
         schedlist.append([
             '9:45PM',
-            '11:59PM',
-            'Workshop',
-            'Hacktoberfest 2020 Hackathon',
-            'xio',
-            """Hacktoberfest — brought to you by DigitalOcean in partnership with Dev & Intel — is a month-long celebration of open source software. First, sign up on the Hacktoberfest site at https://hacktoberfest.digitalocean.com. To qualify for the official limited edition Hacktoberfest shirt, you must register and make four pull requests between October 1–31. Sign Up at <a href="https://organize.mlh.io/participants/events/4435-defcon-201-return-of-hacktoberfest">Major League Hacking</a> for updates and Join Us on the <a href="https://discord.gg/PGgPNEF">DC201 Discord</a> to interact and be on our LIVE Stream!"""
+            None,
+            None,
+            'Workshops II',
+            'The code segment.',
+            """This is where you get your hands dirty, working with the stuff we had on our stream today. Chat, create and do a hacking for great good."""
             ])
 
         schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([
             None,
-            '12:00 MIDNIGHT',
-            '(Online) Sign-Off',
-            'End of programmed content on DEFCON 201 Live.',
+            '12:00 at the latest',
+            'Sign-Off',
             'Good night!',
+            'End of program.',
             '<em>Note: Twitch Viewers will Raid another Stream, dLive Watchers will earn LEMONS!</em>'])
 
-        
         schedlist.append([None, None, None, None, None, None])
         schedlist.append([None, None, "COVID-19 Notice", "Keep an eye out for your fellow hacker. Whether you're social or anti-social, practice distancing.", None, None])
 
