@@ -153,7 +153,7 @@ on our LIVE Stream platforms to entertain people to donate to the cause!
             'Talk',
             'The Internet Of Thongs: Virtualization Of Sexual Intimacy',
             'Andre Shakti, Inferno',
-            """We look at two organizations, The Sanctuary Club and NYC INFERNO, as they talked about the challenges of
+            """We look at two organizations, The Sanctuary Club and NYC INFERNO, as they talk about the challenges of
                transforming their intimate spaces into the virtual world."""
             ])
 
