@@ -114,7 +114,7 @@ on our LIVE Stream platforms to entertain people to donate to the cause!
             'Brief',
             'B!tch Picking: Designing A Lockpick Set For Sex Workers',
             'Sidepocket',
-            """In this short presentation, <a href="https://toool.us/">TOOOL</a> will pitch a concept of an all-in-one case and set design
+            """In this short presentation, a member of <a href="https://toool.us/">TOOOL</a> will pitch a concept of an all-in-one case and set design
                that would satisfy the needs for the safety of sex workers out in the field."""
             ])
 
