@@ -2,20 +2,21 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, December 18th"
+        return "Friday, November 20th"
     def Title():                # Title of the meeting
-        return "<em>To be announced.</em>"
+        return "BackOrifice 2020"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "Online &mdash; Streaming Live"
     def Notice():               # Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://medium.com/@defcon201/"
+        return "https://medium.com/@defcon201/defcon-201-online-meet-up-november-2020-back-orifice-2020-19296967cac4"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
-        return "Medium</a> - and stay tuned for information about this month's meeting<a>"
+        return "post on our Medium"
     def Summary():              # Short, 1-2 sentences about this meeting.
-        return """<b>More information about this month's meeting is coming soon.</b><br>
-        Meeting details are usually confirmed one week in advance of the scheduled meeting date."""
+        return """
+To get our freak on, we decided after high demand to revisit virually one of our favorite meeting subjects of all time back in 2017 when we started out. Hacking Sex. Wet ware meets hardware. Dicks, Dongles and The Internet Of Thongs.
+"""
 
 
         # Default summary is:
@@ -67,56 +68,105 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
         schedlist.append([None, None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>'])
         schedlist.append([None, None, None, None, "dLive",   '<a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>'])
         schedlist.append([None, None, None, None, "YouTube", '<a href="https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg">https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg</a><br>'])
+        schedlist.append([None, None, None, None, "Chaturbate", '<em>Link to our Chaturbate stream will be announced soon.</em>'])
 
         schedlist.append([None, None, None, None, None, None])
 
-        schedlist.append([None, None, None, "The following is preliminary and general information for our meetings.", None, None])
+        schedlist.append([None, None, "This month's charity fundraiser is", """<a href="https://www.rainn.org/">RAINN</a>""", "the Rape, Abuse &amp Incest National Network", """
+RAINN is the nation’s largest anti-sexual violence organization.<br>
+RAINN created and operates the National Sexual Assault Hotline (800.656.HOPE, online.rainn.org y rainn.org/es) in partnership with more than 1,000 local sexual assault service providers across the country,<br>
+and operates the DoD Safe Helpline for the Department of Defense. RAINN also carries out programs to prevent sexual violence, help survivors, and ensure that perpetrators are brought to justice.<br><br>
+
+This month until November 30th, DEFCON 201 are proud to try to raise a minimum goal of <b>$400</b> for RAINN via Tiltify to protect all humans around the world from the horrors of sexual abuse.<br>
+We will offer a wide range of programming from our shows (HACK + ALT + NCOMMANDER, The Master Of Unlocking, Archvile: A Linux Perspective & Crypto Barons) plus special programming including this meeting
+on our LIVE Stream platforms to entertain people to donate to the cause!
+"""])
+        schedlist.append([None, None, None, "If you want to donate at any time, do so through the following link:", """<a href="https://tiltify.com/@defcon201live/defcon-201-makes-it-rainn-november-charity">Tiltify: DEFCON 201 Makes It RAINN November Charity</a>""", None])
+
+
+
         schedlist.append([
             '6:00PM',
-            '6:30PM',
-            None,
+            '6:25PM',
             'Pre-show',
-            'The header.',
-            """As we get our stuff together, enjoy a nice video before our feature presentations."""
+            'Pwn All the Mobile Porn Apps',
+            'Ben Actis',
+            """A talk from <a href="https://www.bsideslv.org/">BSides Las Vegas 2017</a>.
+               It will examine egregious security vulnerabilities found in adult content mobile applications.
+               Highlights include: lack of HTTPS usage, code execution in update mechanisms, and less then stellar vendor responses."""
             ])
 
         schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([
             '6:30PM',
+            '6:50PM',
+            'Talk',
+            'The Privacy of Online Dating & Teledildonics',
+            'Alex Lomas',
+            """Many dating applications use location to match you up with people in the local area, but this led to the leakage of million’s of people’s exact location.
+               We’ll look at some of the problems we found last year, what has changed, and what you can do to protect yourself."""
+            ])
+
+        schedlist.append([
+            '6:50PM',
+            '7:00PM',
+            'Brief',
+            'B!tch Picking: Designing A Lockpick Set For Sex Workers',
+            'Sidepocket',
+            """In this short presentation, a member of <a href="https://toool.us/">TOOOL</a> will pitch a concept of an all-in-one case and set design
+               that would satisfy the needs for the safety of sex workers out in the field."""
+            ])
+
+        schedlist.append([
+            '7:00PM',
+            '7:30PM',
+            'Talk',
+            'Naked &amp; Unafraid: The Basics Of Securing Your Nudes',
+            'Allie Barnes',
+            """This talk aims to give you some basic information on revenge porn, some basic technical information on
+               privacy when it comes to media storage and sharing, how to protect yourself when sharing intimate material,
+               and finally — what your options are if your material DOES get leaked."""
+            ])
+
+        schedlist.append([
+            '7:30PM',
+            '7:50PM',
+            'Talk',
+            'Aliases, Branding, and Consent: The ABCs of Sex Work and Digital Security',
+            'Luna Sylum',
+            """Let’s define your model of acceptable risk, when it comes to social media and information security, if you maintain more than one identity online."""
+            ])
+
+        schedlist.append([
+            '7:50PM',
             '8:00PM',
+            'Breaking News Brief',
+            '<em>To be announced.</em>',
             None,
-            'Talks',
-            'Our main stack.',
-            """This is the meat and bones of our meeting. Sit a while and listen to hackers talk shop."""
-            ])
+            ""
+           ])
 
         schedlist.append([
             '8:00PM',
-            '9:15PM',
-            None,
-            'Workshops',
-            'The data segment.',
-            """Learn and do! We regularly have guests on who love to stretch your brains."""
+            '8:30PM',
+            'Talk',
+            'The Internet Of Thongs: Virtualization Of Sexual Intimacy',
+            'Andre Shakti, Inferno',
+            """We look at two organizations, The Sanctuary Club and NYC INFERNO, as they talk about the challenges of
+               transforming their intimate spaces into the virtual world."""
             ])
 
         schedlist.append([
-            '9:15PM',
-            '9:45PM',
-            None,
-            'Lightning Talks',
-            'Buried under the heap!',
-            """These energizing functional blocks of time in our tightly-woven call graph are meant to spend as few clock cycles as possible to convey some juicy data into your membranes and tactical switches."""
+            '8:30PM',
+            '10:00PM',
+            'Roundtable',
+            'UN-EARN IT: The Domino Effect Of Internet Censorship',
+            'Sex Workers Roundtable (Participants TBA)',
+            """Join a panel of sex workers and activist on the front lines about the censorship of sex work on the internet
+               and how it will and has emboldened other forms internet censorship that affects us all."""
             ])
 
-        schedlist.append([
-            '9:45PM',
-            None,
-            None,
-            'Workshops II',
-            'The code segment.',
-            """This is where you get your hands dirty, working with the stuff we had on our stream today. Chat, create and do a hacking for great good."""
-            ])
 
         schedlist.append([None, None, None, None, None, None])
 
@@ -160,7 +210,7 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
             html += "<em>"
 
             if item["eventtype"] is not None:
-                html += item["eventtype"] + ": "
+                html += "<u>" + item["eventtype"] + ":</u> "
 
             if item["title"] is not None:
                 html += item["title"]
