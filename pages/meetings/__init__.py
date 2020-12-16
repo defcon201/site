@@ -68,7 +68,6 @@ Can it be? Is it finally here? The final stretch to the END of 2020 is upon us!?
         schedlist.append([None, None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>'])
         schedlist.append([None, None, None, None, "dLive",   '<a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>'])
         schedlist.append([None, None, None, None, "YouTube", '<a href="https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg">https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg</a><br>'])
-        schedlist.append([None, None, None, None, "Chaturbate", '<em>Link to our Chaturbate stream will be announced soon.</em>'])
 
         schedlist.append([None, None, None, None, None, None])
 
