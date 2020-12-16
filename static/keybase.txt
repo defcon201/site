@@ -110,3 +110,60 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/sirocyl
 
 ==================================================================
+
+==================================================================
+https://keybase.io/gi_jack
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://defcon201.org
+  * I am gi_jack (https://keybase.io/gi_jack) on keybase.
+  * I have a public key ASA_KtSFPNUuGafnwz1CeQtaBIrCakYLTKtcr6vAI2qBDwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203f2ad4853cd52e19a7e7c33d42790b5a048ac26a460b4cab5cafabc0236a810f0a",
+      "host": "keybase.io",
+      "kid": "01203f2ad4853cd52e19a7e7c33d42790b5a048ac26a460b4cab5cafabc0236a810f0a",
+      "uid": "ba20277c22ee4beb69539df85b28b619",
+      "username": "gi_jack"
+    },
+    "merkle_root": {
+      "ctime": 1608162751,
+      "hash": "95e4ab387810e99d4d049f1740dd22523e86d94b9665ed91c646846e3c342f8f0de6fd1e75a89c6fdb13ea3dbdac18c7e28faa87a1f5917152c795e7ce2cbc7f",
+      "hash_meta": "f370066d19bcba92d800bd3b19428845265e9226493223da05888655066901b1",
+      "seqno": 18423154
+    },
+    "service": {
+      "entropy": "vi1XEA23+iU9zcD5mSQcFOla",
+      "hostname": "defcon201.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.2"
+  },
+  "ctime": 1608162758,
+  "expire_in": 504576000,
+  "prev": "18c5056cdb3540b7e838df7491e728ee09b615e6d5cbaabc4c6777b7ab1304b5",
+  "seqno": 69,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgPyrUhTzVLhmn58M9QnkLWgSKwmpGC0yrXK+rwCNqgQ8Kp3BheWxvYWTESpcCRcQgGMUFbNs1QLfoON90keco7gm2FebVy6q8TGd3t6sTBLXEIL/5z3ObrnpFwmHWbfTYRcLggTlTN6QdCfdp9WIyjLeqAgHCo3NpZ8RA+lS9ef+WTbRWLqK1dtVPAXdwWYQmIZDQ4NF4zlLNJM2hYqn7r0j1gXV5gij+vKFFWe7WQyu+4RlK7CBsPZsbAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINPMzHGj5jcJgDg2v3LqCb749RTg6VbfMtkLF2Z7K4hLo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/gi_jack
+
+==================================================================
