@@ -4,18 +4,19 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
     def Date():                 # Date of the meeting (Weekday, Month DD)
         return "Friday, December 18th"
     def Title():                # Title of the meeting
-        return "<em>To be announced.</em>"
+        return "XmasCon"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "Online &mdash; Streaming Live"
     def Notice():               # Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://medium.com/@defcon201/"
+        return "https://defcon201.medium.com/defcon-201-online-meet-up-december-2020-xmascon-2df1b72da8b7"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
-        return "Medium</a> - and stay tuned for information about this month's meeting<a>"
+        return "post on our Medium"
     def Summary():              # Short, 1-2 sentences about this meeting.
-        return """<b>More information about this month's meeting is coming soon.</b><br>
-        Meeting details are usually confirmed one week in advance of the scheduled meeting date."""
+        return """
+Can it be? Is it finally here? The final stretch to the END of 2020 is upon us!? This might be the best present we get this year!
+"""
 
 
         # Default summary is:
@@ -67,56 +68,64 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
         schedlist.append([None, None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>'])
         schedlist.append([None, None, None, None, "dLive",   '<a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>'])
         schedlist.append([None, None, None, None, "YouTube", '<a href="https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg">https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg</a><br>'])
+        schedlist.append([None, None, None, None, "Chaturbate", '<em>Link to our Chaturbate stream will be announced soon.</em>'])
 
         schedlist.append([None, None, None, None, None, None])
 
-        schedlist.append([None, None, None, "The following is preliminary and general information for our meetings.", None, None])
+        schedlist.append([None, None, "This month's charity fundraiser is", """<a href="http://www.childsplaycharity.org/">Child's Play</a>""", None, """
+Child’s Play was born in 2003 after Mike Krahulik and Jerry Holkins of Penny Arcade, in response to how video games were portrayed negatively by the media, challenged their fans to help support Seattle Children’s Hospital. An Amazon Wishlist was set up and in less than one month, the charity raised over $250,000 in cash and toys for Seattle Children’s hospital.
+
+"""])
+        schedlist.append([None, None, None, "If you want to donate at any time, do so through the following link:", """<a href="https://donate.tiltify.com/@defcon201live/spirit-of-hohocon-childs-play-charity">Tiltify: DC201 Spirit Of HoHoCon Child’s Play Charity</a>""", None])
+
+
+
         schedlist.append([
             '6:00PM',
-            '6:30PM',
-            None,
+            '6:50PM',
             'Pre-show',
-            'The header.',
-            """As we get our stuff together, enjoy a nice video before our feature presentations."""
+            '1993 B.C.: Get Off my LAN! (Hacking in the Olden Days)',
+            'J0hnnyXm4s',
+            """
+Here, Johnny Xmas will deliver one of his famous “When I Was Your Age” rants, this time aimed at the 1990’s and the Rise of the Internet, and the explosion of the hacker community that happened back then, just as it is happening now.
+            """
             ])
 
         schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([
-            '6:30PM',
+            '7:00PM',
             '8:00PM',
-            None,
-            'Talks',
-            'Our main stack.',
-            """This is the meat and bones of our meeting. Sit a while and listen to hackers talk shop."""
+            'Interview',
+            'From Stuxnet to Solar Winds',
+            'Kim Zetter',
+            """
+We at DEFCON 201 are proud to interview cyber-journalist Kim Zetter! Topics will include the state of cybersecurity journalism, how journalist disclose sensitive hacks, hackers relationship with journalism, Governments VS Reporting, and her legendary work documenting Stuxnet and the current cutting-edge state of the Solar Winds breach.
+            """
             ])
 
         schedlist.append([
             '8:00PM',
-            '9:15PM',
-            None,
-            'Workshops',
-            'The data segment.',
-            """Learn and do! We regularly have guests on who love to stretch your brains."""
+            '8:30PM',
+            'Workshop',
+            'Ninja Forge &mdash; Next Generation: Now With More GUI',
+            'GI Jack',
+            """
+ninjaforge-ng is a tool for burning Ninja OS to USB sticks using the purpose created <em>.liveos.zip</em> format. This is part of an overhaul to make the Ninja OS more user friendly, consistent, and secure. The format is documented in a text file, and is freely available for use. This talk will go over the tool and format.
+            """
             ])
 
         schedlist.append([
-            '9:15PM',
-            '9:45PM',
-            None,
-            'Lightning Talks',
-            'Buried under the heap!',
-            """These energizing functional blocks of time in our tightly-woven call graph are meant to spend as few clock cycles as possible to convey some juicy data into your membranes and tactical switches."""
+            '8:30PM',
+            '9:00PM',
+            'Talk',
+            'SNAFU@Internet.mil',
+            'sirocyl',
+            """
+sirocyl takes a look at an interesting case-study in network architecture, where a laptop’s mobile network somehow got DHCP-assigned to an IP address located squarely in the Pentagon.
+            """
             ])
 
-        schedlist.append([
-            '9:45PM',
-            None,
-            None,
-            'Workshops II',
-            'The code segment.',
-            """This is where you get your hands dirty, working with the stuff we had on our stream today. Chat, create and do a hacking for great good."""
-            ])
 
         schedlist.append([None, None, None, None, None, None])
 
@@ -160,7 +169,7 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
             html += "<em>"
 
             if item["eventtype"] is not None:
-                html += item["eventtype"] + ": "
+                html += "<u>" + item["eventtype"] + ":</u> "
 
             if item["title"] is not None:
                 html += item["title"]

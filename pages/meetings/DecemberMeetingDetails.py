@@ -2,20 +2,20 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, November 20th"
+        return "Friday, December 18th"
     def Title():                # Title of the meeting
-        return "BackOrifice 2020"
+        return "XmasCon"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "Online &mdash; Streaming Live"
     def Notice():               # Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://medium.com/@defcon201/defcon-201-online-meet-up-november-2020-back-orifice-2020-19296967cac4"
+        return "https://defcon201.medium.com/defcon-201-online-meet-up-december-2020-xmascon-2df1b72da8b7"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "post on our Medium"
     def Summary():              # Short, 1-2 sentences about this meeting.
         return """
-To get our freak on, we decided after high demand to revisit virually one of our favorite meeting subjects of all time back in 2017 when we started out. Hacking Sex. Wet ware meets hardware. Dicks, Dongles and The Internet Of Thongs.
+Can it be? Is it finally here? The final stretch to the END of 2020 is upon us!? This might be the best present we get this year!
 """
 
 
@@ -72,99 +72,58 @@ To get our freak on, we decided after high demand to revisit virually one of our
 
         schedlist.append([None, None, None, None, None, None])
 
-        schedlist.append([None, None, "This month's charity fundraiser is", """<a href="https://www.rainn.org/">RAINN</a>""", "the Rape, Abuse &amp Incest National Network", """
-RAINN is the nation’s largest anti-sexual violence organization.<br>
-RAINN created and operates the National Sexual Assault Hotline (800.656.HOPE, online.rainn.org y rainn.org/es) in partnership with more than 1,000 local sexual assault service providers across the country,<br>
-and operates the DoD Safe Helpline for the Department of Defense. RAINN also carries out programs to prevent sexual violence, help survivors, and ensure that perpetrators are brought to justice.<br><br>
+        schedlist.append([None, None, "This month's charity fundraiser is", """<a href="http://www.childsplaycharity.org/">Child's Play</a>""", None, """
+Child’s Play was born in 2003 after Mike Krahulik and Jerry Holkins of Penny Arcade, in response to how video games were portrayed negatively by the media, challenged their fans to help support Seattle Children’s Hospital. An Amazon Wishlist was set up and in less than one month, the charity raised over $250,000 in cash and toys for Seattle Children’s hospital.
 
-This month until November 30th, DEFCON 201 are proud to try to raise a minimum goal of <b>$400</b> for RAINN via Tiltify to protect all humans around the world from the horrors of sexual abuse.<br>
-We will offer a wide range of programming from our shows (HACK + ALT + NCOMMANDER, The Master Of Unlocking, Archvile: A Linux Perspective & Crypto Barons) plus special programming including this meeting
-on our LIVE Stream platforms to entertain people to donate to the cause!
 """])
-        schedlist.append([None, None, None, "If you want to donate at any time, do so through the following link:", """<a href="https://tiltify.com/@defcon201live/defcon-201-makes-it-rainn-november-charity">Tiltify: DEFCON 201 Makes It RAINN November Charity</a>""", None])
+        schedlist.append([None, None, None, "If you want to donate at any time, do so through the following link:", """<a href="https://donate.tiltify.com/@defcon201live/spirit-of-hohocon-childs-play-charity">Tiltify: DC201 Spirit Of HoHoCon Child’s Play Charity</a>""", None])
 
 
 
         schedlist.append([
             '6:00PM',
-            '6:25PM',
+            '6:50PM',
             'Pre-show',
-            'Pwn All the Mobile Porn Apps',
-            'Ben Actis',
-            """A talk from <a href="https://www.bsideslv.org/">BSides Las Vegas 2017</a>.
-               It will examine egregious security vulnerabilities found in adult content mobile applications.
-               Highlights include: lack of HTTPS usage, code execution in update mechanisms, and less then stellar vendor responses."""
+            '1993 B.C.: Get Off my LAN! (Hacking in the Olden Days)',
+            'J0hnnyXm4s',
+            """
+Here, Johnny Xmas will deliver one of his famous “When I Was Your Age” rants, this time aimed at the 1990’s and the Rise of the Internet, and the explosion of the hacker community that happened back then, just as it is happening now.
+            """
             ])
 
         schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([
-            '6:30PM',
-            '6:50PM',
-            'Talk',
-            'The Privacy of Online Dating & Teledildonics',
-            'Alex Lomas',
-            """Many dating applications use location to match you up with people in the local area, but this led to the leakage of million’s of people’s exact location.
-               We’ll look at some of the problems we found last year, what has changed, and what you can do to protect yourself."""
-            ])
-
-        schedlist.append([
-            '6:50PM',
             '7:00PM',
-            'Brief',
-            'B!tch Picking: Designing A Lockpick Set For Sex Workers',
-            'Sidepocket',
-            """In this short presentation, a member of <a href="https://toool.us/">TOOOL</a> will pitch a concept of an all-in-one case and set design
-               that would satisfy the needs for the safety of sex workers out in the field."""
-            ])
-
-        schedlist.append([
-            '7:00PM',
-            '7:30PM',
-            'Talk',
-            'Naked &amp; Unafraid: The Basics Of Securing Your Nudes',
-            'Allie Barnes',
-            """This talk aims to give you some basic information on revenge porn, some basic technical information on
-               privacy when it comes to media storage and sharing, how to protect yourself when sharing intimate material,
-               and finally — what your options are if your material DOES get leaked."""
-            ])
-
-        schedlist.append([
-            '7:30PM',
-            '7:50PM',
-            'Talk',
-            'Aliases, Branding, and Consent: The ABCs of Sex Work and Digital Security',
-            'Luna Sylum',
-            """Let’s define your model of acceptable risk, when it comes to social media and information security, if you maintain more than one identity online."""
-            ])
-
-        schedlist.append([
-            '7:50PM',
             '8:00PM',
-            'Breaking News Brief',
-            '<em>To be announced.</em>',
-            None,
-            ""
-           ])
+            'Interview',
+            'From Stuxnet to Solar Winds',
+            'Kim Zetter',
+            """
+We at DEFCON 201 are proud to interview cyber-journalist Kim Zetter! Topics will include the state of cybersecurity journalism, how journalist disclose sensitive hacks, hackers relationship with journalism, Governments VS Reporting, and her legendary work documenting Stuxnet and the current cutting-edge state of the Solar Winds breach.
+            """
+            ])
 
         schedlist.append([
             '8:00PM',
             '8:30PM',
-            'Talk',
-            'The Internet Of Thongs: Virtualization Of Sexual Intimacy',
-            'Andre Shakti, Inferno',
-            """We look at two organizations, The Sanctuary Club and NYC INFERNO, as they talk about the challenges of
-               transforming their intimate spaces into the virtual world."""
+            'Workshop',
+            'Ninja Forge &mdash; Next Generation: Now With More GUI',
+            'GI Jack',
+            """
+ninjaforge-ng is a tool for burning Ninja OS to USB sticks using the purpose created <em>.liveos.zip</em> format. This is part of an overhaul to make the Ninja OS more user friendly, consistent, and secure. The format is documented in a text file, and is freely available for use. This talk will go over the tool and format.
+            """
             ])
 
         schedlist.append([
             '8:30PM',
-            '10:00PM',
-            'Roundtable',
-            'UN-EARN IT: The Domino Effect Of Internet Censorship',
-            'Sex Workers Roundtable (Participants TBA)',
-            """Join a panel of sex workers and activist on the front lines about the censorship of sex work on the internet
-               and how it will and has emboldened other forms internet censorship that affects us all."""
+            '9:00PM',
+            'Talk',
+            'SNAFU@Internet.mil',
+            'sirocyl',
+            """
+sirocyl takes a look at an interesting case-study in network architecture, where a laptop’s mobile network somehow got DHCP-assigned to an IP address located squarely in the Pentagon.
+            """
             ])
 
 
