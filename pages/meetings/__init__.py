@@ -84,7 +84,7 @@ Child’s Play was born in 2003 after Mike Krahulik and Jerry Holkins of Penny A
             '6:50PM',
             'Pre-show',
             '1993 B.C.: Get Off my LAN! (Hacking in the Olden Days)',
-            'J0hnnyXm4s',
+            'J0hnnyXm4s (Pre-Recorded)',
             """
 Here, Johnny Xmas will deliver one of his famous “When I Was Your Age” rants, this time aimed at the 1990’s and the Rise of the Internet, and the explosion of the hacker community that happened back then, just as it is happening now.
             """
