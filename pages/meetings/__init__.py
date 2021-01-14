@@ -2,20 +2,21 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, December 18th"
+        return "Friday, January 15th"
     def Title():                # Title of the meeting
-        return "XmasCon"
+        return "Halt &amp; Catch Fire"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "Online &mdash; Streaming Live"
     def Notice():               # Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://defcon201.medium.com/defcon-201-online-meet-up-december-2020-xmascon-2df1b72da8b7"
+        return "https://defcon201.medium.com/defcon-201-online-meet-up-january-2021-halt-catch-fire-e7d04eedd1d9"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "post on our Medium"
     def Summary():              # Short, 1-2 sentences about this meeting.
         return """
-Can it be? Is it finally here? The final stretch to the END of 2020 is upon us!? This might be the best present we get this year!
+So uh... normally we summarize what has been going on so far this month in the lead up to our meet up but... do we even have to? Have you been online? Have you seen the news?<br>
+We are sadly past the 7-day trial for 2021 and are unable to get a refund so... fuck it!
 """
 
 
@@ -71,57 +72,62 @@ Can it be? Is it finally here? The final stretch to the END of 2020 is upon us!?
 
         schedlist.append([None, None, None, None, None, None])
 
-        schedlist.append([None, None, "This month's charity fundraiser is", """<a href="http://www.childsplaycharity.org/">Child's Play</a>""", None, """
-Child’s Play was born in 2003 after Mike Krahulik and Jerry Holkins of Penny Arcade, in response to how video games were portrayed negatively by the media, challenged their fans to help support Seattle Children’s Hospital. An Amazon Wishlist was set up and in less than one month, the charity raised over $250,000 in cash and toys for Seattle Children’s hospital.
-
-"""])
-        schedlist.append([None, None, None, "If you want to donate at any time, do so through the following link:", """<a href="https://donate.tiltify.com/@defcon201live/spirit-of-hohocon-childs-play-charity">Tiltify: DC201 Spirit Of HoHoCon Child’s Play Charity</a>""", None])
-
-
 
         schedlist.append([
-            '6:00PM',
-            '6:50PM',
+            '5:30PM',
+            '5:55PM',
             'Pre-show',
-            '1993 B.C.: Get Off my LAN! (Hacking in the Olden Days)',
-            'J0hnnyXm4s (Pre-Recorded)',
+            'Don\'t Be a Sucker',
+            'United States Department of War (From the archives, 1943)',
             """
-Here, Johnny Xmas will deliver one of his famous “When I Was Your Age” rants, this time aimed at the 1990’s and the Rise of the Internet, and the explosion of the hacker community that happened back then, just as it is happening now.
+Our PRE-SHOW will a public domain short film that is even more relevant now than it was back then.
             """
             ])
 
         schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([
-            '7:00PM',
-            '8:00PM',
-            'Interview',
-            'From Stuxnet to Solar Winds',
-            'Kim Zetter',
-            """
-We at DEFCON 201 are proud to interview cyber-journalist Kim Zetter! Topics will include the state of cybersecurity journalism, how journalist disclose sensitive hacks, hackers relationship with journalism, Governments VS Reporting, and her legendary work documenting Stuxnet and the current cutting-edge state of the Solar Winds breach.
-            """
-            ])
-
-        schedlist.append([
-            '8:00PM',
-            '8:30PM',
-            'Workshop',
-            'Ninja Forge &mdash; Next Generation: Now With More GUI',
-            'GI Jack',
-            """
-ninjaforge-ng is a tool for burning Ninja OS to USB sticks using the purpose created <em>.liveos.zip</em> format. This is part of an overhaul to make the Ninja OS more user friendly, consistent, and secure. The format is documented in a text file, and is freely available for use. This talk will go over the tool and format.
-            """
-            ])
-
-        schedlist.append([
-            '8:30PM',
-            '9:00PM',
+            '6:00PM',
+            '6:30PM',
             'Talk',
-            'SNAFU@Internet.mil',
-            'sirocyl',
+            'From The Current State of DevOops',
+            'Tillie Kottmann',
             """
-sirocyl takes a look at an interesting case-study in network architecture, where a laptop’s mobile network somehow got DHCP-assigned to an IP address located squarely in the Pentagon.
+A short overview on how source code and secrets can often be extracted from the most popular DevOps tools, followed by some details around recent leaks, how they were acquired and what you can find in them.
+            """
+            ])
+
+        schedlist.append([
+            '6:30PM',
+            '7:00PM',
+            'Workshop',
+            'Internals of Conti Ransomware',
+            'Nikhil Rathor',
+            """
+This talk will be dissecting this ransomware from writing the logic bomb in the macros of the office docs to the loading the malicious payload/executable execs run32dll.exe being deployed for the triage of targeted machines.
+            """
+            ])
+
+        schedlist.append([
+            '7:00PM',
+            '7:30PM',
+            'Talk',
+            'Privacy After The Insurrection',
+            'Albert Fox Cahn (S.T.O.P.)',
+            """
+In the aftermath of last week’s horrific attack on the Capitol, new questions are being raised about the role of surveillance in identifying insurrectionists and responding toe right-wing violence.<br>
+Albert Fox Cahn of the Surveillance Technology Oversight Project (S.T.O.P.) will discuss the dangers of expanding surveillance in these challenging times.
+            """
+            ])
+
+        schedlist.append([
+            '7:30PM',
+            '8:00PM',
+            'Talk',
+            'Cooking Out Of The Frying Pan with 1A Snake Oil',
+            'Sidepocket',
+            """
+In this quick PSA, Sidepocket will go over these bad services past and present, present a methodology on how to identify a good or bad service and highlight some actual alternatives that will help make a more balanced internet.
             """
             ])
 
