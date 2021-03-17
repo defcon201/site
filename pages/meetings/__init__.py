@@ -2,21 +2,21 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, January 15th"
+        return "Friday, March 19th"
     def Title():                # Title of the meeting
-        return "Halt &amp; Catch Fire"
+        return "FOUR F&amp;amp;&bull;&raquo;&mdash;ING YEARS"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "Online &mdash; Streaming Live"
     def Notice():               # Any important notices about the meeting or the information.
-        return ""
+        return "Big Blue Button link will be posted <strong>on March 19th at 5PM EST.</strong>"
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://defcon201.medium.com/defcon-201-online-meet-up-january-2021-halt-catch-fire-e7d04eedd1d9"
+        return "https://defcon201.medium.com/defcon-201-online-meet-up-march-2021-four-f-king-years-c7dbb46543b3"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "post on our Medium"
     def Summary():              # Short, 1-2 sentences about this meeting.
         return """
-So uh... normally we summarize what has been going on so far this month in the lead up to our meet up but... do we even have to? Have you been online? Have you seen the news?<br>
-We are sadly past the 7-day trial for 2021 and are unable to get a refund so... fuck it!
+We are going to party like it’s 1995, because now that we know that there is a plague out there &mdash; unlike last time &mdash; in the immortal words of a moron, "WE'LL DO IT LIVE!" on the DEFCON 201 LIVE Stream!
+This month we are going to make YOU the focus of the event along with special guests from all over the hacker world to drink, play, and hack our way into a new year of Dirty Jersey!
 """
 
 
@@ -74,60 +74,78 @@ We are sadly past the 7-day trial for 2021 and are unable to get a refund so... 
 
 
         schedlist.append([
-            '5:30PM',
-            '5:55PM',
-            'Pre-show',
-            'Don\'t Be a Sucker',
-            'United States Department of War (From the archives, 1943)',
+            None,
+            '6:30PM',
+            '<em>Pre</em>-pre-show',
+            'This is New Jersey',
+            'New Jersey Bell Telephone Company (From the archives, 1956)',
             """
-Our PRE-SHOW will a public domain short film that is even more relevant now than it was back then.
+This Technicolor film was produced in 1956 for the New Jersey Bell Telephone Company, and based on a 1953 John T. Cunningham book <em>This is New Jersey</em>.
+            """
+            ])
+
+        schedlist.append([
+            '6:30PM',
+            '7:00PM',
+            'Pre-show',
+            '&#x1F3B5; Hacker Tunes',
+            '<a href="https://twitter.com/djjackalope">miss jackalope</a>',
+            """
+We at DEFCON 201 are honored to have the reigning queen of hacker beats, Miss DJ Jackalope, to do a 30 minute music set for our anniversary!
             """
             ])
 
         schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([
-            '6:00PM',
-            '6:30PM',
-            'Talk',
-            'From The Current State of DevOops',
-            'Tillie Kottmann',
-            """
-A short overview on how source code and secrets can often be extracted from the most popular DevOps tools, followed by some details around recent leaks, how they were acquired and what you can find in them.
-            """
-            ])
-
-        schedlist.append([
-            '6:30PM',
-            '7:00PM',
-            'Workshop',
-            'Internals of Conti Ransomware',
-            'Nikhil Rathor',
-            """
-This talk will be dissecting this ransomware from writing the logic bomb in the macros of the office docs to the loading the malicious payload/executable execs run32dll.exe being deployed for the triage of targeted machines.
-            """
-            ])
-
-        schedlist.append([
-            '7:00PM',
+            '7:05PM',
             '7:30PM',
             'Talk',
-            'Privacy After The Insurrection',
-            'Albert Fox Cahn (S.T.O.P.)',
-            """
-In the aftermath of last week’s horrific attack on the Capitol, new questions are being raised about the role of surveillance in identifying insurrectionists and responding toe right-wing violence.<br>
-Albert Fox Cahn of the Surveillance Technology Oversight Project (S.T.O.P.) will discuss the dangers of expanding surveillance in these challenging times.
-            """
-            ])
-
-        schedlist.append([
-            '7:30PM',
-            '8:00PM',
-            'Talk',
-            'Cooking Out Of The Frying Pan with 1A Snake Oil',
+            'Slipping A Mickey: The Strange OSINT Iceberg of The Walt Disney Corporation',
             'Sidepocket',
             """
-In this quick PSA, Sidepocket will go over these bad services past and present, present a methodology on how to identify a good or bad service and highlight some actual alternatives that will help make a more balanced internet.
+In this talk, we will go through a select history of Disney technologies, from the scrapped EPCOT future city, to the innovative People Movers, the ill-fated Go.com domain and the Magic Band RFID badges that are being used today! And of course, how to hack all of them!
+            """
+            ])
+
+        schedlist.append([
+            '7:30PM',
+            None,
+            '&#x1F973; Party!',
+            'DEFCON 201 Anniversary Party',
+            None,
+            """
+Hang out in our Big Blue Button Senfcall instance where you can chat about 1337 haxxs (and drink)!
+Various notorious hackers from all over the net will join us including some special guests that YOU DON’T WANT TO MISS!
+            """
+            ])
+
+        schedlist.append([None, None, None, None, None, None])
+        schedlist.append(["after the main content", None, "Special Features", None, None, ""])
+
+
+        schedlist.append([
+            None,
+            None,
+            'Workshop',
+            'Hacker Show &amp; Tell',
+            None,
+            """
+After our lightning talks DEFCON 201 members will be given an opportunity to show off the various projects that they have been working on.
+You can join in any time as we chat and some things we might be showing off for the first time so you don’t want to miss this on the LIVE Stream!
+            """
+            ])
+
+        schedlist.append([
+            None,
+            None,
+            'Workshop',
+            'DEFCON 201 VidHug',
+            'Link will be posted <em>March 18</em> on our Medium, Twitter, and here.',
+            """
+Sadly some of our favorite people won’t be able to make it live, including many of you.
+So after we share it to some of our personal folks, we will be posting publicly the link to our <a href="https://www.vidhug.com/">VidHug</a> to record a massive pre-recorded Anniversary video!
+You can record yourself wishing us a happy 4 years, show off 1337 skills and shout HACK THE PLANET in Zero Cool style!
             """
             ])
 
@@ -161,7 +179,7 @@ In this quick PSA, Sidepocket will go over these bad services past and present, 
             if item["starttime"] is not None or item["endtime"] is not None:
                 if item["starttime"] is not None:
                     if item["endtime"] is None:
-                        html += "Starting at "
+                        html += "Starting "
                     html += item["starttime"]
                 if item["starttime"] is not None and item["endtime"] is not None:
                     html += " - "
