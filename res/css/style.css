@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'defcon201';
-    src: url('../font/defcon201.ttf');
-}
-
 body {
     color: #fff;
     background: #000;
@@ -254,7 +249,7 @@ h5 {
 
 .dc201-wordmark {
     font-size: 48px;
-    font-family: "defcon201", "dc201-stencil-camera", monospace;
+    font-family: "dcg201", monospace;
     font-weight: normal;
     line-height: 66%;
 
@@ -287,6 +282,8 @@ h5 {
 
 #container, #top-header, #header-logos, .dc201-logo, .njbell-logo, .dc201-logo-subheader {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image {

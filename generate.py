@@ -21,8 +21,8 @@ class PageMethods:
 
         # TODO: Get header, footer from ext. file like page content
 
-        title = "DEFCON 201 | " + title if title else "DEFCON 201"
-        description = description if description else "DEFCON 201 (or DC201) is a gathering point for folks interested in hacking."
+        title = "DCG 201 | " + title if title else "DCG 201"
+        description = description if description else "DCG 201 (formerly known as DEFCON 201) is a gathering point for folks interested in hacking."
         titleimage = titleimage if titleimage else "https://defcon201.org/res/img/defcon201.png"
 
         r = """<!DOCTYPE html>
@@ -46,7 +46,7 @@ class PageMethods:
         <meta ptoperty="og:image" content=\"""" + titleimage + """\">
 
         <link rel="stylesheet" type="text/css" media="screen" href=\"""" + self.resource("res/css/style.css") +  """\" />
-        <link rel="stylesheet" href=\"""" + self.resource("res/font/dc201stencam/dc201-stencil-camera.css") +  """\" charset="utf-8">
+        <link rel="stylesheet" href=\"""" + self.resource("res/font/dcg201-icons.css") +  """\" charset="utf-8">
         <link rel="stylesheet" href=\"""" + self.resource("res/font/voltaire-webfont/voltaire-webfont.css") +  """\" type="text/css" charset="utf-8">
         <link rel="stylesheet" href=\"""" + self.resource("res/font/overpass-webfont/overpass.css") +  """\" type="text/css" charset="utf-8">
 
@@ -58,13 +58,12 @@ class PageMethods:
             <div id="header-logos">
                 <a href="https://defcon201.org/" class="linknoformat">
                     <div class="dc201-logo">
-                        <span class="image njbell-logo"><img class="njbell-logo-print" src=\"""" + self.resource("res/img/njbell.svg") +  """\"></span>
-                        <h4 class="dc201-wordmark">DEFCON&#x200a;<span class="image jersey">&nbsp;</span>&#x200a;201</h4>
+                        <h4 class="dc201-wordmark">DCG<span class="icon-201bell"></span>201</h4>
                     </div>
                 </a>
                 <div class="dc201-logo-subheader">
                     <span class="subheader-left-side"></span>
-                    <h4>Jersey City&#x2009;<span class="image liberty"><span>&#x2003;</span></span>&#x2009;New Jersey</h4>
+                    <h4>Jersey City &mdash; New Jersey</h4>
                     <span class="subheader-right-side"></span>
                 </div>
             </div>
@@ -126,7 +125,7 @@ class PageMethods:
         item("https://medium.com/@defcon201/", "News", "news", True)
         item("about/info.html", "Info", "info")
         list_open()
-        subitem("about/info.html", "About DEFCON 201")
+        subitem("about/info.html", "About DCG 201")
         subitem("about/coc.html", "Code of Conduct")
         subitem("about/constitution.html", "Constitution")
         subitem("about/partners.html", "Partners")
@@ -153,7 +152,7 @@ class PageMethods:
                 <div>
                     Text content: <a href="https://creativecommons.org/licenses/by/4.0">CC-BY 4.0</a><br>
                     Site code: <a href="https://twitter.com/sirocyl">sirocyl</a> &mdash; <a href="http://github.com/defcon201/site">Github</a><br>
-                    DEFCON201 Logo: <a href="https://twitter.com/tekcopedis">sidepocket</a> &amp; <a href="http://1dark1.com/">1dark1</a> &amp; <a href="https://twitter.com/sirocyl">sirocyl</a><br>
+                    DCG 201 Logo: sidepocket &amp; <a href="http://1dark1.com/">1dark1</a> &amp; <a href="https://twitter.com/sirocyl">sirocyl</a><br>
                     <br>
                     Questions, changes or comments about the website? <a href="https://github.com/defcon201/site/issues">See the issue tracker.</a><br>
                     <br>

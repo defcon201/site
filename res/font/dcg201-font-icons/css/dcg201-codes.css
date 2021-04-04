@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+ 
+.icon-zero:before { content: '\30'; } /* '0' */
+.icon-one:before { content: '\31'; } /* '1' */
+.icon-two:before { content: '\32'; } /* '2' */
+.icon-C:before { content: '\43'; } /* 'C' */
+.icon-D:before { content: '\44'; } /* 'D' */
+.icon-G:before { content: '\47'; } /* 'G' */
+.icon-jersey:before { content: '🌎'; } /* '\1f30e' */
+.icon-201bell:before { content: '🔔'; } /* '\1f514' */
+.icon-liberty:before { content: '🗽'; } /* '\1f5fd' */
