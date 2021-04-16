@@ -73,7 +73,7 @@ Join us for this month's meet up as we deep dive into more traditional hacker AF
 
 
         schedlist.append([
-            '7:30PM',
+            '7:00PM',
             '8:00PM',
             'Pre-show',
             'It\'s not FINished: The Evolving Maturity in Ransomware Operations',
