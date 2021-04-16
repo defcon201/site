@@ -32,7 +32,7 @@ class PageMethods:
 
         <meta charset="utf-8"/>
         <title>""" + title + """</title>
-        <meta http-equiv="onion-location" content="http://d3amnd5ueqmy5crp.onion/" />
+        <meta http-equiv="onion-location" content="http://dc2oonezjanfurd34l6gi2nzqe6grh7cqhzqary2iluuzewyj77ufhyd.onion/" />
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@defcon201nj">
         <meta name="twitter:creator" content="@sirocyl">
