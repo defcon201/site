@@ -79,7 +79,7 @@ Join us for this month's meet up as we deep dive into more traditional hacker AF
             'It\'s not FINished: The Evolving Maturity in Ransomware Operations',
             'Mitchell Clarke, Tom Hall, Joe Slowik (Black Hat Webcast Series)',
             """
-Our PRE-SHOW will a relevant talk from the Black Hat Webinar series! Synopsis from their description below:<br>
+Our PRE-SHOW will be a relevant talk from the Black Hat Webinar series! Synopsis from their description below:<br>
 <blockquote style="font-size: 9pt; border-left: solid 1px #666; padding-left: 0.5em;">
 Ransom demands are becoming larger, attackers smarter, and intrusions longer.
 We will be sharing tradecraft we've seen ransomware threat actors employ across Europe in 2020.
