@@ -2,21 +2,20 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, March 19th"
+        return "Friday, April 16th"
     def Title():                # Title of the meeting
-        return "FOUR F&amp;amp;&bull;&raquo;&mdash;ING YEARS"
+        return "Application Is Meditating"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "Online &mdash; Streaming Live"
     def Notice():               # Any important notices about the meeting or the information.
-        return "Big Blue Button link will be posted <strong>on March 19th at 5PM EST.</strong>"
+        return ""
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://defcon201.medium.com/defcon-201-online-meet-up-march-2021-four-f-king-years-c7dbb46543b3"
+        return "https://defcon201.medium.com/defcon-201-online-meet-up-april-2021-application-is-meditating-a2f717cb6ee3"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "post on our Medium"
     def Summary():              # Short, 1-2 sentences about this meeting.
         return """
-We are going to party like it’s 1995, because now that we know that there is a plague out there &mdash; unlike last time &mdash; in the immortal words of a moron, "WE'LL DO IT LIVE!" on the DEFCON 201 LIVE Stream!
-This month we are going to make YOU the focus of the event along with special guests from all over the hacker world to drink, play, and hack our way into a new year of Dirty Jersey!
+Join us for this month's meet up as we deep dive into more traditional hacker AF topics from hardware maniuplation, exploits, digital archiving and more!
 """
 
 
@@ -68,61 +67,63 @@ This month we are going to make YOU the focus of the event along with special gu
         schedlist.append([None, None, None, "DEFCON 201 is streaming online.", None, "Live Streams are available at:"])
         schedlist.append([None, None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>'])
         schedlist.append([None, None, None, None, "dLive",   '<a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>'])
-        schedlist.append([None, None, None, None, "YouTube", '<a href="https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg">https://www.youtube.com/channel/UCYDQaOHbK5trRU2CDgb0qSg</a><br>'])
+        schedlist.append([None, None, None, None, "YouTube", '<a href="https://www.youtube.com/c/defcon201">https://www.youtube.com/c/defcon201</a><br>'])
 
         schedlist.append([None, None, None, None, None, None])
 
 
         schedlist.append([
-            None,
-            '6:30PM',
-            '<em>Pre</em>-pre-show',
-            'This is New Jersey',
-            'New Jersey Bell Telephone Company (From the archives, 1956)',
-            """
-This Technicolor film was produced in 1956 for the New Jersey Bell Telephone Company, and based on a 1953 John T. Cunningham book <em>This is New Jersey</em>.
-            """
-            ])
-
-        schedlist.append([
-            '6:30PM',
-            '7:00PM',
+            '7:30PM',
+            '8:00PM',
             'Pre-show',
-            '&#x1F3B5; Hacker Tunes',
-            '<a href="https://twitter.com/djjackalope">miss jackalope</a>',
+            'It\'s not FINished: The Evolving Maturity in Ransomware Operations',
+            'Mitchell Clarke, Tom Hall, Joe Slowik (Black Hat Webcast Series)',
             """
-We at DEFCON 201 are honored to have the reigning queen of hacker beats, Miss DJ Jackalope, to do a 30 minute music set for our anniversary!
+Our PRE-SHOW will a relevant talk from the Black Hat Webinar series! Synopsis from their description below:<br>
+<blockquote style="font-size: 9pt; border-left: solid 1px #666; padding-left: 0.5em;">
+Ransom demands are becoming larger, attackers smarter, and intrusions longer.
+We will be sharing tradecraft we've seen ransomware threat actors employ across Europe in 2020.
+Not only are intrusion tactics improving, but attackers are also transitioning and developing sleek ransomware-as-a-service platforms.
+Threat actors are professionalising and streamlining their platforms.
+These platforms are being used by threat actors to generate malware, to communicate and negotiate with victims, and in some cases, for payment processing and decryption utility delivery.</blockquote>
             """
             ])
 
-        schedlist.append([None, None, None, None, None, None])
-
         schedlist.append([
-            '7:05PM',
-            '7:30PM',
+            '8:00PM',
+            '8:30PM',
             'Talk',
-            'Slipping A Mickey: The Strange OSINT Iceberg of The Walt Disney Corporation',
-            'Sidepocket',
+            'Detecting At-Risk Software Infrastructure',
+            'Kaylea Champion',
             """
-In this talk, we will go through a select history of Disney technologies, from the scrapped EPCOT future city, to the innovative People Movers, the ill-fated Go.com domain and the Magic Band RFID badges that are being used today! And of course, how to hack all of them!
+Software serves as infrastructure, and it can suffer from a lack of maintenance. We want to understand how to detect this kind of risk in Free/Libre Open Source Software infrastructure before major failures occur.
             """
             ])
 
         schedlist.append([
-            '7:30PM',
-            None,
-            '&#x1F973; Party!',
-            'DEFCON 201 Anniversary Party',
-            None,
+            '8:30PM',
+            '9:00PM',
+            'Workshop',
+            'The Joycon Symphonic Orchestra',
+            'sirocyl',
             """
-Hang out in our Big Blue Button Senfcall instance where you can chat about 1337 haxxs (and drink)!
-Various notorious hackers from all over the net will join us including some special guests that YOU DON’T WANT TO MISS!
+In this talk DCG 201 Member sirocyl will look at a program that allows Nintendo Switch Joy-Cons to play .midi files. This will be followed by a mini-jam session that might extend to the hang out portion of the meet up!
+            """
+            ])
+
+        schedlist.append([
+            '9:00PM',
+            '10:00PM',
+            'Talk',
+            'npm\'s Gone Wild: The undefined Edition (CVE-2021-28918)',
+            'SickCodes, John Hacking, Kaoudis, Koroeskohr, Tensor_Bodega',
+            """
+How we copped a decade old 0-day, while fixing another one. Randomly assembled global team of then strangers. The power of dropping research on a Sunday.
             """
             ])
 
         schedlist.append([None, None, None, None, None, None])
         schedlist.append(["after the main content", None, "Special Features", None, None, ""])
-
 
         schedlist.append([
             None,
@@ -137,18 +138,20 @@ You can join in any time as we chat and some things we might be showing off for 
             ])
 
         schedlist.append([
-            None,
+            "5PM EST April 16",
             None,
             'Workshop',
-            'DEFCON 201 VidHug',
-            'Link will be posted <em>March 18</em> on our Medium, Twitter, and here.',
+            '<a href=\"https://plaidctf.com/\">PlaidCTF 2021</a>',
+            'To join the CTF, see: <a href=\"https://www.meetup.com/DEFCON201/events/277538780/\">https://www.meetup.com/DEFCON201/events/277538780/</a>',
             """
-Sadly some of our favorite people won’t be able to make it live, including many of you.
-So after we share it to some of our personal folks, we will be posting publicly the link to our <a href="https://www.vidhug.com/">VidHug</a> to record a massive pre-recorded Anniversary video!
-You can record yourself wishing us a happy 4 years, show off 1337 skills and shout HACK THE PLANET in Zero Cool style!
+This Friday, starting on April 16th at 5:00 PM EST, we invite all DEFCON 201 Members, Attendees and Fans to help us hack the PlaidCTF 2021!
+If you are new to Online CTF, we will help you get set up and walk you through some of the challenges.
+Then you can log in anytime after until April 17th 5:00 PM EST to continue our CTF conquest!<br><br>
+What To Bring: Any laptop will do. Ideally you want to load it full of Information Security Red Team and Blue Team tools, look at Kali Linux, Parrot OS, Pentoo or Black Arch for ideas. To participate online, you will need a Discord Account and to join our Discord at this link: <a href=\"https://discord.gg/PGgPNEF\">https://discord.gg/PGgPNEF</a><br><br>
+
+To learn more about the CTF, please follow the link above!
             """
             ])
-
 
         schedlist.append([None, None, None, None, None, None])
 
@@ -161,7 +164,7 @@ You can record yourself wishing us a happy 4 years, show off 1337 skills and sho
             '<em>Note: Twitch Viewers will Raid another Stream, dLive Watchers will earn LEMONS!</em>'])
 
         schedlist.append([None, None, None, None, None, None])
-        schedlist.append([None, None, "COVID-19 Notice", "Keep an eye out for your fellow hacker. Whether you're social or anti-social, practice distancing.", None, None])
+        schedlist.append([None, None, "COVID-19 Notice", "Keep an eye out for your fellow hacker.", "<strong><a href=\"https://covid19.nj.gov/vaccine\">GET YOUR VAX. They\'re available. Schedule it today.</a></strong>", "And finally, Whether you're social or anti-social, practice distancing."])
 
 
         for item in schedlist:
