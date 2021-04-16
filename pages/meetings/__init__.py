@@ -64,7 +64,7 @@ Join us for this month's meet up as we deep dive into more traditional hacker AF
 
         '''
 
-        schedlist.append([None, None, None, "DEFCON 201 is streaming online.", None, "Live Streams are available at:"])
+        schedlist.append([None, None, None, "DCG 201 is streaming online.", None, "Live Streams are available at:"])
         schedlist.append([None, None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>'])
         schedlist.append([None, None, None, None, "dLive",   '<a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>'])
         schedlist.append([None, None, None, None, "YouTube", '<a href="https://www.youtube.com/c/defcon201">https://www.youtube.com/c/defcon201</a><br>'])
@@ -132,7 +132,7 @@ How we copped a decade old 0-day, while fixing another one. Randomly assembled g
             'Hacker Show &amp; Tell',
             None,
             """
-After our lightning talks DEFCON 201 members will be given an opportunity to show off the various projects that they have been working on.
+After our lightning talks DCG 201 members will be given an opportunity to show off the various projects that they have been working on.
 You can join in any time as we chat and some things we might be showing off for the first time so you don’t want to miss this on the LIVE Stream!
             """
             ])
@@ -144,7 +144,7 @@ You can join in any time as we chat and some things we might be showing off for 
             '<a href=\"https://plaidctf.com/\">PlaidCTF 2021</a>',
             'To join the CTF, see: <a href=\"https://www.meetup.com/DEFCON201/events/277538780/\">https://www.meetup.com/DEFCON201/events/277538780/</a>',
             """
-This Friday, starting on April 16th at 5:00 PM EST, we invite all DEFCON 201 Members, Attendees and Fans to help us hack the PlaidCTF 2021!
+This Friday, starting on April 16th at 5:00 PM EST, we invite all DCG 201 Members, Attendees and Fans to help us hack the PlaidCTF 2021!
 If you are new to Online CTF, we will help you get set up and walk you through some of the challenges.
 Then you can log in anytime after until April 17th 5:00 PM EST to continue our CTF conquest!<br><br>
 What To Bring: Any laptop will do. Ideally you want to load it full of Information Security Red Team and Blue Team tools, look at Kali Linux, Parrot OS, Pentoo or Black Arch for ideas. To participate online, you will need a Discord Account and to join our Discord at this link: <a href=\"https://discord.gg/PGgPNEF\">https://discord.gg/PGgPNEF</a><br><br>
