@@ -6,7 +6,7 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
     def Title():                # Title of the meeting
         return "Virtual Light"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
-        return "Online &mdash; Streaming &amp; on NOWHERE VR"
+        return "Online &mdash; Streaming &amp; <a href=\"https://now.urnowhere.com/invite/ZMkafFwiuiNHyyWPiIyEvNycg?spaceId=n5BDVEJkQ26HaAjO3kdN\">on NOWHERE VR</a>"
     def Notice():               # Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():        # A link that refers to this meeting
@@ -69,13 +69,13 @@ Join us for a special, entirely Virtual Reality online meet up broadcasted out o
         schedlist.append([None, None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>'])
         schedlist.append([None, None, None, None, "dLive",   '<a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>'])
         schedlist.append([None, None, None, None, "YouTube", '<a href="https://www.youtube.com/c/defcon201">https://www.youtube.com/c/defcon201</a><br>'])
-        schedlist.append([None, None, None, None, "NOWHERE VR", '<em>Link coming soon.</em><br>'])
+        schedlist.append([None, None, None, None, "NOWHERE VR", '<a href="https://now.urnowhere.com/invite/ZMkafFwiuiNHyyWPiIyEvNycg?spaceId=n5BDVEJkQ26HaAjO3kdN">NOW HERE. HERE. NOW. CLICK IT.</a><br>'])
 
         schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([
             '5:00PM',
-            'Link will be posted',
+            '<a href="https://now.urnowhere.com/invite/ZMkafFwiuiNHyyWPiIyEvNycg?spaceId=n5BDVEJkQ26HaAjO3kdN">Now until Nowhere</a>',
             'VR Lounge',
             'NOWHERE Virtual Reality Hacker Hangout',
             'DCG 201',
