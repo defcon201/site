@@ -5,7 +5,7 @@
 {{{ MeetingDetails.Notice() }}}
 <p>For more detailed information, see the <a href="{{{ MeetingDetails.CanonicalLink() }}}">{{{ MeetingDetails.LinkName() }}}</a>.</p>
 <p>{{{ MeetingDetails.Summary() }}}</p>
-<h4>Schedule:</h4>
+<h4>Schedule: <small><em>All times &nbsp;<tt>America/New_York</tt>.</em></small></h4>
 {{{
 
 MeetingDetails.FormattedSchedule()

@@ -2,20 +2,21 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, April 16th"
+        return "Friday, May 21st"
     def Title():                # Title of the meeting
-        return "Application Is Meditating"
+        return "Virtual Light"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
-        return "Online &mdash; Streaming Live"
+        return "Online &mdash; Streaming &amp; on NOWHERE VR"
     def Notice():               # Any important notices about the meeting or the information.
         return ""
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://defcon201.medium.com/defcon-201-online-meet-up-april-2021-application-is-meditating-a2f717cb6ee3"
+        return "https://defcon201.medium.com/dcg-201-online-meet-up-may-2021-virtual-light-d858732751d0"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "post on our Medium"
     def Summary():              # Short, 1-2 sentences about this meeting.
         return """
-Join us for this month's meet up as we deep dive into more traditional hacker AF topics from hardware maniuplation, exploits, digital archiving and more!
+Join us for a special, entirely Virtual Reality online meet up broadcasted out of the DCG 201 LIVE Streams,
+ where we look at VR’s past mistakes, security, privacy, development and how it can be used for both good and evil.
 """
 
 
@@ -68,90 +69,127 @@ Join us for this month's meet up as we deep dive into more traditional hacker AF
         schedlist.append([None, None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>'])
         schedlist.append([None, None, None, None, "dLive",   '<a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>'])
         schedlist.append([None, None, None, None, "YouTube", '<a href="https://www.youtube.com/c/defcon201">https://www.youtube.com/c/defcon201</a><br>'])
+        schedlist.append([None, None, None, None, "NOWHERE VR", '<em>Link coming soon.</em><br>'])
 
         schedlist.append([None, None, None, None, None, None])
 
+        schedlist.append([
+            '5:00PM',
+            'Link will be posted',
+            'VR Lounge',
+            'NOWHERE Virtual Reality Hacker Hangout',
+            'DCG 201',
+            """
+Come meet us in the Virtual World of NOWHERE, a new social and events platform that revolutionizes online gathering by offering face-to-face interaction
+in beautifully designed three-dimensional spaces! Hang out, talk on your mic, turn on video to show off your hacker shit and watch the LIVE Stream through
+the virtual world followed by an after party featuring amazing music!
+            """
+            ])
+
+        schedlist.append([None, None, None, None, None, None])
+
+        schedlist.append([
+            '5:30PM',
+            '5:55PM',
+            'Pre-show',
+            'Beyond the Looking Glass (1993)',
+            '<a href="http://www.jaronlanier.com/">Jaron Lanier</a>',
+            """
+A great time capsule on what VR technology was like in the early 1990’s and what their hopes were for the future of the technology.
+            """
+            ])
+
+        schedlist.append([
+            '6:00PM',
+            '7:00PM',
+            'Talk',
+            'XRSI: The Reality Of Securing Virtual Worlds',
+            '<a href="https://twitter.com/KavyaPearlman">Kayva Pearlman</a>',
+            """
+Kavya Pearlman, founder of XR Safety Initiative is busy building processes, standards and finding novel cyberattacks
+to stay ahead of the bad guys that are coming for this rising new domain of Virtual Reality.
+            """
+            ])
 
         schedlist.append([
             '7:00PM',
-            '8:00PM',
-            'Pre-show',
-            'It\'s not FINished: The Evolving Maturity in Ransomware Operations',
-            'Mitchell Clarke, Tom Hall, Joe Slowik (Black Hat Webcast Series)',
-            """
-Our PRE-SHOW will feature a relevant talk from the Black Hat Webinar series! Synopsis from their description below:<br>
-<blockquote style="font-size: 9pt; border-left: solid 1px #666; padding-left: 0.5em;">
-Ransom demands are becoming larger, attackers smarter, and intrusions longer.
-We will be sharing tradecraft we've seen ransomware threat actors employ across Europe in 2020.
-Not only are intrusion tactics improving, but attackers are also transitioning and developing sleek ransomware-as-a-service platforms.
-Threat actors are professionalising and streamlining their platforms.
-These platforms are being used by threat actors to generate malware, to communicate and negotiate with victims, and in some cases, for payment processing and decryption utility delivery.</blockquote>
-            """
-            ])
-
-        schedlist.append([
-            '8:00PM',
-            '8:30PM',
+            '7:30PM',
             'Talk',
-            'Detecting At-Risk Software Infrastructure',
-            'Kaylea Champion',
+            'LÖVR: What’s happening in the world of one Open Source VR Library',
+            '<a href="https://twitter.com/mcclure111">Andi McClure</a>',
             """
-Software serves as infrastructure, and it can suffer from a lack of maintenance. We want to understand how to detect this kind of risk in Free/Libre Open Source Software infrastructure before major failures occur.
+LÖVR is a cross-platform, open-source VR engine created by Bjorn Swenson, an alternative to Unreal or Unity that lets you create a VR game or app in just a few lines of Lua.
+We’ll have Andi McClure by to talk about VR development in general, give a demo of LÖVR, and show off her LÖVR-based commercial game “SKATEGIRL DESTROYS THE UNIVERSE”.
             """
             ])
 
         schedlist.append([
-            '8:30PM',
-            '9:00PM',
+            '7:30PM',
+            '8:00PM',
             'Workshop',
-            'The Joycon Symphonic Orchestra',
-            'sirocyl',
+            'Alloverse: Free & Open Source Virtual Reality',
+            'Nevyn Bengtsson',
             """
-In this talk DCG 201 Member sirocyl will look at a program that allows Nintendo Switch Joy-Cons to play .midi files. This will be followed by a mini-jam session that might extend to the hang out portion of the meet up!
+Continuing from the LÖVR talk, we will air a video presentation by Nevyn Bengtsson showing off his project Alloverse, a LÖVR-based metaverse.
+Come watch if you’re curious about LÖVR or just want to see one nonstandard approach to VR dev.
             """
             ])
 
         schedlist.append([
-            '9:00PM',
-            '10:00PM',
+            '8:00PM',
+            '8:20PM',
             'Talk',
-            'npm\'s Gone Wild: The undefined Edition (CVE-2021-28918)',
-            'SickCodes, John Hacking, Kaoudis, Koroeskohr, Tensor_Bodega',
+            'Spot the Surveillance: A VR Experience for Keeping an Eye on Big Brother',
+            'Rory, and <a href="http://schatzkin.com/">Artemis Schatzkin</a> (<a href="https://eff.org">EFF</a>)',
             """
-How we copped a decade old 0-day, while fixing another one. Randomly assembled global team of then strangers. The power of dropping research on a Sunday.
+Spot the Surveillance is an open-source educational Virtual Reality (VR) tool to help people recognize and understand the types of surveillance technology
+that police deploy in their communities.
+This talk will be how it was built and what is the future of this edu-virtual tech.
+            """
+            ])
+
+        schedlist.append([
+            '8:20PM',
+            '9:00PM',
+            'Talk',
+            'Surfing The 90’s Virtual Reality Internet With VRML',
+            'Sidepocket',
+            """
+Our DCG 201 Co-Founder has once again used his digital archeology skills to unearth another piece of virtual technology that the internet has forgotten about.
+We will go over the VRML language, try to create a .wrl WORLD from scratch and trace its lineage to a shocking conclusion!
             """
             ])
 
         schedlist.append([None, None, None, None, None, None])
+
         schedlist.append(["after the main content", None, "Special Features", None, None, ""])
 
         schedlist.append([
+            '9:00 PM',
             None,
-            None,
-            'Workshop',
-            'Hacker Show &amp; Tell',
-            None,
+            'VR After-Party',
+            'Virtual Reality Concert @ DCG 201 NOWHERE Virtual Reality Hacker Hangout',
+            'DJ Vulp',
             """
-After our lightning talks DCG 201 members will be given an opportunity to show off the various projects that they have been working on.
-You can join in any time as we chat and some things we might be showing off for the first time so you don’t want to miss this on the LIVE Stream!
+We will be having an awesome DJ set by a virtual DJ while we party the night away and talk about 1337 haxxs!
+This will both be on our LIVE Streams as well as in our NOWHERE virtual world!
             """
             ])
 
-        schedlist.append([
-            "5PM EST April 16",
-            None,
-            'Workshop',
-            '<a href=\"https://plaidctf.com/\">PlaidCTF 2021</a>',
-            'To join the CTF, see: <a href=\"https://www.meetup.com/DEFCON201/events/277538780/\">https://www.meetup.com/DEFCON201/events/277538780/</a>',
-            """
-This Friday, starting on April 16th at 5:00 PM EST, we invite all DCG 201 Members, Attendees and Fans to help us hack the PlaidCTF 2021!
-If you are new to Online CTF, we will help you get set up and walk you through some of the challenges.
-Then you can log in anytime after until April 17th 5:00 PM EST to continue our CTF conquest!<br><br>
-What To Bring: Any laptop will do. Ideally you want to load it full of Information Security Red Team and Blue Team tools, look at Kali Linux, Parrot OS, Pentoo or Black Arch for ideas. To participate online, you will need a Discord Account and to join our Discord at this link: <a href=\"https://discord.gg/PGgPNEF\">https://discord.gg/PGgPNEF</a><br><br>
 
-To learn more about the CTF, please follow the link above!
-            """
-            ])
+
+
+#        schedlist.append([
+#            None,
+#            None,
+#            'Workshop',
+#            'Hacker Show &amp; Tell',
+#            None,
+#            """
+#After our lightning talks DCG 201 members will be given an opportunity to show off the various projects that they have been working on.
+#You can join in any time as we chat and some things we might be showing off for the first time so you don’t want to miss this on the LIVE Stream!
+#            """
+#            ])
 
         schedlist.append([None, None, None, None, None, None])
 
