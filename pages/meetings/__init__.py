@@ -2,21 +2,21 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, May 21st"
+        return "Friday, August 20th"
     def Title():                # Title of the meeting
-        return "Virtual Light"
+        return "Hybrid Circuit"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
-        return "Online &mdash; Streaming &amp; <a href=\"https://now.urnowhere.com/invite/ZMkafFwiuiNHyyWPiIyEvNycg?spaceId=n5BDVEJkQ26HaAjO3kdN\">on NOWHERE VR</a>"
+        return "<a href=\"https://www.subculturejc.com/\">Sub Culture</a> (260 Newark Ave. Jersey City)"
     def Notice():               # Any important notices about the meeting or the information.
-        return ""
+        return "This meeting will also have an online/streaming component."
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://defcon201.medium.com/dcg-201-online-meet-up-may-2021-virtual-light-d858732751d0"
+        return "https://defcon201.medium.com/dcg-201-hybrid-meet-up-august-2021-hybrid-circuit-ccac4a1318cd"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "post on our Medium"
     def Summary():              # Short, 1-2 sentences about this meeting.
         return """
-Join us for a special, entirely Virtual Reality online meet up broadcasted out of the DCG 201 LIVE Streams,
- where we look at VR’s past mistakes, security, privacy, development and how it can be used for both good and evil.
+Starting with this meet up, DCG 201 will be a Hybrid event.<br>
+This means we are happy to welcome you back to our old haunt, SubCulture (we miss them so much) in Jersey City in addition to LIVE Streaming parts of our meet up online.
 """
 
 
@@ -64,145 +64,18 @@ Join us for a special, entirely Virtual Reality online meet up broadcasted out o
                           """Footnotes and other important information appear here."""])
 
         '''
+        schedlist.append([None, None, None, "<h4>For information about our planned schedule, both online and off, please check the <a href=\"" + MeetingDetails.CanonicalLink() + "\">" + MeetingDetails.LinkName() + "</a>.</h4>", None, None])
 
-        schedlist.append([None, None, None, "DCG 201 is streaming online.", None, "Live Streams are available at:"])
+        schedlist.append([None, None, None, "DCG 201 will also be streaming online.", None, "Live Streams are available at:"])
         schedlist.append([None, None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>'])
         schedlist.append([None, None, None, None, "dLive",   '<a href="https://dlive.tv/defcon201">https://dlive.tv/defcon201</a><br>'])
         schedlist.append([None, None, None, None, "YouTube", '<a href="https://www.youtube.com/c/defcon201">https://www.youtube.com/c/defcon201</a><br>'])
-        schedlist.append([None, None, None, None, "NOWHERE VR", '<a href="https://now.urnowhere.com/invite/ZMkafFwiuiNHyyWPiIyEvNycg?spaceId=n5BDVEJkQ26HaAjO3kdN">NOW HERE. HERE. NOW. CLICK IT.</a><br>'])
 
         schedlist.append([None, None, None, None, None, None])
-
-        schedlist.append([
-            '5:00PM',
-            '<a href="https://now.urnowhere.com/invite/ZMkafFwiuiNHyyWPiIyEvNycg?spaceId=n5BDVEJkQ26HaAjO3kdN">Now until Nowhere</a>',
-            'VR Lounge',
-            'NOWHERE Virtual Reality Hacker Hangout',
-            'DCG 201',
-            """
-Come meet us in the Virtual World of NOWHERE, a new social and events platform that revolutionizes online gathering by offering face-to-face interaction
-in beautifully designed three-dimensional spaces! Hang out, talk on your mic, turn on video to show off your hacker shit and watch the LIVE Stream through
-the virtual world followed by an after party featuring amazing music!
-            """
-            ])
-
-        schedlist.append([None, None, None, None, None, None])
-
-        schedlist.append([
-            '5:30PM',
-            '5:55PM',
-            'Pre-show',
-            'Beyond the Looking Glass (1993)',
-            '<a href="http://www.jaronlanier.com/">Jaron Lanier</a>',
-            """
-A great time capsule on what VR technology was like in the early 1990’s and what their hopes were for the future of the technology.
-            """
-            ])
-
-        schedlist.append([
-            '6:00PM',
-            '7:00PM',
-            'Talk',
-            'XRSI: The Reality Of Securing Virtual Worlds',
-            '<a href="https://twitter.com/KavyaPearlman">Kayva Pearlman</a>',
-            """
-Kavya Pearlman, founder of XR Safety Initiative is busy building processes, standards and finding novel cyberattacks
-to stay ahead of the bad guys that are coming for this rising new domain of Virtual Reality.
-            """
-            ])
-
-        schedlist.append([
-            '7:00PM',
-            '7:30PM',
-            'Talk',
-            'LÖVR: What’s happening in the world of one Open Source VR Library',
-            '<a href="https://twitter.com/mcclure111">Andi McClure</a>',
-            """
-LÖVR is a cross-platform, open-source VR engine created by Bjorn Swenson, an alternative to Unreal or Unity that lets you create a VR game or app in just a few lines of Lua.
-We’ll have Andi McClure by to talk about VR development in general, give a demo of LÖVR, and show off her LÖVR-based commercial game “SKATEGIRL DESTROYS THE UNIVERSE”.
-            """
-            ])
-
-        schedlist.append([
-            '7:30PM',
-            '8:00PM',
-            'Workshop',
-            'Alloverse: Free & Open Source Virtual Reality',
-            'Nevyn Bengtsson',
-            """
-Continuing from the LÖVR talk, we will air a video presentation by Nevyn Bengtsson showing off his project Alloverse, a LÖVR-based metaverse.
-Come watch if you’re curious about LÖVR or just want to see one nonstandard approach to VR dev.
-            """
-            ])
-
-        schedlist.append([
-            '8:00PM',
-            '8:20PM',
-            'Talk',
-            'Spot the Surveillance: A VR Experience for Keeping an Eye on Big Brother',
-            'Rory, and <a href="http://schatzkin.com/">Artemis Schatzkin</a> (<a href="https://eff.org">EFF</a>)',
-            """
-Spot the Surveillance is an open-source educational Virtual Reality (VR) tool to help people recognize and understand the types of surveillance technology
-that police deploy in their communities.
-This talk will be how it was built and what is the future of this edu-virtual tech.
-            """
-            ])
-
-        schedlist.append([
-            '8:20PM',
-            '9:00PM',
-            'Talk',
-            'Surfing The 90’s Virtual Reality Internet With VRML',
-            'Sidepocket',
-            """
-Our DCG 201 Co-Founder has once again used his digital archeology skills to unearth another piece of virtual technology that the internet has forgotten about.
-We will go over the VRML language, try to create a .wrl WORLD from scratch and trace its lineage to a shocking conclusion!
-            """
-            ])
-
-        schedlist.append([None, None, None, None, None, None])
-
-        schedlist.append(["after the main content", None, "Special Features", None, None, ""])
-
-        schedlist.append([
-            '9:00 PM',
-            None,
-            'VR After-Party',
-            'Virtual Reality Concert @ DCG 201 NOWHERE Virtual Reality Hacker Hangout',
-            'DJ Vulp',
-            """
-We will be having an awesome DJ set by a virtual DJ while we party the night away and talk about 1337 haxxs!
-This will both be on our LIVE Streams as well as in our NOWHERE virtual world!
-            """
-            ])
-
-
-
-
-#        schedlist.append([
-#            None,
-#            None,
-#            'Workshop',
-#            'Hacker Show &amp; Tell',
-#            None,
-#            """
-#After our lightning talks DCG 201 members will be given an opportunity to show off the various projects that they have been working on.
-#You can join in any time as we chat and some things we might be showing off for the first time so you don’t want to miss this on the LIVE Stream!
-#            """
-#            ])
-
-        schedlist.append([None, None, None, None, None, None])
-
-        schedlist.append([
-            None,
-            '12:00 at the latest',
-            'Sign-Off',
-            'Good night!',
-            'End of program.',
-            '<em>Note: Twitch Viewers will Raid another Stream, dLive Watchers will earn LEMONS!</em>'])
 
         schedlist.append([None, None, None, None, None, None])
         schedlist.append([None, None, "COVID-19 Notice", "Keep an eye out for your fellow hacker.", "<strong><a href=\"https://covid19.nj.gov/vaccine\">GET YOUR VAX. They\'re available. Schedule it today.</a></strong>", "And finally, Whether you're social or anti-social, practice distancing."])
+
 
 
         for item in schedlist:
