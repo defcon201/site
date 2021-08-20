@@ -8,15 +8,17 @@ class MeetingDetails:           # Any of these can be HTML formatted, but I'd re
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "<a href=\"https://www.subculturejc.com/\">Sub Culture</a> (260 Newark Ave. Jersey City)"
     def Notice():               # Any important notices about the meeting or the information.
-        return "This meeting will also have an online/streaming component."
+        return "<h3>This meeting <strike>will also have an online/streaming component.</strike><br>This meeting is ONLINE ONLY due to unforeseen circumstances: COVID hurricane."
     def CanonicalLink():        # A link that refers to this meeting
         return "https://defcon201.medium.com/dcg-201-hybrid-meet-up-august-2021-hybrid-circuit-ccac4a1318cd"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
-        return "post on our Medium"
+        return "post on our Medium (ignore the in-person/offline event parts)"
     def Summary():              # Short, 1-2 sentences about this meeting.
-        return """
+        return """<strike>
 Starting with this meet up, DCG 201 will be a Hybrid event.<br>
 This means we are happy to welcome you back to our old haunt, SubCulture (we miss them so much) in Jersey City in addition to LIVE Streaming parts of our meet up online.
+</strike>
+<h3>We will not be meeting in person this month. Apologies for the short notice - we will be online, as usual.</h3>
 """
 
 
@@ -64,7 +66,7 @@ This means we are happy to welcome you back to our old haunt, SubCulture (we mis
                           """Footnotes and other important information appear here."""])
 
         '''
-        schedlist.append([None, None, None, "<h4>For information about our planned schedule, both online and off, please check the <a href=\"" + MeetingDetails.CanonicalLink() + "\">" + MeetingDetails.LinkName() + "</a>.</h4>", None, None])
+        schedlist.append([None, None, None, "<h4>For information about our planned schedule, <strike>both online and off,</strike> <b><em>online</em></b>, please check the <a href=\"" + MeetingDetails.CanonicalLink() + "\">" + MeetingDetails.LinkName() + "</a>.</h4>", None, None])
 
         schedlist.append([None, None, None, "DCG 201 will also be streaming online.", None, "Live Streams are available at:"])
         schedlist.append([None, None, None, None, "Twitch",  '<a href="https://www.twitch.tv/defcon201live">https://www.twitch.tv/defcon201live</a><br>'])
