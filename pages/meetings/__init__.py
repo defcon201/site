@@ -2,21 +2,20 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, October 15th"
+        return "Friday, November 19th"
     def Title():                # Title of the meeting
-        return "Bride of Hacktoberfest"
+        return "November Meeting (TBA)"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "<a href=\"https://www.subculturejc.com/\">Sub Culture</a> (260 Newark Ave. Jersey City)"
     def Notice():               # Any important notices about the meeting or the information.
         return "<h5>This meeting will also have an online/streaming component.</h5>"
     def CanonicalLink():        # A link that refers to this meeting
-        return "https://defcon201.medium.com/dcg-201-hybrid-meet-up-october-2021-bride-of-hacktoberfest-967a6c01663b"
+        return "https://defcon201.medium.com/"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
-        return "post on our Medium"
+        return "Medium for further info"
     def Summary():              # Short, 1-2 sentences about this meeting.
         return """
-Starting with this meet up, DCG 201 will be a Hybrid event.<br>
-This means we are happy to welcome you back to our old haunt, SubCulture (we miss them so much) in Jersey City in addition to LIVE Streaming parts of our meet up online.
+Meeting details to be announced.
 """
 
 
