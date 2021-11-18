@@ -16,14 +16,15 @@ class PageMethods:
     def resource(self, resource):
         return os.path.relpath("docs/" + resource, self.path)
 
-    def header(self, title, menu_hl=None, nodiv=False, white_bg=False, description=None, titleimage=None):
+    def header(self, title, menu_hl=None, nodiv=False, white_bg=False, description=None, titleimage=None, abspathroot=None):
         bodystyle = " style=\"background: #fff; color: #000;\"" if white_bg else ""
 
         # TODO: Get header, footer from ext. file like page content
 
         title = "DCG 201 | " + title if title else "DCG 201"
         description = description if description else "DCG 201 (formerly known as DEFCON 201) is a gathering point for folks interested in hacking."
-        titleimage = titleimage if titleimage else "https://defcon201.org/res/img/defcon201.png"
+        titleimage = titleimage if titleimage else "https://defcon201.org/res/img/dcg201.png"
+        abspathroot = abspathroot if abspathroot else "https://defcon201.org"
 
         r = """<!DOCTYPE html>
 <html lang="en">
@@ -56,7 +57,7 @@ class PageMethods:
         <div class="sidenav">
 
             <div id="header-logos">
-                <a href="https://defcon201.org/" class="linknoformat">
+                <a href=\"""" + abspathroot + """/\" class="linknoformat">
                     <div class="dc201-logo">
                         <h4 class="dc201-wordmark">DCG<span class="icon-201bell"></span>201</h4>
                     </div>
