@@ -10,7 +10,7 @@
     <br>
     <h3>This month's meeting:</h3> <h5>{{{ MeetingDetails.Date() }}}</h5>
     <h4><em><a href="{{{ resource("meetings/meetings.html") }}}">{{{ MeetingDetails.Title() }}}</a></em></h4>
-    <p>{{{ MeetingDetails.Summary() }}}</p>
+    <p>{{{ MeetingDetails.LongSummary() }}}</p>
     <h5><a href="{{{ MeetingDetails.CanonicalLink() }}}">Read the {{{ MeetingDetails.LinkName() }}}...</a></h5>
 </div>
 

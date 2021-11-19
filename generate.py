@@ -234,32 +234,50 @@ def restore_submodule(name="docs"):
         pass
 
 
-def main():
-    print("note: output is now in the docs/ folder.")
+def generate_docs(name="docs"):
+    if is_submodule(name):
+        preserve_submodule(name)
 
-    if is_submodule("docs"):
-        preserve_submodule("docs")
-
-    print("generate: clearing docs folder")
+    print("generate: clearing " + name + " folder")
     try:
-        shutil.rmtree("docs/")
+        if name is not None:
+            shutil.rmtree("./" + name + "/")
     except FileNotFoundError:
-        print("generate: nothing to clear")
+        print("generate: " + name + ": nothing to clear")
         pass
 
     print("generate: copying static resources")
-    shutil.copytree("static/", "docs/")
-    shutil.copytree("res/", "docs/res/")
-    restore_submodule("docs")
+    shutil.copytree("static/common", name + "/", dirs_exist_ok=True)
+    staticpath = "base" if name == "docs" else name
+    print("generate: staticpath is " + staticpath + ".")
+    shutil.copytree("static/" + staticpath + "/", name + "/", dirs_exist_ok=True)
 
-    print("generate: begin processing pages")
-    for root, dirs, files in os.walk("./pages"):
+    restore_submodule(name)
+
+    print("generate: begin processing " + name + " pages")
+    pagepath = name + "-pages" if name != "docs" else "pages"
+    print("generate: pagepath is " + pagepath)
+    print("generate: processing " + name + " pages")
+    for root, dirs, files in os.walk("./" + pagepath):
         for file in files:
             if file.endswith(".page"):
-                process(root, "docs/" + os.path.relpath(root, "pages/"), file, file[:-5] + ".html")
+                process(root, name + "/" + os.path.relpath(root, pagepath + "/"), file, file[:-5] + ".html")
 
-    print("generate: finished processing pages.")
-    print("page output is in docs/")
+    print("generate: finished processing " + name + " pages.")
+    print("page output is in " + name + "/")
+
+
+
+def main():
+    generate_docs("docs")
+
+    generate_docs("tor")
+
+    generate_docs("flyer")
+
+    generate_docs("toolbox")
+
+    generate_docs("txt")
 
 if __name__ == "__main__":
     main()
