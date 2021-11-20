@@ -2,40 +2,24 @@
 
 class MeetingDetails:           # Any of these can be HTML formatted, but I'd recommend against it for semantics sake EXCEPT where triple quotes (""" like this """) appear.
     def Date():                 # Date of the meeting (Weekday, Month DD)
-        return "Friday, November 19th"
+        return "Friday, December 17th"
     def Title():                # Title of the meeting
-        return "No Net November"
+        return "TBA"
     def Location():             # Location of the meeting (as of spring 2019, "SUBCULTURE Jersey City, 260 Newark Ave.")
         return "<a href=\"https://www.subculturejc.com/\">Sub Culture</a> (260 Newark Ave. Jersey City)"
     def Notice():               # Any important notices about the meeting or the information.
-        return "" # "<h5>This meeting will also have an online/streaming component.</h5>"
+        return "Information pending." # "<h5>This meeting will also have an online/streaming component.</h5>"
     def CanonicalLink():        # A link that refers to this meeting
         return "https://defcon201.org/meetings/meetings.html"
     def LinkName():             # What this link refers to (for instance "post on our Medium", "forum post", "tweet", "Meetup event")
         return "meeting page"
     def Summary():              # Short, 1-2 sentences about this meeting.
         return """
-Planning? We don't need no stinkin' planning!
+Stay tuned for more information.
 """
     def LongSummary():
-        # return Summary()
-        return """
-
-<h2>This month's <span style="font-size: smaller;" class="dc201-wordmark">DCG<span class="xicon-201bell"></span>201</span> meeting has been...</h2> dare I say it &mdash; <h2><em>"cancelled".</em></h2><br>
-<br>
-<h4>Streaming:</h4><br>
-For those of you near and far, anticipating a streaming show at the usual time and date: We'll see you next month, for the December meeting, on 12/17.<br>
-<strong>There is no streaming component, this time.</strong> Other streaming programming for the rest of the month may continue as scheduled.<br><br>
-
-<h4>In-person at Subculture:</h4><br>
-While the actual DCG201 meeting agenda is cancelled for this month, due to the last-minute nature of this cancellation, we may anticipate people to possibly show up anyway.<br>
-To that end &mdash; and we cannot guarantee this, but &mdash; there may be at least one DCG201 member present.<br>
-We shall continue to host an abridged DCG201 session, as an impromptu hacker gathering, not unlike the 2600 meets &mdash; with no formal agenda or scheduled talks at this time.<br><br>
-
-The location remains at Sub Culture, 260 Newark Ave., Jersey City. Order a sandwich and chat amongst yourselves. :)<br>
-Finally, while the start time will remain as usual, this meeting <em>may</em> end early if there is low turnout.
-
-"""
+        return MeetingDetails.Summary()
+        # return ""
 
 
         # Default summary is:
@@ -83,7 +67,6 @@ Finally, while the start time will remain as usual, this meeting <em>may</em> en
 
         '''
 
-        '''
         schedlist.append([None, None, None, "<h4>For information about our planned schedule, both online and off, please check the <a href=\"" + MeetingDetails.CanonicalLink() + "\">" + MeetingDetails.LinkName() + "</a>.</h4>", None, None])
 
         schedlist.append([None, None, None, "DCG 201 will also be streaming online.", None, "Live Streams are available at:"])
@@ -94,24 +77,6 @@ Finally, while the start time will remain as usual, this meeting <em>may</em> en
         schedlist.append([None, None, None, None, None, None])
 
         schedlist.append([None, None, None, None, None, None])
-        '''
-        schedlist.append([None, None, None, """
-
-<h2>This month's <span style="font-size: smaller;" class="dc201-wordmark">DCG<span class="xicon-201bell"></span>201</span> meeting has been...</h2> dare I say it &mdash; <h2><em>"cancelled".</em></h2><br>
-<br>
-<h4>Streaming:</h4><br>
-For those of you near and far, anticipating a streaming show at the usual time and date: We'll see you next month, for the December meeting, on 12/17.<br>
-<strong>There is no streaming component, this time.</strong> Other streaming programming for the rest of the month may continue as scheduled.<br><br>
-
-<h4>In-person at Subculture:</h4><br>
-While the actual DCG201 meeting agenda is cancelled for this month, due to the last-minute nature of this cancellation, we may anticipate people to possibly show up anyway.<br>
-To that end &mdash; and we cannot guarantee this, but &mdash; there may be at least one DCG201 member present.<br>
-We shall continue to host an abridged DCG201 session, as an impromptu hacker gathering, not unlike the 2600 meets &mdash; with no formal agenda or scheduled talks at this time.<br><br>
-
-The location remains at Sub Culture, 260 Newark Ave., Jersey City. Order a sandwich and chat amongst yourselves. :)<br>
-Finally, while the start time will remain as usual, this meeting <em>may</em> end early if there is low turnout.
-
-        """, None, None])
         schedlist.append([None, None, "COVID-19 Notice", "Keep an eye out for your fellow hacker.", "<strong><a href=\"https://covid19.nj.gov/vaccine\">GET YOUR VAX. They\'re available. Schedule it today.</a></strong>", "And finally, Whether you're social or anti-social, practice distancing."])
 
 
