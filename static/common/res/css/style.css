@@ -201,7 +201,7 @@ h5 {
 }
 
 .fullpic h1, .fullpic h2, .fullpic h3, .fullpic h4, .fullpic h5 {
-    line-height: 0.3em;
+    line-height: 1em;
 
     display: inline-block;
 

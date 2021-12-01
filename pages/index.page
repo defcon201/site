@@ -27,7 +27,7 @@
 </div>
 
 <div class="fullpic condensedbox" style="/* background-image: url({{{ resource("res/img/dc201gang.jpg") }}}); background-position: top; */">
-    <h2>Contact us: <span style="text-decoration: underline;">info@defcon201.org</span></h2>
+    <h2>Contact us: <span style="text-decoration: line-through;">info@defcon201.org</span> We may be experiencing temporary e-mail downtime. Please contact us through Twitter, <a href="https://twitter.com/defcon201nj">@defcon201nj</a> in the interim time.</h2>
     <p><span style="font-size: 14px;"><span style="font-weight: 600;">Call For Papers:</span> We're accepting submissions for Workshops and Lightning Talks!</span></p>
 </div>
 
