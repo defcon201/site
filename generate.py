@@ -7,6 +7,13 @@ import sys
 import re
 import shutil
 
+print("Working directory is" + os.getcwd())
+print(os.path.dirname(os.path.realpath(__file__)))
+
+if os.getcwd() != os.path.dirname(os.path.realpath(__file__)):
+    print("error: This script is meant to be run from the repository root.")
+    raise SystemExit()
+
 from pages.meetings import MeetingDetails
 
 class PageMethods:
@@ -195,10 +202,26 @@ def process(path_in, path_out, name_in, name_out):
     # FIXME: this is just a buggy quick hack
     splits = re.split("({{{[^}]+}}})", indata)
     for split in splits:
-        if split and split[:3] == "{{{":
-            outdata += eval(split[3:-3], pm.get_globals())
+        # TODO: replace this with a switch-case to add more tag types (markdown parser? data retrieval/display methods?)
+        if split and split[:11] == "{{{INCLUDE ":
+            if split[:12] == "{{{INCLUDE /":
+                includepath = os.path.join("./", split[12:-3])
+            else:
+                includepath = os.path.join(path_in, split[11:-3])
+
+            print("Including contents from " + includepath)
+            try:
+                with open(includepath, "r") as includefile:
+                    outdata += includefile.read()
+            except FileNotFoundError:
+                print("warning: File missing at \'" + includepath + "\' - check " + fullname + " for correctness.")
+                pass
+
         else:
-            outdata += split
+            if split and split[:3] == "{{{":
+                outdata += eval(split[3:-3], pm.get_globals())
+            else:
+                outdata += split
 
     try:
         os.makedirs(path_out)

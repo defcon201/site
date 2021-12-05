@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>DCG201 | Error Page: It Doesn't Work! (500)</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/error/err.css"></link>
+  </head>
+  <body>
+    <div class="main_page">
+      <div class="page_header floating_element">
+        <img src="/res/img/dcg201logo-b.png" alt="DCG201 Logo" class="floating_element" height="90px"/>
+        <span class="floating_element">
+          DCG201 Error Page - 500<br>
+          <small><em>"Internal Server Error"</em></small>
+        </span>
+      </div>
+<!--
+      <div class="table_of_contents floating_element">
+        <div class="section_header section_header_grey">
+          TABLE OF CONTENTS
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#about">About</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#changes">Changes</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#scope">Scope</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#files">Config files</a>
+        </div>
+      </div>
+-->
+      <div class="content_section floating_element">
+
+
+        <div class="section_header section_header_red">
+          <div id="about"></div>
+          It's f<censored>$#%!</censored>ed!
+        </div>
+        <div class="content_section_text">
+          <p>
+                This is the s<censored>#!+@</censored>ty error page used to indicate the incorrect g<censored>*</censored>ddamn
+                operation of the f<censored>%&amp;$</censored>ing DCG201 server after a screwed-up installation on our ass<censored>#@!&amp;</censored> systems.
+          </p>
+
+
+          <p>
+                If you are the administrator, and you can read this page, your ass is grass. It means that the HTTP server installed at
+                this site is f<censored>!%</censored>king scuppered. You should <b>fix this s<censored>#!+</censored></b> (located at
+                <tt><a href="https://github.com/defcon201/site">https://github.com/defcon201/site</a></tt>) posthaste, before you continue to clobber your HTTP server.
+          </p>
+          <br>
+          <p>
+                <em>*deep breath*</em>
+          </p>
+          <p>
+                .... Anyway.<br>
+                If you are a normal user of this web site and don't know what this page is
+                about, this probably means that the site is currently unavailable due to
+                maintenance, incompetence, interference or malicious activity.
+          </p>
+
+
+          <p>
+                If you caused this by accident, no foul - please <a href="mailto:info@defcon201.org">get in touch</a> with the <a href="https://twitter.com/defcon201nj">site's administrator.</a><br>
+                If you caused this on purpose, and you know what you're doing, and you didn't choose to let us know what went wrong - kindly f<censored>!$%</censored> yourself.<br>
+                If the problem persists, please contact the site's administrator....'s ass with your boot. Because we f<censored>$#!</censored>ed it, and we've been too lazy to notice or care.
+          </p>
+
+        </div>
+{{{INCLUDE error_bottom.frag}}}

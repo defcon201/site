@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>DCG201 | Error Page: It Doesn't Work! (404)</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/error/err.css"></link>
+  </head>
+  <body>
+    <div class="main_page">
+      <div class="page_header floating_element">
+        <img src="/res/img/dcg201logo-b.png" alt="DCG201 Logo" class="floating_element" height="90px"/>
+        <span class="floating_element">
+          DCG201 Error Page - 404<br>
+          <small><em>"Not Found"</em></small>
+        </span>
+      </div>
+<!--
+      <div class="table_of_contents floating_element">
+        <div class="section_header section_header_grey">
+          TABLE OF CONTENTS
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#about">About</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#changes">Changes</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#scope">Scope</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#files">Config files</a>
+        </div>
+      </div>
+-->
+      <div class="content_section floating_element">
+
+
+        <div class="section_header section_header_red">
+          <div id="about"></div>
+          It's lost!
+        </div>
+        <div class="content_section_text">
+          <p>
+                This is the default error page used to indicate the incorrect 
+                condition of the request to the server after navigation to our website.
+          </p>
+
+
+          <p>
+                <strong>Administrator:</strong>
+                If you can read this page, it means that the DCG201 HTTP server installed at
+                this site is working properly, but that the resource requested is not available.<br>
+                You should <b>replace this file</b> (located at <tt id="pageurl">defcon201.org</tt>)
+                or its URL in the referring page, before continuing to operate your HTTP server.
+          </p>
+<script type="text/javascript" src="err.js"></script>
+<br>
+          <p>
+                If you are a normal user of this web site and don't know what this page is
+                about, this probably means that the page is currently unavailable due to
+                maintenance or a recent site change, or that the link you followed is incorrect.<br>
+                If the problem persists, please contact the site's administrator.
+          </p>
+
+        </div>
+{{{INCLUDE error_bottom.frag}}}
