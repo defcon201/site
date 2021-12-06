@@ -1,6 +1,7 @@
 __pycache__
 output/
 *.swp
+docs/
 flyer/
 tor/
 toolbox/
