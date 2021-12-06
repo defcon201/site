@@ -14,14 +14,14 @@ if os.getcwd() != os.path.dirname(os.path.realpath(__file__)):
     print("error: This script is meant to be run from the repository root.")
     raise SystemExit()
 
-from pages.meetings import MeetingDetails
+from pages.docs.meetings import MeetingDetails
 
 class PageMethods:
     def __init__(self, path):
         self.path = path
 
     def resource(self, resource):
-        return os.path.relpath("docs/" + resource, self.path)
+        return os.path.relpath("output/base/" + resource, self.path)
 
     def header(self, title, menu_hl=None, nodiv=False, white_bg=False, description=None, titleimage=None, abspathroot=None):
         bodystyle = " style=\"background: #fff; color: #000;\"" if white_bg else ""
@@ -263,28 +263,29 @@ def generate_docs(name="docs"):
 
     print("generate: clearing " + name + " folder")
     try:
-        if name is not None:
-            shutil.rmtree("./" + name + "/")
+        if name is not None and name != "":
+            shutil.rmtree("./output/" + name + "/")
     except FileNotFoundError:
         print("generate: " + name + ": nothing to clear")
         pass
 
     print("generate: copying static resources")
-    shutil.copytree("static/common", name + "/", dirs_exist_ok=True)
     staticpath = "base" if name == "docs" else name
-    print("generate: staticpath is " + staticpath + ".")
-    shutil.copytree("static/" + staticpath + "/", name + "/", dirs_exist_ok=True)
+    outpath = "output/" + staticpath
+    print("generate: staticpath is " + staticpath + " and outpath is " + outpath + ".")
+    shutil.copytree("static/common", "./" + outpath + "/", dirs_exist_ok=True)
+    shutil.copytree("static/" + staticpath + "/", "./" + outpath + "/", dirs_exist_ok=True)
 
     restore_submodule(name)
 
     print("generate: begin processing " + name + " pages")
-    pagepath = name + "-pages" if name != "docs" else "pages"
+    pagepath = "pages/docs" if name == "docs" else "pages/" + name + "-pages"
     print("generate: pagepath is " + pagepath)
     print("generate: processing " + name + " pages")
     for root, dirs, files in os.walk("./" + pagepath):
         for file in files:
             if file.endswith(".page"):
-                process(root, name + "/" + os.path.relpath(root, pagepath + "/"), file, file[:-5] + ".html")
+                process(root, "output/" + staticpath + "/" + os.path.relpath(root, pagepath + "/"), file, file[:-5] + ".html")
 
     print("generate: finished processing " + name + " pages.")
     print("page output is in " + name + "/")
